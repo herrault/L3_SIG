@@ -25,10 +25,8 @@
    - `arbres.shp` (points : espèce, genre, ancien ou jeune)  
    - `batiments.shp` (polygones : usage, hauteur)  
    - `voirie.shp` (lignes : type de voie, nom)  
-   - `zone_etude.shp` (polygone de délimitation de l’étude)  
-
-*Vous êtes maintenant prêt à commencer l’analyse, comme un professionnel qui organise ses données avant un projet.*
-
+   - `zone_etude.shp` (polygone de délimitation de l’étude)
+     
 ---
 
 ## Séance 1 – Exploration et sélection
@@ -42,12 +40,14 @@
   - `voirie` → couleur par type de voie.  
   - `zone_etude` → contour clair, transparence 30%.  
 
-*Vous visualisez la ville comme un urbaniste écologique : observez la répartition des arbres par rapport aux bâtiments et aux rues.*
+* Exportez la vue pour chaque visualisation et collez la dans un .doc.*
 
 **Questions :**  
 - Combien d’arbres sont anciens ?  
 - Combien de bâtiments publics et privés ?  
-- Quelle est la longueur totale du réseau viaire ?  
+- Quelle est la longueur totale du réseau viaire ?
+
+* Répondez aux questions dans ce même .doc.*
 
 ---
 
