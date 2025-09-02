@@ -1,4 +1,4 @@
-# TD 1 Explorer l'environnement, explorer les données
+# TD 1 Explorer l'environnement, Explorer les données
 
 **Date :** 02-09-2025
 **Nom :** Herrault PA - Chardon V
