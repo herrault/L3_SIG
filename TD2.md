@@ -1,4 +1,4 @@
-# TD2 – QGIS 3.34 LTR : Analyse spatiale et traitement vectoriel
+# TD2 – Analyse spatiale à partir de données vectorielles 
 
 **Date :** 02-09-2025
 **Nom :** Herrault PA et Chardon V
@@ -7,8 +7,8 @@
 - Maîtriser les outils de sélection spatiale et attributaire.  
 - Manipuler les outils de la boîte à outils de traitement QGIS.  
 - Explorer et analyser des données vectorielles à Strasbourg.  
-- Comprendre l’interaction entre écologie urbaine (arbres) et aménagement (bâtiments, voirie).  
-- Produire des résultats réutilisables pour des projets urbains et écologiques.  
+- Quantifier les interactions entre écologie urbaine (arbres) et aménagement (bâtiments, voirie).  
+- Produire des résultats réutilisables pour des projets urbains et écologiques.
 
 ---
 
