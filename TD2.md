@@ -1,6 +1,6 @@
-# TD2 – Analyse spatiale à partir de données vectorielles 
+# TD2 – Analyse spatiale à partir de données vectorielles
 
-**Date :** 02-09-2025
+**Date :** 02-09-2025  
 **Nom :** Herrault PA et Chardon V
 
 ## 🎯 Objectifs
@@ -19,24 +19,24 @@
    - `Traitements`  
    - `Resultats`  
    - `Annexes`  
-
-
-3. Placez dans `Donnees` les trois couches vectorielles :  
+3. Placez dans `Donnees` les couches vectorielles :  
    - `arbres.shp` (points : espèce, genre, ancien ou jeune)  
    - `batiments.shp` (polygones : usage, hauteur)  
    - `voirie.shp` (lignes : type de voie, nom)  
+   - `zone_etude.shp` (polygone de délimitation de l’étude)  
 
 ---
 
 ## Séance 1 – Exploration et sélection
 
 ### 1.1 Exploration des données
-- Ajoutez les trois couches à QGIS.  
+- Ajoutez les quatre couches à QGIS.  
 - Examinez les tables attributaires : types de données, champs disponibles, nombre d’entités.  
 - Modifiez la symbologie :  
   - `arbres` → couleur par âge (jeune/ancien), forme par genre.  
   - `batiments` → couleur par usage, transparence 50%.  
   - `voirie` → couleur par type de voie.  
+  - `zone_etude` → contour clair, transparence 30%.  
 
 **Questions :**  
 - Combien d’arbres sont anciens ?  
@@ -120,24 +120,69 @@
 
 ---
 
-### 2.5 Cartographie finale
+### 2.5 Opérations vectorielles avancées : Clip, Dissolve et Union
+
+#### a) Découpage (Clip)
+**Objectif :** limiter les arbres et bâtiments à la zone d’étude.  
+
+1. Menu : **Vecteur > Outils de géotraitement > Découper (Clip)**  
+2. Couche à découper : `arbres.shp` ou `batiments.shp`  
+3. Couche de découpage : `zone_etude.shp`  
+4. Nom de sortie : `arbres_zone_etude.shp` et `batiments_zone_etude.shp`  
+
+**Questions :**  
+- Combien d’arbres restent dans la zone d’étude après le Clip ?  
+- Combien de bâtiments sont inclus dans la zone ?  
+
+---
+
+#### b) Regroupement (Dissolve)
+**Objectif :** fusionner des entités similaires pour simplifier l’analyse.  
+
+1. Menu : **Vecteur > Outils de géotraitement > Dissolve**  
+2. Couche : `arbres_zone_etude.shp`  
+3. Attribut pour regrouper : `espèce` ou `genre`  
+4. Nom de sortie : `arbres_dissolve.shp`  
+
+**Questions :**  
+- Combien d’entités avant et après Dissolve ?  
+- Quels avantages pour l’analyse des espèces dans la zone d’étude ?  
+
+---
+
+#### c) Union
+**Objectif :** combiner arbres et bâtiments pour analyser les interactions.  
+
+1. Menu : **Vecteur > Outils de géotraitement > Union**  
+2. Couches à unir : `arbres_dissolve.shp` et `batiments_zone_etude.shp`  
+3. Nom de sortie : `arbres_batiments_union.shp`  
+
+**Questions :**  
+- Combien d’entités au total après l’union ?  
+- Quels attributs des deux couches sont conservés dans la couche combinée ?  
+- Quelles interactions écologie/urbanisme pouvez-vous identifier grâce à cette union ?  
+
+---
+
+### 2.6 Cartographie finale
 - Créez une carte thématique montrant :  
   - Arbres anciens et jeunes.  
   - Bâtiments selon densité d’arbres à proximité.  
   - Réseau viaire.  
+  - Limites de la zone d’étude.  
 - Ajouter légende, titre, échelle et Nord.  
 
 ---
 
 ## 3. Bilan et réflexions
 - Compréhension des différentes sélections (attributs, localisation, intersection).  
-- Utilisation des outils de géotraitement (buffer, distance, jointure spatiale).  
+- Utilisation des outils de géotraitement (buffer, distance, jointure spatiale, Clip, Dissolve, Union).  
 - Création d’indicateurs combinant écologie et urbanisme.  
-- Production de cartes et export de données vectorielles réutilisables.  
+- Production de cartes et export de données vectorielles réutilisables.
 
 ---
 
 ## Astuces et recommandations
 - Toujours vérifier le système de coordonnées avant d’exporter ou de traiter les données.  
 - Garder des copies des couches originales pour éviter de perdre des informations.  
-- Documenter chaque étape dans le panneau **Propriétés > Métadonnées**.  
+- Documenter chaque étape dans le panneau **Propriétés > Métadonnées**.
