@@ -19,12 +19,6 @@
    - `Resultats`  
    - `Annexes`  
 
-```text
-TD_QGIS/
-├─ Donnees/
-├─ Traitements/
-├─ Resultats/
-└─ Annexes/
 
 ---
 
@@ -66,7 +60,7 @@ TD_QGIS/
 - Exporter/importer la symbologie dans `Annexes`.  
 
 ### 2.3 Étiquettes
-- Clic droit sur la couche → **Etiquettes** → afficher `nom_station` ou `nom_commune`.  
+- Clic droit sur la couche → **Étiquettes** → afficher `nom_station` ou `nom_commune`.  
 - Modifier police, taille, couleur si nécessaire.  
 
 ### 2.4 Sélection par attributs
@@ -138,6 +132,7 @@ TD_QGIS/
 - Export de sous-ensembles vectoriels.  
 - Exploration et symbolisation de données raster.  
 - Calcul géométrique et distances.
+
 
 
 
