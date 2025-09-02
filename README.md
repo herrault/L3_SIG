@@ -6,8 +6,7 @@
 ## 🎯 Objectifs
 - Découvrir et explorer l’interface QGIS.  
 - Manipuler des données vectorielles et raster.  
-- Réaliser des traitements simples et extraire des informations géométriques.  
-- Répondre aux questions pratiques pour se familiariser avec les SIG.  
+- Réaliser des traitements simples et extraire des informations géométriques basiques
 
 ---
 
