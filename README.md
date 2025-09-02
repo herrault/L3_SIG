@@ -1,7 +1,7 @@
 # TD 1 Explorer l'environnement, explorer les données
 
-**Date :** …  
-**Nom :** …  
+**Date :** 02-09-2025
+**Nom :** Herrault PA - Chardon V
 
 ## 🎯 Objectifs
 - Découvrir et explorer l’interface QGIS.  
