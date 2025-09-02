@@ -26,6 +26,8 @@ TD_QGIS/
 ├─ Resultats/
 └─ Annexes/
 
+---
+
 ## 1. Importer les données vectorielles (shapefiles)
 
 ### 1.1 Pyrénées (TD1)
@@ -48,7 +50,9 @@ TD_QGIS/
 **Questions Strasbourg :**  
 - Quel est le système de coordonnées des shapefiles EMS ?  
 - Quels shapefiles sont points ? lignes ? polygones ?  
-- Combien de bâtiments individuels ? Combien de communes ?  
+- Combien de bâtiments individuels ? Combien de communes ?
+
+---
 
 ## 2. Exploration des données vectorielles
 
@@ -98,7 +102,9 @@ TD_QGIS/
 **Exercices :**  
 - Exporter jardins familiaux → `Traitements`.  
 - Exporter stations VelHop → `Traitements`.  
-- Exporter stations VelHop avec >10 vélos → `Resultats`.  
+- Exporter stations VelHop avec >10 vélos → `Resultats`.
+
+---
 
 ## 3. Exploration des données raster
 
@@ -122,7 +128,9 @@ TD_QGIS/
 ### 3.3 Distances et coordonnées
 - Identifier flèche cathédrale et statue Place de la République.  
 - Mesurer distance à vol d’oiseau avec outil **Mesurer**.  
-- Calculer distance à partir des coordonnées et unité du système.  
+- Calculer distance à partir des coordonnées et unité du système.
+
+---
 
 ## 4. Bilan et réflexions
 - Création et organisation d’un projet QGIS.  
