@@ -10,7 +10,7 @@
 - Quantifier les interactions entre écologie urbaine (arbres) et aménagement (bâtiments, voirie).  
 - Produire des résultats réutilisables pour des projets urbains et écologiques.
 
-*Contexte : Vous êtes consultant pour la ville de Strasbourg. Votre mission est d’analyser la répartition des arbres en lien avec le bâti et le réseau viaire, afin d’identifier les zones où l’écologie urbaine et l’aménagement pourraient mieux interagir.*
+*Contexte : Vous êtes consultant pour la ville de Strasbourg. Votre mission est d’analyser la répartition des arbres en lien avec le bâti et le réseau viaire, afin d’identifier les zones prioritaires pour la gestion urbaine et la biodiversité.*
 
 ---
 
@@ -27,7 +27,7 @@
    - `voirie.shp` (lignes : type de voie, nom)  
    - `zone_etude.shp` (polygone de délimitation de l’étude)  
 
-*Vous allez maintenant créer votre espace de travail comme le ferait un professionnel avant de commencer un projet urbain.*
+*Vous êtes maintenant prêt à commencer l’analyse, comme un professionnel qui organise ses données avant un projet.*
 
 ---
 
@@ -42,7 +42,7 @@
   - `voirie` → couleur par type de voie.  
   - `zone_etude` → contour clair, transparence 30%.  
 
-*Vous êtes maintenant en train de visualiser la ville comme un urbaniste écologique. Observez les arbres qui bordent les rues et les parcs, et comment ils interagissent avec le bâti.*
+*Vous visualisez la ville comme un urbaniste écologique : observez la répartition des arbres par rapport aux bâtiments et aux rues.*
 
 **Questions :**  
 - Combien d’arbres sont anciens ?  
@@ -59,7 +59,7 @@
 - Exportez les arbres *Quercus* dans `Traitements` en `quercus.shp`.  
 - Exportez les bâtiments >20 m dans `Traitements` en `batiments_grands.shp`.  
 
-*Imaginez que vous préparez un rapport sur les chênes et les grands bâtiments pour orienter un projet de verdissement urbain.*
+*Vous préparez un rapport sur les chênes et les grands bâtiments pour orienter un projet de verdissement urbain.*
 
 ---
 
@@ -67,66 +67,56 @@
 - Sélectionnez les arbres situés à moins de 20 m des voies principales.  
 - Sélectionnez les bâtiments situés dans un rayon de 50 m autour des arbres anciens.  
 
-*Vous commencez à analyser l’impact du réseau viaire sur les arbres et comment les bâtiments influencent l’écologie locale.*
-
 **Questions :**  
 - Combien d’arbres sont proches du réseau viaire ?  
 - Combien de bâtiments se trouvent autour des arbres anciens ?  
 
----
-
-### 1.4 Boîte à outils – Intersections
-- Outil : **Vecteur > Outils de géotraitement > Intersection**  
-- Intersection entre `arbres.shp` et `zone_risque.shp` (ou buffer autour des voies).  
-- Résultat : arbres situés dans des zones sensibles ou de proximité voirie.  
-
-**Exercice :**  
-- Créez un buffer de 10 m autour des voies principales et sélectionnez les arbres à l’intérieur.  
-
-*Vous identifiez maintenant les arbres qui nécessitent une attention particulière pour la sécurité ou la préservation.*
-
----
-
-### 1.5 Synthèse de la séance 1
-- Carte thématique des arbres anciens et jeunes en fonction de la proximité des voies.  
-- Export des couches sélectionnées et préparation pour la séance suivante.  
-
-*À la fin de cette séance, vous êtes capable de visualiser et d’extraire des informations clés sur la distribution des arbres en ville.*
+*Vous analysez l’impact du réseau viaire sur la végétation et la proximité du bâti sur les arbres.*
 
 ---
 
 ## Séance 2 – Analyse et traitement avancé
 
-### 2.1 Réutilisation des couches
-- Réutilisez les couches exportées `quercus.shp` et `batiments_grands.shp`.  
-- Vérifiez les systèmes de coordonnées et unifiez-les si nécessaire (EPSG 2154).  
+### 2.1 Limitation à la zone d’étude (Clip)
+- Outil : **Vecteur > Outils de géotraitement > Découper (Clip)**  
+- Découpez `arbres.shp` et `batiments.shp` avec `zone_etude.shp`.  
+- Noms de sortie :  
+  - `arbres_zone_etude.shp`  
+  - `batiments_zone_etude.shp`  
 
-*Vous préparez vos données pour des analyses plus avancées, comme le ferait un expert SIG avant un diagnostic urbain.*
-
----
-
-### 2.2 Calcul de statistiques spatiales
-- Outil : **Vecteur > Analyse > Statistiques de zone**  
-- Exemple : surface de bâtiments par zone, densité d’arbres par parcelle ou quartier.  
-
-**Exercices :**  
-- Calculer le nombre d’arbres par parcelle ou par quartier.  
-- Calculer la surface totale des bâtiments >20 m.  
-
-*Ces statistiques vous aident à comprendre la répartition écologique et les contraintes urbaines.*
-
----
-
-### 2.3 Outils de la boîte à outils
-- **Buffer** : créer des zones tampon autour des arbres anciens (20 m, 50 m).  
-- **Distance minimale** : calculer la distance entre chaque arbre ancien et le bâtiment le plus proche.  
-- **Jointure spatiale** : relier `arbres.shp` et `batiments.shp`.  
-
-*Vous simulez maintenant le rôle d’un urbaniste écologique qui cherche à évaluer l’impact du bâti sur la biodiversité urbaine.*
+*Justification : Seules les entités situées dans la zone étudiée sont pertinentes pour l’analyse.*
 
 **Questions :**  
-- Quels arbres sont à moins de 10 m d’un bâtiment public ?  
-- Quels bâtiments sont à moins de 20 m des arbres anciens ?  
+- Combien d’arbres restent dans la zone d’étude ?  
+- Combien de bâtiments y sont inclus ?  
+
+---
+
+### 2.2 Regroupement d’entités similaires (Dissolve)
+- Outil : **Vecteur > Outils de géotraitement > Dissolve**  
+- Couche : `arbres_zone_etude.shp`  
+- Attribut pour regrouper : `genre` ou `espèce`  
+- Nom de sortie : `arbres_dissolve.shp`  
+
+*Justification : Simplifier la couche pour visualiser la répartition des espèces et faciliter les statistiques.*
+
+**Questions :**  
+- Combien d’entités avant et après Dissolve ?  
+- Quels avantages pour l’analyse des espèces dans la zone d’étude ?  
+
+---
+
+### 2.3 Analyse combinée (Union)
+- Outil : **Vecteur > Outils de géotraitement > Union**  
+- Couches à unir : `arbres_dissolve.shp` et `batiments_zone_etude.shp`  
+- Nom de sortie : `arbres_batiments_union.shp`  
+
+*Justification : Identifier les zones où arbres et bâtiments interagissent. Cela aide à repérer les zones sensibles, les conflits potentiels et les opportunités de verdissement.*
+
+**Questions :**  
+- Combien d’entités au total après l’union ?  
+- Quels attributs des deux couches sont conservés ?  
+- Quelles interactions écologie/urbanisme pouvez-vous identifier ?  
 
 ---
 
@@ -138,61 +128,11 @@
 - Exporter la couche `arbres_vulnerables.shp` dans `Resultats`.  
 - Exporter la couche `batiments_densite.shp` dans `Resultats`.  
 
-*Vous créez ici des indicateurs utiles pour des décisions d’aménagement et de protection des arbres.*
+*Ces indicateurs sont utiles pour décider des actions d’entretien et de protection des arbres en ville.*
 
 ---
 
-### 2.5 Opérations vectorielles avancées : Clip, Dissolve et Union
-
-#### a) Découpage (Clip)
-**Objectif :** limiter les arbres et bâtiments à la zone d’étude.  
-
-1. Menu : **Vecteur > Outils de géotraitement > Découper (Clip)**  
-2. Couche à découper : `arbres.shp` ou `batiments.shp`  
-3. Couche de découpage : `zone_etude.shp`  
-4. Nom de sortie : `arbres_zone_etude.shp` et `batiments_zone_etude.shp`  
-
-*Vous simulez un projet réel : seules les entités dans la zone prioritaire sont analysées.*
-
-**Questions :**  
-- Combien d’arbres restent dans la zone d’étude après le Clip ?  
-- Combien de bâtiments sont inclus dans la zone ?  
-
----
-
-#### b) Regroupement (Dissolve)
-**Objectif :** fusionner des entités similaires pour simplifier l’analyse.  
-
-1. Menu : **Vecteur > Outils de géotraitement > Dissolve**  
-2. Couche : `arbres_zone_etude.shp`  
-3. Attribut pour regrouper : `espèce` ou `genre`  
-4. Nom de sortie : `arbres_dissolve.shp`  
-
-*Cette étape permet de produire des couches synthétiques pour mieux visualiser les distributions d’espèces.*
-
-**Questions :**  
-- Combien d’entités avant et après Dissolve ?  
-- Quels avantages pour l’analyse des espèces dans la zone d’étude ?  
-
----
-
-#### c) Union
-**Objectif :** combiner arbres et bâtiments pour analyser les interactions.  
-
-1. Menu : **Vecteur > Outils de géotraitement > Union**  
-2. Couches à unir : `arbres_dissolve.shp` et `batiments_zone_etude.shp`  
-3. Nom de sortie : `arbres_batiments_union.shp`  
-
-*Vous combinez maintenant données écologiques et urbanistiques pour identifier des zones d’intervention prioritaire.*
-
-**Questions :**  
-- Combien d’entités au total après l’union ?  
-- Quels attributs des deux couches sont conservés ?  
-- Quelles interactions écologie/urbanisme pouvez-vous identifier grâce à cette union ?  
-
----
-
-### 2.6 Cartographie finale
+### 2.5 Cartographie finale
 - Carte thématique montrant :  
   - Arbres anciens et jeunes.  
   - Bâtiments selon densité d’arbres à proximité.  
@@ -200,17 +140,17 @@
   - Limites de la zone d’étude.  
 - Ajouter légende, titre, échelle et Nord.  
 
-*Vous présentez ici le résultat final comme un consultant préparant un rapport pour la ville.*
+*Vous présentez un rapport visuel comme un consultant SIG urbain.*
 
 ---
 
 ## 3. Bilan et réflexions
 - Compréhension des différentes sélections (attributs, localisation, intersection).  
-- Utilisation des outils de géotraitement (buffer, distance, jointure spatiale, Clip, Dissolve, Union).  
+- Utilisation des outils de géotraitement (Clip, Dissolve, Union, buffer, distance, jointure spatiale).  
 - Création d’indicateurs combinant écologie et urbanisme.  
 - Production de cartes et export de données vectorielles réutilisables.  
 
-*Vous avez maintenant suivi le workflow complet d’un projet SIG appliqué à la ville, combinant écologie et aménagement.*
+*Vous avez suivi le workflow complet d’un projet SIG appliqué à la ville, combinant écologie et aménagement.*
 
 ---
 
@@ -218,3 +158,4 @@
 - Toujours vérifier le système de coordonnées avant d’exporter ou de traiter les données.  
 - Garder des copies des couches originales pour éviter de perdre des informations.  
 - Documenter chaque étape dans le panneau **Propriétés > Métadonnées**.
+
