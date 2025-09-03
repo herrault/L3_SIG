@@ -21,32 +21,19 @@
 Cette organisation permettra de **séparer les données sources** (jamais modifiées) des résultats produits pendant le TD.  
 
 ---
+## 1. Importer et organiser les données vectorielles (Eurométropole)
 
-## 1. Importer et organiser les données vectorielles
+L’objectif est de **savoir importer des données shapefiles** et de les organiser dans un **GeoPackage** pour faciliter leur gestion.
 
-L’objectif de cette partie est de savoir **importer des données shapefiles** et de les organiser dans un **GeoPackage** pour faciliter leur gestion.
-
-### 1.1 Jeux de données Pyrénées
-1. Décompressez `data_TD_pyrenees` dans le dossier `Donnees`.  
+### 1.1 Jeux de données Strasbourg
+1. Décompressez `data_TD_eurometropole` dans le dossier `Donnees`.  
 2. Dans QGIS, créez un **GeoPackage** nommé `database.gpkg` dans `TD1_QGIS`.  
    - Ce fichier servira de **base de travail centralisée**.  
    - Chaque shapefile importé y sera enregistré comme une couche.  
-3. Importez les shapefiles dans `database.gpkg`.  
-   - Regroupez visuellement les couches dans deux groupes QGIS :  
-     - `lineaire` (routes, cours d’eau, etc.)  
-     - `surfacique` (communes, zones naturelles, etc.)  
-4. Vérifiez le **système de coordonnées (EPSG)** de chaque couche.  
-
-**Questions Pyrénées :**  
-- Quel est le système de coordonnées des couches importées ?  
-- Quelle est la distance entre Torreilles et Villelongue-de-la-Salanque ?  
-- Quelle est la longueur et la nature du tronçon `TRONROUT0000000038686356` ?  
-
-### 1.2 Jeux de données Strasbourg
-1. Décompressez `data_TD_eurometropole` dans `Donnees`.  
-2. Importez dans QGIS les couches suivantes :  
+3. Importez les shapefiles suivants dans `database.gpkg` :  
    - `voie_ram`, `voie_ferree`, `surface_eau`, `station_tram`, `limite_cus`, `grand_axe`, `cours_eau`, `commune`, `batiment_public`, `bati_indiv`, `amenagt_es_vert`.  
-3. Organisez-les dans des groupes logiques (par exemple : transport, eau, bâti, administratif).  
+4. Organisez-les dans des groupes logiques (par exemple : transport, eau, bâti, administratif).  
+5. Vérifiez le **système de coordonnées (EPSG)** de chaque couche pour s’assurer qu’elles sont homogènes.  
 
 **Questions Strasbourg :**  
 - Quel est le système de coordonnées des shapefiles EMS ?  
