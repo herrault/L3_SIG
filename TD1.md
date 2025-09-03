@@ -1,153 +1,165 @@
-# TD 1 – Explorer l'environnement, explorer les données
+# TD1 – Explorer l'environnement et les données de Strasbourg
 
 **Date :** 02-09-2025  
 **Nom :** Herrault PA - Chardon V
 
 ## 🎯 Objectifs
-- Découvrir et explorer l’interface QGIS.  
-- Lire et organiser des données vectorielles et raster.  
-- Réaliser des traitements simples et extraire des informations géométriques et attributaires de base.  
+- Découvrir l’interface QGIS et ses fonctionnalités principales.  
+- Importer et organiser des données vectorielles et raster.  
+- Réaliser des traitements simples et extraire des informations géométriques et attributaires.  
+- Savoir exporter des sous-ensembles de données et manipuler la symbologie.
 
 ---
 
 ## 0. Préparation de l’espace de travail
+Avant de commencer, nous allons créer un espace de travail structuré :  
+
 1. Créez un dossier principal `TD1_QGIS`.  
 2. Créez les sous-dossiers :  
-   - `Donnees` (fichiers bruts fournis)  
-   - `Traitements` (couches intermédiaires créées)  
-   - `Resultats` (produits finaux)  
-   - `Annexes` (exports de symbologie, captures d’écran, notes, etc.)  
+   - `Donnees` → fichiers bruts fournis  
+   - `Traitements` → couches intermédiaires créées  
+   - `Resultats` → produits finaux  
+   - `Annexes` → symbologie exportée, captures d’écran, notes  
 
-*Cette organisation permet de **séparer les données sources** (jamais modifiées) des résultats produits pendant le TD et de travailler de manière reproductible.*
+> Cette organisation sépare les données sources des résultats produits et permet un travail reproductible.
 
 ---
 
 ## 1. Importer et organiser les données vectorielles (Eurométropole)
 
-L’objectif est de **savoir importer des shapefiles**, les stocker dans un **GeoPackage** central et les organiser en groupes logiques.
+Nous allons importer les **shapefiles de l’Eurométropole de Strasbourg** et les stocker dans un **GeoPackage central** pour faciliter l’organisation et le partage.  
 
-### 1.1 Jeux de données Strasbourg
-1. Décompressez `data_TD_eurometropole` dans le dossier `Donnees`.  
+### 1.1 Jeux de données
+1. Décompressez `data_TD_eurometropole` dans `Donnees`.  
 2. Dans QGIS, créez un **GeoPackage** nommé `database.gpkg` dans `TD1_QGIS`.  
-   - Le GeoPackage servira de **base de travail centralisée** pour toutes les couches vectorielles.  
-   - Chaque shapefile importé y sera enregistré comme une couche pour faciliter l’export, la gestion et le partage.  
-3. Importez les shapefiles suivants dans `database.gpkg` :  
-   - Transport : `voie_ram`, `voie_ferree`, `grand_axe`, `station_tram`  
-   - Eau : `surface_eau`, `cours_eau`  
-   - Bâti : `batiment_public`, `bati_indiv`, `amenagt_es_vert`  
-   - Administratif : `commune`, `limite_cus`  
-4. Organisez-les dans des **groupes thématiques** (transport, eau, bâti, administratif).  
-5. Vérifiez le **système de coordonnées (EPSG)** de chaque couche (**Clic droit > Propriétés > Source > Référence spatiale**) et assurez-vous qu’elles sont homogènes.  
+3. Importez les couches suivantes dans `database.gpkg` :  
 
-**Questions Strasbourg :**  
+| Thème      | Couches |
+|------------|---------|
+| Transport  | `voie_tram`, `voie_ferree`, `grand_axe`, `station_tram` |
+| Eau        | `surface_eau`, `cours_eau` |
+| Bâti       | `batiment_public`, `bati_indiv`, `amenagt_es_vert` |
+| Administratif | `commune`, `limite_cus` |
+
+4. Organisez-les en **groupes thématiques** dans le GeoPackage.  
+5. Vérifiez que toutes les couches partagent le même **système de coordonnées EPSG** (`Clic droit > Propriétés > Source > Référence spatiale`).  
+
+### Questions
 - Quel est le système de coordonnées des shapefiles EMS ?  
-- Quels shapefiles sont de type points ? lignes ? polygones ?  
-- Combien de bâtiments individuels ? Combien de communes ?
+- Identifiez les couches de type point, ligne, polygone.  
+- Combien de bâtiments individuels sont présents ? Combien de communes ?
 
 ---
 
 ## 2. Exploration des données vectorielles
 
-L’objectif est de **comprendre le contenu de chaque couche** et d’appliquer des outils de visualisation, de sélection et d’export.
+L’objectif est de découvrir le contenu de chaque couche et d’appliquer les outils de **visualisation, sélection et export**.
 
-### 2.1 Table attributaire
-- Pour chaque couche (ex. `grand_axe`, `batiment_public`, `commune`), ouvrez la table attributaire (**Clic droit sur la couche > Ouvrir la table attributaire**).  
-- Observez les **champs, types de données et effectifs**.  
-- Utilisez **Trier** et **Filtrer** pour explorer et répondre aux questions.
+### 2.1 Tables attributaires
+- Pour chaque couche (ex. `grand_axe`, `batiment_public`, `commune`) :  
+  - **Clic droit > Ouvrir la table attributaire**  
+  - Observez les champs, types de données et effectifs.  
+  - Trier et filtrer pour explorer les données.  
 
 ### 2.2 Symbologie
-- Pour chaque couche, définissez une symbologie claire (**Clic droit > Propriétés > Symbologie > Valeurs uniques**) :  
-  - Choisissez un champ (ex. `type_de_voie` pour `grand_axe`).  
-  - Cliquez sur **Ajouter toutes les valeurs** et appliquez une palette adaptée.  
-- Exportez la symbologie dans `Annexes`.
+- Définir une symbologie claire pour chaque couche :  
+  - **Clic droit > Propriétés > Symbologie > Valeurs uniques**  
+  - Choisir un champ pertinent pour catégoriser (ex. `type_voie` pour `grand_axe`)  
+  - Ajouter toutes les valeurs et appliquer une palette adaptée.  
+- Exportez la symbologie dans `Annexes` pour sauvegarder vos choix.  
 
 ### 2.3 Étiquettes
-- Affichez des étiquettes sur les couches concernées (**Clic droit > Propriétés > Étiquettes**) :  
+- Affichez des étiquettes pour mieux comprendre la localisation :  
   - `nom_station` pour `station_tram`  
   - `nom_commune` pour `commune`  
-- Ajustez police, taille et couleur.
+- Ajustez police, taille et couleur.  
 
 ### 2.4 Sélection par attributs
-- Menu : **Vecteur > Outils de recherche > Sélectionner par expression**  
-- Exemples :  
-  - Sélectionner les voies rapides (`grand_axe`)  
-  - Sélectionner les bâtiments sportifs (`batiment_public`)  
+- **Vecteur > Outils de recherche > Sélectionner par expression**  
+- Exemples ciblés :  
+  - Sélectionner les **voies rapides** dans `grand_axe`  
+  - Sélectionner les **bâtiments sportifs** dans `batiment_public`  
 
-**Questions :**  
-- Combien de voies rapides ?  
-- Combien de bâtiments sportifs ?  
+### Questions
+- Combien de voies rapides sont présentes ?  
+- Combien de bâtiments publics à vocation sportive ?
 
 ### 2.5 Sélection par localisation
-- Menu : **Vecteur > Outils de recherche > Sélection par localisation**  
-- Exemple : sélectionner toutes les communes incluses dans `limite_cus`.  
-- Vérifiez quelles entités sont sélectionnées et notez-les.
-
-### 2.6 Importer des données CSV (stations VéloHop)
-1. Téléchargez le fichier CSV des stations VéloHop et placez-le dans `Donnees`.  
-2. Vérifiez les champs `la` (latitude) et `lg` (longitude) dans Excel/LibreOffice.  
-3. Dans QGIS : **Clic droit sur le CSV > Importer comme couche de texte délimité**  
-   - X = `lg`, Y = `la`, système EPSG:4326 (WGS84)  
-
-**Question :** Quelle station dispose du plus grand nombre de vélos disponibles ?
-
-### 2.7 Calculs géométriques
-- Pour les couches polygonales ou linéaires, ajoutez un champ dans la table attributaire (**Calculatrice de champ**) :  
-  - `surface` pour polygones (`bati_indiv`, `surface_eau`)  
-  - `longueur` pour lignes (`grand_axe`, `cours_eau`)  
-- Vérifiez avec **Clic droit sur le champ > Calculer la géométrie**.
-
-**Questions :**  
-- Quelle est la surface totale des gravières (`surface_eau`) ?  
-- Quelle est la surface du Rhin (`cours_eau`) ?
-
-### 2.8 Exporter des sous-ensembles
-- Après une sélection, exportez la couche (**Clic droit > Exporter > Sauvegarder les entités sélectionnées sous…**) dans :  
-  - `Traitements` pour couches intermédiaires  
-  - `Resultats` pour résultats finaux
-
-**Exercices :**  
-- Exporter les jardins familiaux (`amenagt_es_vert`) → `Traitements`.  
-- Exporter toutes les stations VéloHop → `Traitements`.  
-- Exporter les stations VéloHop avec plus de 10 vélos → `Resultats`.
+- **Vecteur > Outils de recherche > Sélection par localisation**  
+- Sélectionnez toutes les communes **incluses dans `limite_cus`**.  
+- Vérifiez les entités sélectionnées et notez-les.  
 
 ---
 
-## 3. Exploration des données raster
+## 3. Importer des données CSV (stations VéloHop)
+1. Téléchargez le fichier CSV des stations VéloHop et placez-le dans `Donnees`.  
+2. Vérifiez les champs `la` (latitude) et `lg` (longitude).  
+3. Dans QGIS :  
+   - **Clic droit sur le CSV > Importer comme couche de texte délimité**  
+   - X = `lg`, Y = `la`, EPSG:4326 (WGS84)  
 
-L’objectif est de **comprendre la structure des rasters** et de manipuler leurs valeurs et symbologies.
+### Question
+- Quelle station possède le plus de vélos disponibles ?
 
-### 3.1 Raster multi-bande (orthophoto)
-- Importez `ortho_2018_CC48.tif`.  
-- Examinez les métadonnées pour identifier **résolution, système de coordonnées et unité**.
+---
 
-**Questions :**  
-- Quelle est la résolution du raster ?  
-- Quel est le système de coordonnées et son unité ?  
+## 4. Calculs géométriques
+- Pour les couches polygonales ou linéaires :  
+  - Ajouter un champ (`surface` pour polygones, `longueur` pour lignes)  
+  - **Clic droit sur le champ > Calculer la géométrie**
+
+### Questions
+- Surface totale des gravières (`surface_eau`) ?  
+- Surface du Rhin (`cours_eau`) ?
+
+---
+
+## 5. Exporter des sous-ensembles
+- Après sélection, exportez la couche :  
+  - `Traitements` pour couches intermédiaires  
+  - `Resultats` pour résultats finaux  
+
+### Exercices
+- Exporter les **jardins familiaux** (`amenagt_es_vert`) → `Traitements`  
+- Exporter toutes les **stations VéloHop** → `Traitements`  
+- Exporter les stations VéloHop avec **>10 vélos** → `Resultats`  
+
+---
+
+## 6. Exploration des rasters
+
+### 6.1 Raster multi-bande (orthophoto)
+- Importez `ortho_2018_CC48.tif`  
+- Vérifiez **résolution, système de coordonnées et unités**  
+
+### Questions
+- Résolution du raster ?  
+- Système de coordonnées et unité ?  
 - Valeurs des pixels aux coordonnées X=2050750, Y=7275678 ?
 
-### 3.2 Raster mono-bande (hauteur des toits)
-- Importez `hauteur_toits_CC48.tif`.  
+### 6.2 Raster mono-bande (hauteur des toits)
+- Importez `hauteur_toits_CC48.tif`  
 
-**Questions :**  
-- Quelle est la résolution ?  
-- Combien de bandes contient-il ?  
-- Que représentent les valeurs des pixels ?  
+### Questions
+- Résolution et nombre de bandes ?  
+- Que représentent les valeurs ?
 
-- Modifiez la symbologie (**Propriétés > Symbologie > Classification manuelle**) :  
+- Symbologie :  
   - Toits >100 m → rouge  
-  - Toits 1–5 m → vert
+  - Toits 1–5 m → vert  
 
-### 3.3 Distances et coordonnées
-- Identifiez la flèche de la cathédrale et la statue de la Place de la République.  
-- Mesurez la distance à vol d’oiseau avec l’outil **Mesurer**.  
-- Vérifiez les valeurs via les coordonnées et l’unité du système.
+### 6.3 Distances et coordonnées
+- Identifier la **flèche de la cathédrale** et la **statue de la Place de la République**  
+- Mesurer la distance à vol d’oiseau  
+- Vérifier via les coordonnées et unités
 
 ---
 
-## 4. Bilan et réflexions
-- Structuration d’un projet QGIS avec GeoPackage centralisé.  
-- Exploration des données vectorielles : tables attributaires, symbologie, étiquetage.  
-- Sélections par attributs et par localisation, export de sous-ensembles.  
-- Calculs géométriques simples (surfaces, longueurs).  
-- Exploration et symbolisation des rasters.  
-- Utilisation d’outils de mesure et lecture de coordonnées.
+## 7. Bilan
+- Organisation d’un projet QGIS avec **GeoPackage centralisé**  
+- Exploration des données vectorielles et raster  
+- Sélections par attributs et localisation  
+- Calculs géométriques simples  
+- Export et manipulation de sous-ensembles  
+- Utilisation d’outils de mesure et lecture de coordonnées  
+
