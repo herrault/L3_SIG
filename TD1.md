@@ -1,147 +1,151 @@
-# TD 1 – Explorer l'environnement, explorer les données
+# TD1 – Explorer l'environnement, explorer les données
 
-**Date :** 02-09-2025  
+**Date :** 06/02/2022  
 **Nom :** Herrault PA - Chardon V
 
-## 🎯 Objectifs
-- Découvrir et explorer l’interface QGIS.  
-- Lire et organiser des données vectorielles et raster.  
-- Réaliser des traitements simples et extraire des informations géométriques/attributaires de base.  
+## Objectifs
+- Découverte de l’interface du logiciel QGIS ;  
+- Charger, explorer, enregistrer des données.
 
 ---
 
-## 0. Préparation de l’espace de travail
-1. Créez un dossier principal `TD1_QGIS`.  
-2. Créez les sous-dossiers :  
-   - `Donnees` (fichiers bruts fournis)  
-   - `Traitements` (couches intermédiaires créées)  
-   - `Resultats` (produits finaux)  
-   - `Annexes` (exports de symbologie, captures d’écran, notes, etc.)  
+## 1. Données
+Les données utilisées pour le TD sont dans le dossier compressé `data_TD1`, à retrouver sur Moodle.  
+Vous devez le décompresser où vous voulez.  
+Il s’agit de données thématiques recouvrant le territoire de trois communes du département Français des Pyrénées Orientales (routes, bâti, végétation …).
 
-Cette organisation permettra de **séparer les données sources** (jamais modifiées) des résultats produits pendant le TD.  
+**Question :** Quel est le format des données contenues dans le dossier du TD1 ? Cherchez sur Internet à quoi correspondent les différents formats (`.shp`, `.shx`, etc.).
 
----
-## 1. Importer et organiser les données vectorielles (Eurométropole)
+- `.shp` : stocke les entités géographiques. Il s'agit du shapefile proprement-dit, utilisé pour visualiser les données dans QGIS.  
+- `.dbf` : stocke les données attributaires (tableur consultable avec Excel ou LibreOffice). Ne pas modifier le fichier original.  
+- `.shx` : stocke les index des entités géométriques contenues dans le `.shp`.  
+- `.prj` : stocke le système de projection des données géométriques.
 
-L’objectif est de **savoir importer des données shapefiles** et de les organiser dans un **GeoPackage** pour faciliter leur gestion.
-
-### 1.1 Jeux de données Strasbourg
-1. Décompressez `data_TD_eurometropole` dans le dossier `Donnees`.  
-2. Dans QGIS, créez un **GeoPackage** nommé `database.gpkg` dans `TD1_QGIS`.  
-   - Ce fichier servira de **base de travail centralisée**.  
-   - Chaque shapefile importé y sera enregistré comme une couche.  
-3. Importez les shapefiles suivants dans `database.gpkg` :  
-   - `voie_ram`, `voie_ferree`, `surface_eau`, `station_tram`, `limite_cus`, `grand_axe`, `cours_eau`, `commune`, `batiment_public`, `bati_indiv`, `amenagt_es_vert`.  
-4. Organisez-les dans des groupes logiques (par exemple : transport, eau, bâti, administratif).  
-5. Vérifiez le **système de coordonnées (EPSG)** de chaque couche pour s’assurer qu’elles sont homogènes.  
-
-**Questions Strasbourg :**  
-- Quel est le système de coordonnées des shapefiles EMS ?  
-- Quels shapefiles sont de type points ? lignes ? polygones ?  
-- Combien de bâtiments individuels ? Combien de communes ?  
+**Note :** Pour avoir l’intégralité des fonctionnalités, une couche vectorielle doit au minimum avoir `.shp`, `.dbf`, `.shx` et `.prj`.
 
 ---
 
-## 2. Exploration des données vectorielles
+## 2. Créer un espace de travail
+1. Créez un dossier nommé `TD1`.  
+2. Copiez les données décompressées précédemment dans ce dossier.  
 
-L’objectif est de **comprendre le contenu** des couches grâce aux tables attributaires, symbologies, sélections et exports.
+**Règles de dénomination des fichiers :**  
+- Pas d'espaces dans les noms (`Parcelle en herbe` → `Parcelle_en_herbe`)  
+- Pas de caractères accentués (`Propriétaire` → `Proprietaire`)  
+- Pas de caractères spéciaux (`& : ; / \ @…`)  
+- Pas de chiffre comme premier caractère (`1990_habitat` → `Habitat_1990`)  
 
-### 2.1 Table attributaire
-- Faites un clic droit sur une couche → **Ouvrir la table attributaire**.  
-- Observez les champs, types de données et effectifs.  
-- Utilisez **Trier** ou **Filtrer** pour explorer le contenu.  
+---
 
-### 2.2 Symbologie
-- Clic droit sur une couche → **Propriétés > Symbologie > Valeurs uniques**.  
-- Choisissez un champ, cliquez sur **Ajouter toutes les valeurs**, appliquez une palette.  
-- Exportez la symbologie dans `Annexes`.  
+## 3. Connecter l’espace de travail dans QGIS
+1. Lancez **QGIS 3.x**.  
+2. Dans le panneau **Navigateur**, ajoutez le dossier `TD1` en tant que source de données.  
+3. La source apparaît maintenant dans QGIS, vous permettant de naviguer et charger les fichiers.
 
-### 2.3 Étiquettes
-- Clic droit sur la couche → **Propriétés > Étiquettes**.  
-- Affichez `nom_station` (stations de tram) ou `nom_commune`.  
-- Modifiez police, taille, couleur si nécessaire.  
+---
 
-### 2.4 Sélection par attributs
-- Menu : **Vecteur > Outils de recherche > Sélectionner par expression**.  
+## 4. Créer une GeoPackage et organiser les données
+1. Dans QGIS : **Clic droit sur `TD1` → Nouvelle GeoPackage**.  
+2. Nommez-la `database.gpkg`. Cette GeoPackage servira de **base de travail centralisée**.  
+3. Créez deux **groupes** (ou classes) à l’intérieur de la GeoPackage :  
+   - `lineaire` → pour les entités linéaires  
+   - `surfacique` → pour les entités surfaciques  
+
+**Astuce :** Vérifiez le système de coordonnées (EPSG) de chaque couche avant import.  
+
+4. Importez les fichiers `.shp` dans les groupes correspondants.  
+5. Renommez les couches dans l’arborescence et observez comment QGIS gère les fichiers.
+
+---
+
+## 5. Explorer les données
+1. **Créer une carte** : `Projet → Nouvelle Carte`.  
+2. Ajoutez vos couches depuis la GeoPackage en les glissant dans le panneau **Couches**.  
+3. Enregistrez votre projet (`Projet → Enregistrer sous`).
+
+### 5.1 Table attributaire
+- Clic droit sur une couche → **Ouvrir la table attributaire**.  
+- Observez champs et types de données.  
+
+### 5.2 Symbologie
+- Clic droit sur la couche → **Propriétés > Symbologie > Valeurs uniques**.  
+- Choisissez un champ et **Ajouter toutes les valeurs**.  
+- Appliquez une palette de couleurs.  
+
+### 5.3 Étiquettes
+- Clic droit sur la couche → **Propriétés > Étiquettes > Simple**.  
+- Affichez `nom_station` ou `nom_commune`.  
+
+### 5.4 Sélection par attributs
+- Menu : **Sélection → Sélection par expression**  
 - Exemples :  
-  - Sélectionner les voies rapides (`grand_axe`).  
-  - Sélectionner les bâtiments sportifs (`batiment_public`).  
+  - Voies rapides (`grand_axe`)  
+  - Bâtiments sportifs (`batiment_public`)  
 
 **Questions :**  
-- Combien de voies rapides ?  
-- Combien de bâtiments sportifs ?  
+- Quelle est la distance entre le centre-ville de Torreilles et Villelongue-de-la-Salanque ?  
+- Quelle est la longueur et la nature du tronçon `TRONROUT0000000038686356` ?  
 
-### 2.5 Sélection par localisation
-- Menu : **Vecteur > Outils de recherche > Sélection par localisation**.  
-- Exemple : sélectionner toutes les communes incluses dans `limite_cus`.  
+### 5.5 Sélection par localisation
+- Menu : **Vecteur → Outils de géotraitement → Sélection par localisation**  
+- Exemple : communes à l’intérieur de la couche `limite_cus`.  
 
-### 2.6 Importer des données CSV (stations VéloHop)
-1. Téléchargez les stations VéloHop et placez le fichier dans `Donnees`.  
-2. Ouvrez le CSV avec Excel/LibreOffice et vérifiez les champs `la` (latitude) et `lg` (longitude).  
-3. Dans QGIS : **Clic droit sur le CSV > Importer comme couche de texte délimité**.  
+### 5.6 Importer un CSV (stations VéloHop)
+1. Placez le fichier CSV dans `Donnees`.  
+2. **Couches → Ajouter une couche → Ajouter une couche de texte délimité**  
    - X = `lg`  
    - Y = `la`  
-   - Système de coordonnées : WGS84 (EPSG:4326).  
+   - EPSG = 4326 (WGS84)  
 
-**Question :** Quelle station dispose du plus grand nombre de vélos disponibles ?  
+**Question :** Quelle station dispose du plus grand nombre de vélos disponibles ?
 
-### 2.7 Calculs géométriques
-- Ouvrez la table attributaire → **Calculatrice de champ**.  
-- Ajoutez un champ `surface` ou `longueur` selon le type de géométrie.  
-- Menu : **Clic droit sur le champ > Calculer la géométrie** pour vérifier.  
+### 5.7 Calcul géométrique
+- Ouvrir la table attributaire → **Calculatrice de champ**  
+- Ajouter un champ `surface` ou `longueur` et calculer la géométrie.  
 
 **Questions :**  
-- Quelle est la surface totale des gravières ?  
-- Quelle est la surface du Rhin ?  
+- Surface totale des gravières ?  
+- Surface du Rhin ?  
 
-### 2.8 Exporter des sous-ensembles
-- Après une sélection → **Clic droit > Exporter > Sauvegarder les entités sélectionnées sous…**.  
+### 5.8 Exporter des sous-ensembles
+- Sélection → **Couches → Exporter → Enregistrer les entités sélectionnées sous…**  
 
 **Exercices :**  
-- Exporter les jardins familiaux → `Traitements`.  
-- Exporter toutes les stations VéloHop → `Traitements`.  
-- Exporter les stations VéloHop avec plus de 10 vélos → `Resultats`.  
+- Exporter jardins familiaux → `Traitements`  
+- Exporter stations VéloHop → `Traitements`  
+- Exporter stations VéloHop >10 vélos → `Resultats`
 
 ---
 
-## 3. Exploration des données raster
-
-Objectif : comprendre la structure des données raster (résolution, système de coordonnées, valeurs de pixels) et les manipuler pour en extraire de l’information.
-
-### 3.1 Raster multi-bande (orthophoto)
+## 6. Exploration des données raster
+### 6.1 Raster multi-bande (orthophoto)
 - Importez `ortho_2018_CC48.tif`.  
-- Ouvrez les propriétés pour examiner les métadonnées.  
+- Vérifiez résolution, système de coordonnées, unité et valeurs des pixels (outil **Identifier**).  
 
 **Questions :**  
-- Quelle est la résolution du raster ?  
-- Quel est son système de coordonnées et son unité ?  
-- Quelles sont les valeurs de pixels aux coordonnées X=2050750, Y=7275678 ?  
+- Résolution du raster ?  
+- Système de coordonnées et unité ?  
+- Valeurs aux coordonnées X=2050750 Y=7275678 ?
 
-### 3.2 Raster mono-bande (hauteur des toits)
+### 6.2 Raster mono-bande (hauteur des toits)
 - Importez `hauteur_toits_CC48.tif`.  
+- Vérifiez résolution, nombre de bandes, et interprétation des valeurs.  
+- Symbologie → Classification manuelle :  
+  - >100 m → rouge  
+  - 1–5 m → vert  
 
-**Questions :**  
-- Quelle est la résolution du raster ?  
-- Combien de bandes contient-il ?  
-- Que représentent les valeurs des pixels ?  
-
-- Modifiez la symbologie : **Propriétés > Symbologie > Classification manuelle**.  
-- Créez des classes colorées, par exemple :  
-  - Toits >100 m → rouge  
-  - Toits entre 1–5 m → vert  
-
-### 3.3 Distances et coordonnées
-- Identifiez la flèche de la cathédrale et la statue de la Place de la République.  
-- Mesurez la distance à vol d’oiseau avec l’outil **Mesurer**.  
-- Vérifiez le calcul à partir des coordonnées et de l’unité du système.  
+### 6.3 Distances et coordonnées
+- Identifier la flèche de la cathédrale et la statue de la Place de la République.  
+- Mesurer distance à vol d’oiseau (outil **Mesurer**).  
+- Vérifier distance à partir des coordonnées et unité du système.
 
 ---
 
-## 4. Bilan et réflexions
-- Organisation d’un projet QGIS et structuration des données dans un GeoPackage.  
-- Exploration des données vectorielles (tables attributaires, symbologie, étiquetage).  
-- Sélections par attributs et localisation, exports de sous-ensembles.  
-- Calculs géométriques simples (surfaces, longueurs).  
-- Exploration et symbolisation de données raster.  
-- Manipulation d’outils de mesure et de lecture de coordonnées.  
+## 7. Bilan
+- Organisation de projet QGIS avec GeoPackage.  
+- Exploration des couches vectorielles (attributs, symbologie, étiquettes).  
+- Sélection par attributs et localisation, export de sous-ensembles.  
+- Calculs géométriques (surface, longueur).  
+- Exploration et symbologie des rasters.  
+- Mesures et lecture de coordonnées.
 
