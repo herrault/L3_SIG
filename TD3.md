@@ -43,7 +43,7 @@
 📌 **Pourquoi ?**  
 La phase exploratoire est essentielle : avant toute analyse, il faut comprendre ce que contiennent les données. La symbologie thématique permet d’identifier visuellement des tendances (par ex. relation distance - taille des galets).  
 
-### 1.2 Sélection par attributs et jointure attributaire
+### 2. Sélection par attributs et jointure attributaire
 
 **Questions :**  
 - Combien de galets ont été retrouvés par classe granulométrique lors de la deuxième campagne ?
@@ -55,7 +55,7 @@ La phase exploratoire est essentielle : avant toute analyse, il faut comprendre 
 *Contexte : vous préparez un rapport présentant les résultats de l'études.*  
 ---
 
-### 2. Calcul des distances de transport et extraction de métriques
+### 3. Calcul des distances de transport et extraction de métriques
 - Créer une ligne centrale (centerline) à partir de la couche `chenal_actif.gpkg`
 - Réaliser une projection orthogonale des traceurs inclus dans la couche `Traceurs_P1.gpkg` - exporter le résultat dans `Traitements` sous `Traceurs_P1_orthogonale.gpkg`.  
 - Calculer la distance euclidienne de chaque galet inclus dans la couche `Traceurs_P1.gpkg` - exporter dans `Traitements` sous `Traceurs_P1_euclidienne.gpkg`.
@@ -68,29 +68,31 @@ La phase exploratoire est essentielle : avant toute analyse, il faut comprendre 
 
 ---
 
-### 3. Limitation à la zone d’étude (Clip) 
+### 4. Mesure et étude des évolutions topo-bathymétriques du chenal actif 
 - Découpez `MNT_2022.gpkg` et `MNT_2023.gpkg` avec `chenal_actif.gpkg`.  
-- Sauvegardez en :  
-  - `MNT_2022_clip.gpkg`  
-  - `MNT_2023_CLIP.GPKG`  
-
----
-
-
-
+- Sauvegardez les deux couches dans `Traitements` sous`MNT_2022_clip.gpkg`; `MNT_2023_clip.gpkg` 
+- Réaliser une soustraction des deux MNT en utilisant la calculatrice raster.
+  - Sauvegardez le résultat dans `Traitements` sous `MNT_2022_2023_clip.gpkg`
+ 
+**Questions :**   
+- Supposons une incertitude de mesure de 0,1 m pour chaque levé. Intégrer cette incertitude par la réalisation d'un nouveau raster à partir du raster `MNT_2022_2023_clip.gpkg`.
+- Enregistrez votre nouvelle couche raster dans `Traitements` sous `MNT_2022_2023_clip_corr.gpkg`
+- Quelle est la différence de superficie entre les deux rasters ?
+- Que constatez-vous en comparant la localisation des traceurs et les évolutions topo-bathymétriques ?
+     
 ---
 
 ### 5. Cartographie finale
 Réalisez une carte thématique incluant :  
-- Arbres anciens et jeunes.  
-- Bâtiments selon densité d’arbres à proximité.  
-- Réseau viaire.  
-- Limites de la zone d’étude.  
+- La position initiale et de 2023 des traceurs détectés
+- Les évolutions topo-bathymétriques survenues entre les deux survols LiDAR topo-bathymétriques
+- Limites du chenal actif
+- Orthophotographie de la zone d'étude  
 
 Ajoutez une légende claire, un titre, une échelle et une flèche du Nord.  
 
 📌 **Pourquoi ?**  
-La carte finale est la synthèse du travail : elle permet de communiquer efficacement les résultats à un commanditaire non spécialiste (ici, la Ville de Strasbourg).  
+La carte finale est la synthèse du travail : elle permet de communiquer efficacement les résultats à un commanditaire non spécialiste (ici, EDF).  
 
 ---
 
@@ -100,7 +102,7 @@ La carte finale est la synthèse du travail : elle permet de communiquer efficac
 - Création d’indicateurs combinant écologie et urbanisme.  
 - Production de cartes et export de données vectorielles réutilisables.  
 
-*Vous avez suivi le workflow complet d’un projet SIG appliqué à la ville, combinant écologie et aménagement.*  
+*Vous avez suivi le workflow complet d’un projet SIG en géomorphologie fluviale, combinant évolutions topo-bathymétriques et transport de la charge de fond.*  
 
 ---
 
