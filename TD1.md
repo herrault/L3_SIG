@@ -17,7 +17,6 @@ Avant de commencer, nous allons créer un espace de travail structuré :
 1. Créez un dossier principal `TD1_QGIS`.  
 2. Créez les sous-dossiers :  
    - `Donnees` → fichiers bruts fournis  
-   - `Traitements` → couches intermédiaires créées  
    - `Resultats` → produits finaux  
    - `Annexes` → symbologie exportée, captures d’écran, notes  
 
