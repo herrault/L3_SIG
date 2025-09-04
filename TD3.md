@@ -77,12 +77,14 @@ La phase exploratoire est essentielle : avant toute analyse, il faut comprendre 
 - Sauvegardez les deux couches dans `Traitements` sous`MNT_2022_clip.gpkg`; `MNT_2023_clip.gpkg` 
 - Réaliser une soustraction des deux MNTs en utilisant la calculatrice raster pour identifier les évolutions topo-bathymétrique au cours du temps.
   - Sauvegardez le résultat dans `Traitements` sous `MNT_2022_2023.gpkg`
+- Utiliser la bonne symbologie pour représenter les évolutions topo-bathymétriques par classe de 0,5 m. (couleur chaudes évolutions > 0 m; couleurs froides évolutions < 0 m)
  
 **Questions :**   
 - Supposons une incertitude de mesure de 0,1 m pour chaque levé. Intégrer cette incertitude par la réalisation d'un nouveau raster à partir du raster `MNT_2022_2023.gpkg`.
 - Enregistrez votre nouvelle couche raster dans `Traitements` sous `MNT_2022_2023_corr.gpkg`
-- Utiliser la bonne symbologie pour 
-- Que constatez-vous en comparant la localisation des traceurs et les évolutions topo-bathymétriques ?
+- Utiliser la bonne symbologie pour représenter les évolutions topo-bathymétriques par classe de 0,5 m (couleur chaudes évolutions > 0 m; couleurs froides évolutions < 0 m)
+- Que constatez-vous en comparant `MNT_2022_2023.gpkg` et `MNT_2022_2023_corr.gpkg`?
+- Que constatez-vous en comparant la localisation des traceurs détectés en 2023 et les évolutions topo-bathymétriques observées entre 2022 et 2023 sur `MNT_2022_2023_corr.gpkg` ?
      
 ---
 
@@ -97,7 +99,6 @@ Ajoutez une légende claire, un titre, une échelle et une flèche du Nord.
 
 📌 **Pourquoi ?**  
 La carte finale est la synthèse du travail : elle permet de communiquer efficacement les résultats à un commanditaire non spécialiste (ici, EDF).  
-
 ---
 
 ## 6. Bilan et réflexions (à faire)
