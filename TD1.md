@@ -86,43 +86,49 @@ L’objectif est de découvrir le contenu de chaque couche et d’appliquer les 
 
 ### 2.5 Sélection par localisation
 - **Vecteur > Outils de recherche > Sélection par localisation**  
-- Sélectionnez toutes les communes **incluses dans `limite_cus`**.  
-- Vérifiez les entités sélectionnées et notez-les.  
+- Sélectionnez toutes les communes **incluses dans `limite_cus`**.  Attention à correctement sélectionner le bon critère topologique. 
+- Vérifiez les entités sélectionnées spatialement et du point de vue attributaire.
+
+### Question
+- Combien de communes font partie intégrantes de la CUS ?
 
 ---
 
 ## 3. Importer des données CSV (stations VéloHop)
 1. Téléchargez le fichier CSV des stations VéloHop et placez-le dans `Donnees`.  
-2. Vérifiez les champs `la` (latitude) et `lg` (longitude).  
+2. Vérifiez les champs `lat` (latitude) et `lon` (longitude).  
 3. Dans QGIS :  
-   - **Clic droit sur le CSV > Importer comme couche de texte délimité**  
-   - X = `lg`, Y = `la`, EPSG:4326 (WGS84)  
+   - **Couche > Ajouter une couche > Ajouter une couche de texte délimité**  
+   - X = `lon`, Y = `lat`, EPSG:4326 (WGS84)  
+4. Deux points à observer : (1) la couche est temporaire, il faut donc la rendre permanente; (2) le système de coordonnées est différent des autres couches
+5. Pour effectuer cette tâche > **enregistrez-sous** > exportez cette couche sous 'stat_velhop_euro.shp' dans **Résultats** et changez le système pour celui des autres couches
+6. Placez la sensuite dans votre database
 
 ### Question
 - Quelle station possède le plus de vélos disponibles ?
+- Avec la méthode employée précédemment, combien de stations sont localisées sur la commune de Strasbourg ?
 
 ---
 
 ## 4. Calculs géométriques
-- Pour les couches polygonales ou linéaires :  
+- Pour les couches polygonales ou linéaires (surface_eau, cours_eau, voie_tram)
   - Ajouter un champ (`surface` pour polygones, `longueur` pour lignes)  
-  - **Clic droit sur le champ > Calculer la géométrie**
+  - Calculez les surfaces en hectares et les longueurs en mètres
 
 ### Questions
 - Surface totale des gravières (`surface_eau`) ?  
 - Surface du Rhin (`cours_eau`) ?
+- Voie de tram avec la longueur la plus grande ?
 
 ---
 
 ## 5. Exporter des sous-ensembles
-- Après sélection, exportez la couche :  
-  - `Traitements` pour couches intermédiaires  
-  - `Resultats` pour résultats finaux  
+- Après sélection, exportez la couche : 
 
 ### Exercices
-- Exporter les **jardins familiaux** (`amenagt_es_vert`) → `Traitements`  
-- Exporter toutes les **stations VéloHop** → `Traitements`  
-- Exporter les stations VéloHop avec **>10 vélos** → `Resultats`  
+- Exporter les **jardins familiaux** (`amenagt_es_vert`) → `Résultats`  
+- Exporter toutes les **etang**  → `Résultats`  
+- Exporter les stations VéloHop avec **>10 vélos** et situées en dehors de Strasbourg → `Resultats`  
 
 ---
 
@@ -133,7 +139,8 @@ L’objectif est de découvrir le contenu de chaque couche et d’appliquer les 
 - Vérifiez **résolution, système de coordonnées et unités**  
 
 ### Questions
-- Résolution du raster ?  
+- Résolution du raster ?
+- Nombre de bandes ?
 - Système de coordonnées et unité ?  
 - Valeurs des pixels aux coordonnées X=2050750, Y=7275678 ?
 
@@ -141,18 +148,16 @@ L’objectif est de découvrir le contenu de chaque couche et d’appliquer les 
 - Importez `hauteur_toits_CC48.tif`  
 
 ### Questions
-- Résolution et nombre de bandes ?  
+- Résolution spatiale ?  
 - Que représentent les valeurs ?
 
-- Symbologie :  
-  - Toits >100 m → rouge  
+- Appliquez la symbologie suivante :  
+  - Toits >50 m → rouge  
   - Toits 1–5 m → vert  
 
 ### 6.3 Distances et coordonnées
 - Identifier la **flèche de la cathédrale** et la **statue de la Place de la République**  
-- Mesurer la distance à vol d’oiseau  
-- Vérifier via les coordonnées et unités
-
+- Mesurer la distance à vol d’oiseau avec l'outil règle
 ---
 
 ## 7. Bilan
