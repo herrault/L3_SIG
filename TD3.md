@@ -11,6 +11,7 @@
 - Réaliser des projections et calculer de distance
 - Réaliser des opérations arithmétiques sur des données raster.
 - Manipuler, traiter et analyser des données vectorielles et raster en rivière.
+- Adapter la bonne symbologie pour étudier des données rasters
 - Développer un regard critique sur la précision des données utilisées  
 - Produire des résultats réutilisables pour des projets en géomorphologie fluviale (mobilité de la charge de fond et évolutions topo-bathymétriques.  
 
@@ -58,29 +59,29 @@ La phase exploratoire est essentielle : avant toute analyse, il faut comprendre 
 ---
 
 ### 3. Calcul des distances de transport et extraction de métriques
-- Créer une ligne centrale (centerline) à partir de la couche `Chenal_actif.gpkg`
+- Créer une ligne centrale (centerline) à partir de la couche `Chenal_actif.gpkg`. Exporter le résultat dans `Traitements` sous `Centerline.gpkg`.  
 - Réaliser une projection orthogonale sur la ligne centrale des traceurs inclus dans la couche `Traceurs_P1.gpkg` - exporter le résultat dans `Traitements` sous `Traceurs_P1_orthogonale.gpkg`.  
 - Calculer la distance euclidienne de chaque galet inclus dans la couche `Traceurs_P1.gpkg` - exporter dans `Traitements` sous `Traceurs_P1_euclidienne.gpkg`.
-- Quelle est la distance minimale, moyenne, médiane et maximale des galets retrouvés entre les deux levés pour les deux méthodes de calcul des distances?
-- Réaliser la même opération en incluant uniquement les galets qui se sont déplacés au minimum de 5m. Que constatez-vous ?
+- Quelle est la distance minimale, moyenne, médiane et maximale des galets calculées entre les deux levés pour les deux méthodes de calcul ? Que remarquez-vous ?
+- Réaliser la même opération en incluant uniquement les galets qui se sont déplacés au minimum de 5 m. Que constatez-vous ?
 
 **Questions :**  
 - Quelles est la classe granulométrique qui s'est déplacée en moyenne le plus loin ? 
 - Pensez-vous que ces distances sont robustes statistiquement ?
-- Si pas le cas, quelle solution proposeriez-vous ?
+- Si ce n'est pas le cas, quelle solution proposeriez-vous ?
 
 ---
 
 ### 4. Mesure et étude des évolutions topo-bathymétriques du chenal actif 
 - Découpez `MNT_2022.gpkg` et `MNT_2023.gpkg` avec `chenal_actif.gpkg`.  
 - Sauvegardez les deux couches dans `Traitements` sous`MNT_2022_clip.gpkg`; `MNT_2023_clip.gpkg` 
-- Réaliser une soustraction des deux MNT en utilisant la calculatrice raster.
-  - Sauvegardez le résultat dans `Traitements` sous `MNT_2022_2023_clip.gpkg`
+- Réaliser une soustraction des deux MNTs en utilisant la calculatrice raster pour identifier les évolutions topo-bathymétrique au cours du temps.
+  - Sauvegardez le résultat dans `Traitements` sous `MNT_2022_2023.gpkg`
  
 **Questions :**   
-- Supposons une incertitude de mesure de 0,1 m pour chaque levé. Intégrer cette incertitude par la réalisation d'un nouveau raster à partir du raster `MNT_2022_2023_clip.gpkg`.
-- Enregistrez votre nouvelle couche raster dans `Traitements` sous `MNT_2022_2023_clip_corr.gpkg`
-- Quelle est la différence de superficie entre les deux rasters ?
+- Supposons une incertitude de mesure de 0,1 m pour chaque levé. Intégrer cette incertitude par la réalisation d'un nouveau raster à partir du raster `MNT_2022_2023.gpkg`.
+- Enregistrez votre nouvelle couche raster dans `Traitements` sous `MNT_2022_2023_corr.gpkg`
+- Utiliser la bonne symbologie pour 
 - Que constatez-vous en comparant la localisation des traceurs et les évolutions topo-bathymétriques ?
      
 ---
