@@ -1,4 +1,4 @@
-# TD2 – Analyse spatiale à partir de données vectorielles
+# TD2 – Analyse spatiale à partir de données vectorielles // La question des vieux arbres à Strasbourg
 
 **Date :** 02-09-2025  
 **Nom :** Herrault PA et Chardon V  
@@ -12,7 +12,7 @@
 - Quantifier les interactions entre écologie urbaine (arbres) et aménagement (bâtiments, voirie).  
 - Produire des résultats réutilisables pour des projets urbains et écologiques.  
 
-*Contexte : Vous êtes consultant pour la ville de Strasbourg. Votre mission est d’analyser la répartition des arbres en lien avec le bâti et le réseau viaire, afin d’identifier les zones prioritaires pour la gestion urbaine et la biodiversité.*  
+*Contexte : Les vieux arbres en milieu urbain remplissent des fonctions écologiques essentielles : régulation thermique, filtration de l’air, rétention des eaux pluviales, support de biodiversité. Leur morphologie (couronne étendue, racines superficielles) et leur longévité les rendent sensibles aux pressions physiques et environnementales liées à l’urbanisation. La proximité des infrastructures, notamment la voirie et les bâtiments, influence directement leur état de santé et leur pérennité. Ces éléments modifient les conditions pédologiques, hydriques et lumineuses, et peuvent entraîner un stress mécanique ou physiologique. L’analyse de la répartition des vieux arbres en ville nécessite donc une prise en compte systématique du contexte bâti et des aménagements urbains..*  
 
 ---
 
@@ -32,19 +32,16 @@
 ## Séance 1 – Exploration et sélection
 
 ### 1.1 Exploration des données
-- Ajoutez les quatre couches à QGIS.  
+- De la même manière que dans le TD1, créez un geopackage nommée database_arbre et placez vos couches à l'intérieur
 - Examinez les tables attributaires : notez les types de données, champs disponibles, nombre d’entités.  
 - Modifiez la symbologie pour améliorer la lecture cartographique :  
   - `arbres` → couleur par âge (jeune/ancien), forme par genre.  
   - `batiments` → couleur par usage, transparence 50%.  
   - `voirie` → couleur par type de voie.  
-  - `zone_etude` → contour clair, transparence 30%.  
-
-📌 **Pourquoi ?**  
-La phase exploratoire est essentielle : avant toute analyse, il faut comprendre ce que contiennent les données. La symbologie thématique permet d’identifier visuellement des tendances (par ex. concentration d’arbres anciens dans certains quartiers).  
+  - `zone_etude` → contour gris foncé, transparence 30%.  
 
 **À rendre :**  
-- Exportez une vue pour chaque visualisation et collez-la dans un document Word (`Annexes`).  
+- Exportez une vue (Projet > Exporter/Importer) pour chaque visualisation et collez-la dans un document Word (`Annexes`).  
 
 **Questions :**  
 - Combien d’arbres sont anciens ?  
@@ -54,26 +51,23 @@ La phase exploratoire est essentielle : avant toute analyse, il faut comprendre 
 ---
 
 ### 1.2 Sélection par attributs
-- Sélectionnez tous les arbres du genre *Quercus* (chênes).  
-- Sélectionnez tous les bâtiments de plus de 20 m de hauteur.  
 
-📌 **Pourquoi ?**  
-Les sélections attributaires permettent de filtrer une couche selon les valeurs contenues dans la table. Cela sert à isoler des cas particuliers (ici, les chênes et les grands bâtiments) pour une analyse ciblée.  
+
+- Sélectionnez tous les vieux arbres du genre *Quercus* (chênes).  
+- Sélectionnez tous les bâtiments de plus de 20 m de hauteur.
 
 **Exercices :**  
-- Exportez les arbres *Quercus* dans `Traitements` sous `quercus.shp`.  
-- Exportez les bâtiments >20 m dans `Traitements` sous `batiments_grands.shp`.  
-
-*Contexte : vous préparez un rapport sur les chênes et les grands bâtiments pour orienter un projet de verdissement urbain.*  
+- Exportez les vieux *Quercus* dans `Résultats` sous `quercus_vieux.shp`.  
+- Exportez les bâtiments >20 m dans `Résultats` sous `batiments_grands.shp`.  
 
 ---
 
 ### 1.3 Sélection par localisation
-- Sélectionnez les arbres situés à moins de 20 m des voies principales.  
-- Sélectionnez les bâtiments situés dans un rayon de 50 m autour des arbres anciens.  
 
-📌 **Pourquoi ?**  
-La sélection spatiale permet de croiser des couches en fonction de leur position relative dans l’espace. C’est un outil puissant pour analyser des interactions concrètes, comme la proximité arbres/bâtiments ou arbres/voirie.  
+📌 Les vieux arbres sont 
+
+- Sélectionnez les vieux quercus situés à moins de 20 m des voies principales et exportez les ('vieux_quercus_risques.shp')
+- Sélectionnez les grands bâtiments situés dans un rayon de 50 m autour des arbres anciens.  
 
 **Questions :**  
 - Combien d’arbres sont proches du réseau viaire ?  
