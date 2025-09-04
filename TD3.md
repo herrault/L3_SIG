@@ -1,4 +1,4 @@
-# TD3 – La géomorphologie fluviale, c'est géniale
+# TD3 – La géomorphologie fluviale, c'est génial
 
 **Date :** 04-09-2025  
 **Nom :** Herrault PA et Chardon V  
