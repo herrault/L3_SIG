@@ -91,62 +91,75 @@ sont considérés comme **en danger**. Ceux qui cumuleraient les deux profils (a
 
 📌 **Contexte ?**  
 
-La seconde partie vise à introduire de nouvelles fonctionnalités plus avancés (regroupement, fusion, agrrégation, etc) pour tirer des partie des intéractions entre plusieyrs couches. 
+La seconde partie vise à introduire de nouvelles fonctionnalités plus avancés (regroupement, fusion, aggrégation, etc) pour tirer des partie des intéractions d'une ou plusieurs couches. 
 
 ### 2.1 Limitation à la zone d’étude (Clip)
 
-- Outil : **Vecteur > Outils de géotraitement > Découper (Clip)**  
-- Découpez `arbres.shp` et `batiments.shp` avec `zone_etude.shp`.  
+- Outil : **Vecteur > Outils de géotraitement > Couper (Clip)**  
+- Découpez `arbres.shp`, `batiments.shp` et `zone_etude.shp`.  
 - Sauvegardez en :  
   - `arbres_zone_etude.shp`  
-  - `batiments_zone_etude.shp`  
-
+  - `batiments_zone_etude.shp`
+  - `voirie_zone_etude.shp`
 ---
 
 ### 2.2 Regroupement d’entités similaires (Dissolve)
 
-Le *Dissolve* fusionne les entités partageant un attribut commun. Par exep, regrouper par espèce permet de simplifier la couche et de produire des statistiques globales 
+L' *Aggrégation* fusionne les entités partageant un attribut commun et permet d'effectuer des statistiques sur la base de ce regroupement.
 
-- Outil : **Vecteur > Outils de géotraitement > Dissolve**  
-- Couche : `arbres_zone_etude.shp`  
-- Attribut pour regrouper : `genre` ou `espèce`.  
-- Sortie : `arbres_dissolve.shp`.  
+- **Vecteur > Outils de géotraitement > Aggrégation *  
+- Couche : `arbres_zone_etude.shp`
 
----
+**À faire :**  
+
+- Effectuer un regroupement par genre et comptez le nombre d'individus par genre ainsi que le nombre d'espèce différentes. Exportez votre résultat ('arbres_aggreges.shp') puis inspectez votre table. 
 
 ### 2.3 Analyse combinée (Union)
-- Outil : **Vecteur > Outils de géotraitement > Union**  
-- Couches : `arbres_dissolve.shp` et `batiments_zone_etude.shp`.  
-- Sortie : `arbres_batiments_union.shp`.  
 
-📌 **Pourquoi ?**  
-L’union conserve toutes les géométries et tous les attributs des deux couches. Cela permet d’identifier les zones de chevauchement entre arbres et bâtiments et de quantifier les interactions.  
+L’union conserve toutes les géométries et tous les attributs des deux couches. Cela permet par exemple d’identifier les zones de chevauchement entre les arbres et la voirie et de quantifier les interactions.  
+
+- **Vecteur > Outils de géotraitement > Union**  
+- Couches : `arbres_zone_etude.shp` et `voirie_zone_etude.shp`.  
+
+- **À faire :**  
+
+- la voirie étant représentée par des entités linéaires, nous allons appliquer une zone tampon pour simuler une largeur de route. Appliquez un tampon carré de 5m et exportez le résultat sous 'voirie_tampon.shp'.
+- Réalisez maintenant une union entre vos arbres (1ere couche) et cette nouvelle voirie (2nde couche). Qu'observez vous spatialement et du point de vue attributaire ?
+- Reproduisez le même travail en utilisant l'outil d'**intersection** ? Obtenez vous le même résultat ?
 
 ---
 
-### 2.4 Création d’indicateurs écologiques-urbains
-- Ajoutez un champ `vulnerable` dans `arbres.shp` :  
-  - Arbres anciens proches de voies ou bâtiments = `oui`  
-  - Sinon = `non`.  
-- Ajoutez un champ `densite_arbres` dans `batiments.shp` :  
-  - Nombre d’arbres dans un rayon de 50 m autour du bâtiment.  
+### 2.4 Résumés statistiques
 
-📌 **Pourquoi ?**  
-Créer de nouveaux attributs est une manière de transformer une observation spatiale en indicateur quantitatif. Ici, on passe d’une simple proximité à un diagnostic (arbres vulnérables, bâtiments bénéficiant d’une forte densité d’arbres).  
+Un autre outil intéressant s'appuie sur le résumé statistique pour calculer à partir d'un champ sans réaliser d'opérations spatiales nécessairement. 
+
+- **Boite à outils Traitement > Outils généraux pour les vecteurs > Résumés statistiques**
+- Couches : 'voirie.shp'
+
+- **À faire :**  
+
+- A l'aide de cet outil, calculez la moyenne, la somme et le maximum de longueur de linéaire par type de voie 
 
 ---
 
 ### 2.5 Cartographie finale
-Réalisez une carte thématique incluant :  
-- Arbres anciens et jeunes.  
-- Bâtiments selon densité d’arbres à proximité.  
-- Réseau viaire.  
-- Limites de la zone d’étude.  
+ 
+- Produisez une cartographie des arbres urbains (tous genres confondus, à Strasbourg) en distinguant **les jeunes** et **les anciens** (symbologie différente).  
+- Les vieux arbres situés à moins de 20 m des rues principales sont considérés comme **arbres de bordure**.  
+- Les vieux arbres situés dans un rayon de 50 m autour des bâtiments de grande taille (> 15 m) sont considérés comme **arbres sensibles**.  
+- Les vieux arbres qui cumulent ces deux situations (bordure + sensibles) doivent être identifiés comme **arbres cumulés**.  
+- Tous les autres vieux arbres doivent apparaître comme **non concernés**.  
 
-Ajoutez une légende claire, un titre, une échelle et une flèche du Nord.  
+📌 **Étape supplémentaire :**  
+- Réalisez une **Intersection** entre les arbres anciens et la couche de voirie tamponnée (5 m).  
+- À partir de cette intersection, identifiez les arbres directement situés sur l’emprise potentielle de la voirie.  
+- Ajoutez une catégorie supplémentaire dans votre légende : **arbres en conflit direct avec la voirie**.  
 
-📌 **Pourquoi ?**  
-La carte finale est la synthèse du travail : elle permet de communiquer efficacement les résultats à un commanditaire non spécialiste (ici, la Ville de Strasbourg).  
+**À faire :**  
+- Réfléchissez aux champs attributaires nécessaires pour stocker ces informations et à la hiérarchie des catégories.  
+- Représentez les différentes classes avec une symbologie adaptée (par exemple : dégradés de couleurs ou symboles distincts).
+- Mettez la en page
+- Exportez votre carte finale au format image (`Resultats/cartographie_finale.png`) 
 
 ---
 
@@ -155,8 +168,6 @@ La carte finale est la synthèse du travail : elle permet de communiquer efficac
 - Utilisation des outils de géotraitement (Clip, Dissolve, Union).  
 - Création d’indicateurs combinant écologie et urbanisme.  
 - Production de cartes et export de données vectorielles réutilisables.  
-
-*Vous avez suivi le workflow complet d’un projet SIG appliqué à la ville, combinant écologie et aménagement.*  
 
 ---
 
