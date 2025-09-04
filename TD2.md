@@ -103,7 +103,7 @@ La seconde partie vise à introduire de nouvelles fonctionnalités plus avancés
   - `voirie_zone_etude.shp`
 ---
 
-### 2.2 Regroupement d’entités similaires (Dissolve)
+### 2.2 Regroupement d’entités similaires (Aggrégation)
 
 L' *Aggrégation* fusionne les entités partageant un attribut commun et permet d'effectuer des statistiques sur la base de ce regroupement.
 
@@ -114,7 +114,7 @@ L' *Aggrégation* fusionne les entités partageant un attribut commun et permet 
 
 - Effectuer un regroupement par genre et comptez le nombre d'individus par genre ainsi que le nombre d'espèce différentes. Exportez votre résultat ('arbres_aggreges.shp') puis inspectez votre table. 
 
-### 2.3 Analyse combinée (Union)
+### 2.3 Analyse combinée (Union et Intersection)
 
 L’union conserve toutes les géométries et tous les attributs des deux couches. Cela permet par exemple d’identifier les zones de chevauchement entre les arbres et la voirie et de quantifier les interactions.  
 
