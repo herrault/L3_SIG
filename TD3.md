@@ -26,7 +26,7 @@
 3. Placez dans `Donnees` les couches rasters et vectorielles fournies :  
    - `Galets_2022.gpkg` (points : Id, classe granulométrique, longitude, latitude)
    - `Galets_2023.gpkg` (points : Id, longitude, latitude)
-   - `Cordon.gpkg` (polygone)  
+   - `Cordon_sedimentaire.gpkg` (polygone)  
    - `chenal en eau.gpkg` (polygones : usage, hauteur)  
    - `MNT_2022.tif` (raster, altitude du fond du chenal et topographie emmergée en 2022)  
    - `MNT_2023.tif` (raster, altitude du fond du chenal et tppographie emmergée en 2023)
@@ -40,8 +40,7 @@
 - Modifiez la symbologie pour améliorer la lecture cartographique :  
   - `Galets_2022` → taille par classe  
   - `Galets_2023` → taille par classe, transparence 50%.  
-  - `voirie` → couleur par type de voie.  
-  - `zone_etude` → contour clair, transparence 30%.  
+  - `Cordon_sedimentaire.gpkg` → couleur jaune, transparence 80%.  
 
 📌 **Pourquoi ?**  
 La phase exploratoire est essentielle : avant toute analyse, il faut comprendre ce que contiennent les données. La symbologie thématique permet d’identifier visuellement des tendances (par ex. relation distance - taille des galets).  
@@ -50,20 +49,18 @@ La phase exploratoire est essentielle : avant toute analyse, il faut comprendre 
 
 **Questions :**  
 - Combien de galets ont été retrouvés par classe granulométrique lors de la deuxième campagne ?
-- Quelle est la classe granulométrique qui a été la moins retrouvées lors de la deuxième campagne ? 
-
+- Quelle est la classe granulométrique qui a été la moins retrouvée (en %) lors de la deuxième campagne ? 
 ---
-
 **Exercices :**  
 - Exportez les traceurs détectés lors de la deuxième campagne et y incluant les coordonnées d'injection dans `Traitements` sous `Traceurs_P1.gpkg`.  
 
-
 *Contexte : vous préparez un rapport présentant les résultats de l'études.*  
-
 ---
 
-### 1.3 Sélection par distance
-
+### 1.3 Calcul des distances de transport (je pense ici que je détaille un peu trop les étapes non ?)
+- Créer une ligne centrale (centerline) à partir de la couche `chenal en eau.gpkg`
+- Ajouter les coordonnées initiales 
+- Réaliser une projection orthogonale des traceurs détectés lors des deux campagnes
  
 - Combien de galets se sont déplacés de moins de 5 m entre les deux campagnes ?  
 - Quelle est la distance minimale, moyenne, médiane et maximale des galets retrouvés lors de la période de suivi en supprimant les galets qui ont parcouru moins de 5 m ?  
@@ -80,7 +77,7 @@ La sélection spatiale permet de croiser des couches en fonction de leur positio
 
 ---
 
-## Séance 2 – Analyse et traitement avancé
+## Séance 2 – Analyse et traitement avancé (Raster)
 
 ### 2.1 Limitation à la zone d’étude (Clip)
 - Outil : **Vecteur > Outils de géotraitement > Découper (Clip)**  
