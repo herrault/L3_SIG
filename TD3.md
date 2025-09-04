@@ -1,6 +1,6 @@
-# TD3 – Analyse spatiale à partir de données vectorielles
+# TD3 – Analyse spatiale à partir de données vecteurs et rasters
 
-**Date :** 02-09-2025  
+**Date :** 04-09-2025  
 **Nom :** Herrault PA et Chardon V  
 
 ---
@@ -9,24 +9,26 @@
 - Maîtriser les outils de sélection spatiale et attributaire.  
 - Manipuler les outils de la boîte à outils de traitement QGIS.  
 - Explorer et analyser des données vectorielles à Strasbourg.  
-- Quantifier les interactions entre écologie urbaine (arbres) et aménagement (bâtiments, voirie).  
-- Produire des résultats réutilisables pour des projets urbains et écologiques.  
+- Quantifier les interactions entre changement topo-bathymétrique et déplacement de la charge de fond.  
+- Produire des résultats réutilisables pour des projets en géomorphologie fluviale.  
 
-*Contexte : Vous êtes consultant pour la ville de Strasbourg. Votre mission est d’analyser la répartition des arbres en lien avec le bâti et le réseau viaire, afin d’identifier les zones prioritaires pour la gestion urbaine et la biodiversité.*  
+*Contexte : Vous avez obtenu un marché avec EDF dans le cadre d'une opération de restauration menées en rivière (injection sédimentaire). L'objectif est d'identifier et de quantifier les évolutions morphologiques après l'injection et de mesurer les distances de transport de galets équipés de traceurs (puces RFID).*  
 
 ---
 
 ## 0. Préparation de l’espace de travail
-1. Créez un dossier principal `TD2_QGIS`.  
+1. Créez un dossier principal `TD3_QGIS`.  
 2. Créez les sous-dossiers :  
    - `Donnees`  
    - `Resultats`  
    - `Annexes`  
-3. Placez dans `Donnees` les couches vectorielles fournies :  
-   - `arbres.shp` (points : espèce, genre, ancien ou jeune)  
-   - `batiments.shp` (polygones : usage, hauteur)  
-   - `voirie.shp` (lignes : type de voie, nom)  
-   - `zone_etude.shp` (polygone de délimitation de l’étude)
+3. Placez dans `Donnees` les couches rasters et vectorielles fournies :  
+   - `Galets_2022.gpkg` (points : Id, classe granulométrique, longitude, latitude)
+   - `Galets_2023.gpkg` (points : Id, longitude, latitude)
+   - `Cordon.gpkg` (polygone)  
+   - `chenal en eau.gpkg` (polygones : usage, hauteur)  
+   - `MNT_2022.tif` (raster, altitude du fond du chenal et topographie emmergée en 2022)  
+   - `MNT_2023.tif` (raster, altitude du fond du chenal et tppographie emmergée en 2023)
 ---
 
 ## Séance 1 – Exploration et sélection
@@ -35,40 +37,36 @@
 - Ajoutez les quatre couches à QGIS.  
 - Examinez les tables attributaires : notez les types de données, champs disponibles, nombre d’entités.  
 - Modifiez la symbologie pour améliorer la lecture cartographique :  
-  - `arbres` → couleur par âge (jeune/ancien), forme par genre.  
-  - `batiments` → couleur par usage, transparence 50%.  
+  - `Galets_2022` → taille par classe  
+  - `Galets_2023` → taille par classe, transparence 50%.  
   - `voirie` → couleur par type de voie.  
   - `zone_etude` → contour clair, transparence 30%.  
 
 📌 **Pourquoi ?**  
-La phase exploratoire est essentielle : avant toute analyse, il faut comprendre ce que contiennent les données. La symbologie thématique permet d’identifier visuellement des tendances (par ex. concentration d’arbres anciens dans certains quartiers).  
+La phase exploratoire est essentielle : avant toute analyse, il faut comprendre ce que contiennent les données. La symbologie thématique permet d’identifier visuellement des tendances (par ex. relation distance - taille des galets).  
 
-**À rendre :**  
-- Exportez une vue pour chaque visualisation et collez-la dans un document Word (`Annexes`).  
+### 1.2 Sélection par attributs et jointure attributaire
 
 **Questions :**  
-- Combien d’arbres sont anciens ?  
-- Combien de bâtiments publics et privés ?  
-- Quelle est la longueur totale du réseau viaire ?  
+- Combien de galets ont été retrouvés par classe granulométrique lors de la deuxième campagne ?
+- Quelle est la classe granulométrique qui a été la moins retrouvées lors de la deuxième campagne ? 
 
 ---
-
-### 1.2 Sélection par attributs
-- Sélectionnez tous les arbres du genre *Quercus* (chênes).  
-- Sélectionnez tous les bâtiments de plus de 20 m de hauteur.  
-
-📌 **Pourquoi ?**  
-Les sélections attributaires permettent de filtrer une couche selon les valeurs contenues dans la table. Cela sert à isoler des cas particuliers (ici, les chênes et les grands bâtiments) pour une analyse ciblée.  
 
 **Exercices :**  
-- Exportez les arbres *Quercus* dans `Traitements` sous `quercus.shp`.  
-- Exportez les bâtiments >20 m dans `Traitements` sous `batiments_grands.shp`.  
+- Exportez les traceurs détectés lors de la deuxième campagne et y incluant les coordonnées d'injection dans `Traitements` sous `Traceurs_P1.gpkg`.  
 
-*Contexte : vous préparez un rapport sur les chênes et les grands bâtiments pour orienter un projet de verdissement urbain.*  
+
+*Contexte : vous préparez un rapport présentant les résultats de l'études.*  
 
 ---
 
-### 1.3 Sélection par localisation
+### 1.3 Sélection par distance
+
+ 
+- Combien de galets se sont déplacés de moins de 5 m entre les deux campagnes ?  
+- Quelle est la distance minimale, moyenne, médiane et maximale des galets retrouvés lors de la période de suivi en supprimant les galets qui ont parcouru moins de 5 m ?  
+
 - Sélectionnez les arbres situés à moins de 20 m des voies principales.  
 - Sélectionnez les bâtiments situés dans un rayon de 50 m autour des arbres anciens.  
 
