@@ -27,14 +27,12 @@
    - `Galets_2022.gpkg` (points : Id, classe granulométrique, longitude, latitude)
    - `Galets_2023.gpkg` (points : Id, longitude, latitude)
    - `Cordon_sedimentaire.gpkg` (polygone)  
-   - `chenal en eau.gpkg` (polygones : usage, hauteur)  
+   - `chenal_actif.gpkg` (polygones : usage, hauteur)  
    - `MNT_2022.tif` (raster, altitude du fond du chenal et topographie emmergée en 2022)  
    - `MNT_2023.tif` (raster, altitude du fond du chenal et tppographie emmergée en 2023)
 ---
 
-## Séance 1 – Exploration et sélection
-
-### 1.1 Exploration des données
+### 1. Exploration des données
 - Ajoutez les quatre couches à QGIS.  
 - Examinez les tables attributaires : notez les types de données, champs disponibles, nombre d’entités.  
 - Modifiez la symbologie pour améliorer la lecture cartographique :  
@@ -57,74 +55,32 @@ La phase exploratoire est essentielle : avant toute analyse, il faut comprendre 
 *Contexte : vous préparez un rapport présentant les résultats de l'études.*  
 ---
 
-### 1.3 Calcul des distances de transport (je pense ici que je détaille un peu trop les étapes non ?)
-- Créer une ligne centrale (centerline) à partir de la couche `chenal en eau.gpkg`
-- Ajouter les coordonnées initiales 
-- Réaliser une projection orthogonale des traceurs détectés lors des deux campagnes
- 
-- Combien de galets se sont déplacés de moins de 5 m entre les deux campagnes ?  
-- Quelle est la distance minimale, moyenne, médiane et maximale des galets retrouvés lors de la période de suivi en supprimant les galets qui ont parcouru moins de 5 m ?  
-
-- Sélectionnez les arbres situés à moins de 20 m des voies principales.  
-- Sélectionnez les bâtiments situés dans un rayon de 50 m autour des arbres anciens.  
-
-📌 **Pourquoi ?**  
-La sélection spatiale permet de croiser des couches en fonction de leur position relative dans l’espace. C’est un outil puissant pour analyser des interactions concrètes, comme la proximité arbres/bâtiments ou arbres/voirie.  
+### 2. Calcul des distances de transport et extraction de métriques
+- Créer une ligne centrale (centerline) à partir de la couche `chenal_actif.gpkg`
+- Réaliser une projection orthogonale des traceurs inclus dans la couche `Traceurs_P1.gpkg` - exporter le résultat dans `Traitements` sous `Traceurs_P1_orthogonale.gpkg`.  
+- Calculer la distance euclidienne de chaque galet inclus dans la couche `Traceurs_P1.gpkg` - exporter dans `Traitements` sous `Traceurs_P1_euclidienne.gpkg`.
+- Quelle est la distance minimale, moyenne, médiane et maximale des galets retrouvés lors de la période de suivi en supprimant les galets qui ont parcouru moins de 5 m pour les deux méthodes de calcul des distances ?  Que constatez-vous ?
 
 **Questions :**  
-- Combien d’arbres sont proches du réseau viaire ?  
-- Combien de bâtiments se trouvent autour des arbres anciens ?  
+- Quelles est la classe granulométrique qui s'est déplacée en moyenne le plus loin ? 
+- Pensez-vous que ces distances sont robustes statistiquement ?
+- Si pas le cas, quelle solution proposeriez-vous ?
 
 ---
 
-## Séance 2 – Analyse et traitement avancé (Raster)
-
-### 2.1 Limitation à la zone d’étude (Clip)
-- Outil : **Vecteur > Outils de géotraitement > Découper (Clip)**  
-- Découpez `arbres.shp` et `batiments.shp` avec `zone_etude.shp`.  
+### 3. Limitation à la zone d’étude (Clip) 
+- Découpez `MNT_2022.gpkg` et `MNT_2023.gpkg` avec `chenal_actif.gpkg`.  
 - Sauvegardez en :  
-  - `arbres_zone_etude.shp`  
-  - `batiments_zone_etude.shp`  
-
-📌 **Pourquoi ?**  
-Limiter l’analyse à la zone d’étude évite d’intégrer des données hors sujet. Cela réduit aussi la charge de calcul et garantit la cohérence des résultats.  
+  - `MNT_2022_clip.gpkg`  
+  - `MNT_2023_CLIP.GPKG`  
 
 ---
 
-### 2.2 Regroupement d’entités similaires (Dissolve)
-- Outil : **Vecteur > Outils de géotraitement > Dissolve**  
-- Couche : `arbres_zone_etude.shp`  
-- Attribut pour regrouper : `genre` ou `espèce`.  
-- Sortie : `arbres_dissolve.shp`.  
 
-📌 **Pourquoi ?**  
-Le *Dissolve* fusionne les entités partageant un attribut commun. Ici, regrouper par espèce permet de simplifier la couche et de produire des statistiques globales (nombre ou surface par espèce).  
 
 ---
 
-### 2.3 Analyse combinée (Union)
-- Outil : **Vecteur > Outils de géotraitement > Union**  
-- Couches : `arbres_dissolve.shp` et `batiments_zone_etude.shp`.  
-- Sortie : `arbres_batiments_union.shp`.  
-
-📌 **Pourquoi ?**  
-L’union conserve toutes les géométries et tous les attributs des deux couches. Cela permet d’identifier les zones de chevauchement entre arbres et bâtiments et de quantifier les interactions.  
-
----
-
-### 2.4 Création d’indicateurs écologiques-urbains
-- Ajoutez un champ `vulnerable` dans `arbres.shp` :  
-  - Arbres anciens proches de voies ou bâtiments = `oui`  
-  - Sinon = `non`.  
-- Ajoutez un champ `densite_arbres` dans `batiments.shp` :  
-  - Nombre d’arbres dans un rayon de 50 m autour du bâtiment.  
-
-📌 **Pourquoi ?**  
-Créer de nouveaux attributs est une manière de transformer une observation spatiale en indicateur quantitatif. Ici, on passe d’une simple proximité à un diagnostic (arbres vulnérables, bâtiments bénéficiant d’une forte densité d’arbres).  
-
----
-
-### 2.5 Cartographie finale
+### 5. Cartographie finale
 Réalisez une carte thématique incluant :  
 - Arbres anciens et jeunes.  
 - Bâtiments selon densité d’arbres à proximité.  
