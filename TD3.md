@@ -42,9 +42,6 @@
   - `Galets_2023` → taille par classe, transparence 50%.  
   - `Cordon_sedimentaire.gpkg` → couleur jaune, transparence 80%.  
 
-📌 **Pourquoi ?**  
-La phase exploratoire est essentielle : avant toute analyse, il faut comprendre ce que contiennent les données. La symbologie thématique permet d’identifier visuellement des tendances (par ex. relation distance - taille des galets).  
-
 ### 2. Sélection par attributs et jointure attributaire
 
 **Questions :**  
@@ -97,15 +94,11 @@ Réalisez une carte thématique incluant :
 
 Ajoutez une légende claire, un titre, une échelle et une flèche du Nord.  
 
-📌 **Pourquoi ?**  
-La carte finale est la synthèse du travail : elle permet de communiquer efficacement les résultats à un commanditaire non spécialiste (ici, EDF).  
----
-
 ## 6. Bilan et réflexions (à faire)
 - Compréhension des différentes sélections (attributs, localisation, intersection).  
-- Calcul de distances.  
-- Calculs mathémaatiques sur des données raster.  
-- Production de cartes et export de données vectorielles réutilisables.  
+- Calcul de différentes distances.  
+- Calculs arithmétiques sur des données raster.  
+- Production de cartes et export de données vectorielles et rasters réutilisables.  
 
 *Vous avez suivi le workflow complet d’un projet SIG en géomorphologie fluviale, combinant évolutions topo-bathymétriques et transport de la charge de fond.*  
 
