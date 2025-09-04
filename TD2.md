@@ -12,7 +12,9 @@
 - Quantifier les interactions entre écologie urbaine (arbres) et aménagement (bâtiments, voirie).  
 - Produire des résultats réutilisables pour des projets urbains et écologiques.  
 
-*Contexte : Les vieux arbres en milieu urbain remplissent des fonctions écologiques essentielles : régulation thermique, filtration de l’air, rétention des eaux pluviales, support de biodiversité. Leur morphologie (couronne étendue, racines superficielles) et leur longévité les rendent sensibles aux pressions physiques et environnementales liées à l’urbanisation. La proximité des infrastructures, notamment la voirie et les bâtiments, influence directement leur état de santé et leur pérennité. Ces éléments modifient les conditions pédologiques, hydriques et lumineuses, et peuvent entraîner un stress mécanique ou physiologique. L’analyse de la répartition des vieux arbres en ville nécessite donc une prise en compte systématique du contexte bâti et des aménagements urbains..*  
+📌 **Contexte ?**  
+
+Les vieux arbres en milieu urbain remplissent des fonctions écologiques essentielles : régulation thermique, filtration de l’air, rétention des eaux pluviales, support de biodiversité. Leur morphologie (couronne étendue, racines superficielles) et leur longévité les rendent sensibles aux pressions physiques et environnementales liées à l’urbanisation. La proximité des infrastructures, notamment la voirie et les bâtiments, influence directement leur état de santé et leur pérennité. Ces éléments modifient les conditions pédologiques, hydriques et lumineuses, et peuvent entraîner un stress mécanique ou physiologique. L’analyse de la répartition des vieux arbres en ville nécessite donc une prise en compte systématique du contexte bâti et des aménagements urbains.*  
 
 ---
 
@@ -29,7 +31,7 @@
    - `zone_etude.shp` (polygone de délimitation de l’étude)
 ---
 
-## Séance 1 – Exploration et sélection
+## Partie 1 – Exploration et sélection
 
 ### 1.1 Exploration des données
 - De la même manière que dans le TD1, créez un geopackage nommée database_arbre et placez vos couches à l'intérieur
@@ -40,7 +42,7 @@
   - `voirie` → couleur par type de voie.  
   - `zone_etude` → contour gris foncé, transparence 30%.  
 
-**À rendre :**  
+**À faire :**  
 - Exportez une vue (Projet > Exporter/Importer) pour chaque visualisation et collez-la dans un document Word (`Annexes`).  
 
 **Questions :**  
@@ -52,32 +54,31 @@
 
 ### 1.2 Sélection par attributs
 
+📌 **Contexte ?**  
+Les arbres anciens comme les Quercus sont à la fois des refuges de biodiversité et appartiennent au patrimoine paysager. Leur proximité avec des infrastructures routières (pollution, risques mécaniques) ou avec des bâtiments (chute, conflits racinaires) peut cependant poser des problèmes de gestion et de sécurité. Les commandes qui suivent permettent donc d’identifier les situations de cohabitation sensible entre patrimoine naturel et infrastructures humaines.
 
-- Sélectionnez tous les vieux arbres du genre *Quercus* (chênes).  
-- Sélectionnez tous les bâtiments de plus de 20 m de hauteur.
-
-**Exercices :**  
-- Exportez les vieux *Quercus* dans `Résultats` sous `quercus_vieux.shp`.  
-- Exportez les bâtiments >20 m dans `Résultats` sous `batiments_grands.shp`.  
+- Sélectionnez tous **les vieux arbres du genre *Quercus* (chênes)** et exportez les `Résultats` sous `quercus_vieux.shp`.  
+- Sélectionnez tous **les bâtiments publics et privés de plus de 20 m de hauteur**. Après avoir ouvert le menu **Edition**, dans un champ nommé **type_taille** (type = entier), codez en 1 ceux ayant une taille > 20m et les autres en 2. Sauvegardez vos résultats et
+bouclez votre menu d'Edition. 
 
 ---
 
 ### 1.3 Sélection par localisation
 
-📌 Les vieux arbres sont 
-
 - Sélectionnez les vieux quercus situés à moins de 20 m des voies principales et exportez les ('vieux_quercus_risques.shp')
-- Sélectionnez les grands bâtiments situés dans un rayon de 50 m autour des arbres anciens.  
+- Sélectionnez les grands bâtiments situés dans un rayon de 50 m autour des arbres anciens et exportez les ('grands_bat_quercus_risques.shp')
 
 **Questions :**  
-- Combien d’arbres sont proches du réseau viaire ?  
-- Combien de bâtiments se trouvent autour des arbres anciens ?  
+
+- Parmi les vieux arbres, combien de chênes (quercus) en sont pas en situation de conflit avec la voirie  ?  
+- Combien de bâtiments de grande taille se trouvent autour des arbres anciens ?  
 
 ---
 
-## Séance 2 – Analyse et traitement avancé
+## Partie 2 – Analyse et traitement avancé
 
 ### 2.1 Limitation à la zone d’étude (Clip)
+
 - Outil : **Vecteur > Outils de géotraitement > Découper (Clip)**  
 - Découpez `arbres.shp` et `batiments.shp` avec `zone_etude.shp`.  
 - Sauvegardez en :  
@@ -90,6 +91,7 @@ Limiter l’analyse à la zone d’étude évite d’intégrer des données hors
 ---
 
 ### 2.2 Regroupement d’entités similaires (Dissolve)
+
 - Outil : **Vecteur > Outils de géotraitement > Dissolve**  
 - Couche : `arbres_zone_etude.shp`  
 - Attribut pour regrouper : `genre` ou `espèce`.  
