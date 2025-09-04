@@ -6,9 +6,9 @@
 ---
 
 ## 🎯 Objectifs
-- Maîtriser les outils de sélection spatiale et attributaire.  
+- Maîtriser les outils de sélection / jointure spatiale et attributaire.  
 - Manipuler les outils de la boîte à outils de traitement QGIS.  
-- Explorer et analyser des données vectorielles à Strasbourg.  
+- Explorer et analyser des données vectorielles et raster en rivière.  
 - Quantifier les interactions entre changement topo-bathymétrique et déplacement de la charge de fond.  
 - Produire des résultats réutilisables pour des projets en géomorphologie fluviale.  
 
