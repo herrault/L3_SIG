@@ -8,12 +8,11 @@
 ## 🎯 Objectifs
 - Maîtriser les outils de sélection / jointure spatiale et attributaire.  
 - Manipuler les outils de la boîte à outils de traitement QGIS.  
-- Explorer et analyser des données vectorielles et raster en rivière.
-- Projection orthogonale et calculs de distance  
-- Réaliser des opérations sur raster pour quantifier les interactions entre changement topo-bathymétriques et déplacement de la charge de fond.  
-- Produire des résultats réutilisables pour des projets en géomorphologie fluviale.  
+- Explorer, traiter et et analyser des données vectorielles et raster en rivière.
+- Projections et calculs de distance  
+- Produire des résultats réutilisables pour des projets en géomorphologie fluviale (mobilité de la charge de fond et évolutions topo-bathymétriques.  
 
-*Contexte : Vous avez obtenu un marché avec EDF dans le cadre d'une opération de restauration menées en rivière (injection sédimentaire). L'objectif est d'identifier et de quantifier les évolutions morphologiques après l'injection et de mesurer les distances de transport de galets équipés de traceurs (puces RFID).*  
+*Contexte : Vous avez obtenu un marché avec EDF dans le cadre d'une opération de restauration menées en rivière (injection sédimentaire). L'objectif est de quantifier les évolutions topo-bathymétriques du chenal actifs et de calculer les distances de transport de galets équipés de traceurs (puces RFID).*  
 
 ---
 
