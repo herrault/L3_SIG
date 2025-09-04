@@ -8,8 +8,10 @@
 ## 🎯 Objectifs
 - Maîtriser les outils de sélection / jointure spatiale et attributaire.  
 - Manipuler les outils de la boîte à outils de traitement QGIS.  
-- Explorer, traiter et et analyser des données vectorielles et raster en rivière.
-- Projections et calculs de distance  
+- Manipuler, traiter et analyser des données vectorielles et raster en rivière.
+- Projections et calculs de distance
+- Calculs mathémaatiques sur des données raster.
+- Développer un regard critique sur la précision des données utilisées  
 - Produire des résultats réutilisables pour des projets en géomorphologie fluviale (mobilité de la charge de fond et évolutions topo-bathymétriques.  
 
 *Contexte : Vous avez obtenu un marché avec EDF dans le cadre d'une opération de restauration menées en rivière (injection sédimentaire). L'objectif est de quantifier les évolutions topo-bathymétriques du chenal actifs et de calculer les distances de transport de galets équipés de traceurs (puces RFID).*  
@@ -97,8 +99,8 @@ La carte finale est la synthèse du travail : elle permet de communiquer efficac
 
 ## 3. Bilan et réflexions
 - Compréhension des différentes sélections (attributs, localisation, intersection).  
-- Utilisation des outils de géotraitement (Clip, Dissolve, Union).  
-- Création d’indicateurs combinant écologie et urbanisme.  
+- Calcul de distances.  
+- Calculs mathémaatiques sur des données raster.  
 - Production de cartes et export de données vectorielles réutilisables.  
 
 *Vous avez suivi le workflow complet d’un projet SIG en géomorphologie fluviale, combinant évolutions topo-bathymétriques et transport de la charge de fond.*  
@@ -108,4 +110,5 @@ La carte finale est la synthèse du travail : elle permet de communiquer efficac
 ## Astuces et recommandations
 - Toujours vérifier le système de coordonnées avant d’exporter ou de traiter les données.  
 - Conserver une copie des couches originales (ne jamais écraser les données sources).  
-- Documenter chaque étape dans le panneau **Propriétés > Métadonnées**.  
+- Documenter chaque étape dans le panneau **Propriétés > Métadonnées**.
+- Tenir compte des incertitudes des mesures dans les analyses
