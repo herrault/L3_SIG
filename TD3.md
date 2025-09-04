@@ -7,10 +7,10 @@
 
 ## 🎯 Objectifs
 - Maîtriser les outils de sélection / jointure spatiale et attributaire.  
-- Manipuler les outils de la boîte à outils de traitement QGIS.  
+- Manipuler les outils de la boîte à outils de traitement QGIS.
+- Réaliser des projections et calculer de distance
+- Réaliser des opérations arithmétiques sur des données raster.
 - Manipuler, traiter et analyser des données vectorielles et raster en rivière.
-- Projections et calculs de distance
-- Calculs mathémaatiques sur des données raster.
 - Développer un regard critique sur la précision des données utilisées  
 - Produire des résultats réutilisables pour des projets en géomorphologie fluviale (mobilité de la charge de fond et évolutions topo-bathymétriques.  
 
