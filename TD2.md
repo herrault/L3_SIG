@@ -75,9 +75,9 @@ bouclez votre menu d'Edition.
 **Questions :**  
 
 - Parmi les vieux arbres, combien de chênes (quercus) en sont pas en situation de conflit avec la voirie  ?  
-- Combien de bâtiments de grande taille se trouvent autour des arbres anciens ?
+- Combien de bâtiments de grande taille se trouvent autour des arbres anciens ? Quel est leur surface moyenne ?
 
-**Exercice :**   
+### 1.4 Cartographie finale 
 
 - Produisez une cartographie des arbres urbains (tous genres confondus, à Strasbourg) faisant apparaitre les jeunes et les vieux (avec symbologie différente). Les vieux arbres situées à moins de 20m
 des rues et ruelles sont considérés comme **à risque** et doivent être représentés comme tels. Les vieux arbres situés dans un rayon de 50m autour des bâtiments de grande taille (> 15m)
