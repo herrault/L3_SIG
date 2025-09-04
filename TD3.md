@@ -100,7 +100,7 @@ La carte finale est la synthèse du travail : elle permet de communiquer efficac
 
 ---
 
-## 3. Bilan et réflexions
+## 6. Bilan et réflexions (à faire)
 - Compréhension des différentes sélections (attributs, localisation, intersection).  
 - Calcul de distances.  
 - Calculs mathémaatiques sur des données raster.  
