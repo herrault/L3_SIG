@@ -20,18 +20,13 @@
 1. Créez un dossier principal `TD2_QGIS`.  
 2. Créez les sous-dossiers :  
    - `Donnees`  
-   - `Traitements`  
    - `Resultats`  
    - `Annexes`  
 3. Placez dans `Donnees` les couches vectorielles fournies :  
    - `arbres.shp` (points : espèce, genre, ancien ou jeune)  
    - `batiments.shp` (polygones : usage, hauteur)  
    - `voirie.shp` (lignes : type de voie, nom)  
-   - `zone_etude.shp` (polygone de délimitation de l’étude)  
-
-💡 **Pourquoi cette organisation ?**  
-Travailler avec une arborescence claire facilite la reproductibilité et limite les erreurs. Les données originales sont conservées séparées des résultats produits, ce qui permet de revenir en arrière à tout moment.  
-
+   - `zone_etude.shp` (polygone de délimitation de l’étude)
 ---
 
 ## Séance 1 – Exploration et sélection
