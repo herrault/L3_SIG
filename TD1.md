@@ -40,13 +40,13 @@ Nous allons importer les **shapefiles de l’Eurométropole de Strasbourg** et l
 | Bâti       | `batiment_public`, `bati_indiv`, `amenagt_es_vert` |
 | Administratif | `commune`, `limite_cus` |
 
-4. Organisez-les en **groupes thématiques** dans le GeoPackage.  
-5. Vérifiez que toutes les couches partagent le même **système de coordonnées EPSG** (`Clic droit > Propriétés > Source > Référence spatiale`).  
+4. Vérifiez que toutes les couches partagent le même **système de coordonnées EPSG** (`Clic droit > Propriétés > Source > Systeme de coordonnées`).
+5. Importez ces données dans vos couches à visualiser et organisez les en groupes thématiques (Transport, etc) dans votre bloc de couches
 
 ### Questions
-- Quel est le système de coordonnées des shapefiles EMS ?  
+- Quel est le système de coordonnées des shapefiles EMS ?  Quelle est sa particularité ?
 - Identifiez les couches de type point, ligne, polygone.  
-- Combien de bâtiments individuels sont présents ? Combien de communes ?
+- Combien de bâtiments individuels sont présents ? Combien de communes ? Combien existe-t'il de voies de tram ?
 
 ---
 
@@ -55,17 +55,22 @@ Nous allons importer les **shapefiles de l’Eurométropole de Strasbourg** et l
 L’objectif est de découvrir le contenu de chaque couche et d’appliquer les outils de **visualisation, sélection et export**.
 
 ### 2.1 Tables attributaires
-- Pour chaque couche (ex. `grand_axe`, `batiment_public`, `commune`) :  
+- Pour chaque couche (`grand_axe`, `batiment_public`, `commune`) :  
   - **Clic droit > Ouvrir la table attributaire**  
   - Observez les champs, types de données et effectifs.  
-  - Trier et filtrer pour explorer les données.  
+  - Trier et filtrer pour explorer les données avec l'outil de filtrage (icone entonnoir disponible depuis la table attributaire)
+ 
+### Question
+- Combien existe-t-il de voies rapides ?
+- Combien de bâtiments appartenant à LA POSTE, sont de type industriels et technologiques ?
+- Combien de communes ne figurent pas dans la CUS ?
 
 ### 2.2 Symbologie
-- Définir une symbologie claire pour chaque couche :  
-  - **Clic droit > Propriétés > Symbologie > Valeurs uniques**  
-  - Choisir un champ pertinent pour catégoriser (ex. `type_voie` pour `grand_axe`)  
+- Définir une symbologie claire pour les couches ('voie_tram',  `amenagt_es_vert`,  `grand_axe`)
+  - **Clic droit > Propriétés > Symbologie 
+  - Choisir un champ pertinent pour catégoriser le type de voie de tram, le type d'aménagement vert et le type de grand axe)
   - Ajouter toutes les valeurs et appliquer une palette adaptée.  
-- Exportez la symbologie dans `Annexes` pour sauvegarder vos choix.  
+- Pour chaque symbologie définie, exportez la à partir du menu **style** et exportez la dans **Annexes**
 
 ### 2.3 Étiquettes
 - Affichez des étiquettes pour mieux comprendre la localisation :  
@@ -74,14 +79,17 @@ L’objectif est de découvrir le contenu de chaque couche et d’appliquer les 
 - Ajustez police, taille et couleur.  
 
 ### 2.4 Sélection par attributs
+
 - **Vecteur > Outils de recherche > Sélectionner par expression**  
 - Exemples ciblés :  
   - Sélectionner les **voies rapides** dans `grand_axe`  
-  - Sélectionner les **bâtiments sportifs** dans `batiment_public`  
+  - Sélectionner les **bâtiments sportifs** dans `batiment_public`
+  - Sélectionner les **bâtiments historiques et militaire** dans `batiment_public`
 
 ### Questions
 - Combien de voies rapides sont présentes ?  
 - Combien de bâtiments publics à vocation sportive ?
+- Combien de bâtiments historique et militaire ?
 
 ### 2.5 Sélection par localisation
 - **Vecteur > Outils de recherche > Sélection par localisation**  
@@ -90,6 +98,7 @@ L’objectif est de découvrir le contenu de chaque couche et d’appliquer les 
 
 ### Question
 - Combien de communes font partie intégrantes de la CUS ?
+- Dans la même logique, sélectionnez les gravières localisées hors commune de Strasbourg ?
 
 ---
 
@@ -106,18 +115,19 @@ L’objectif est de découvrir le contenu de chaque couche et d’appliquer les 
 ### Question
 - Quelle station possède le plus de vélos disponibles ?
 - Avec la méthode employée précédemment, combien de stations sont localisées sur la commune de Strasbourg ?
+- Représentez en cercles proportionnels le nombre de vélos disponible par station pour la commune de strasbourg uniquement 
 
 ---
 
 ## 4. Calculs géométriques
 - Pour les couches polygonales ou linéaires (surface_eau, cours_eau, voie_tram)
   - Ajouter un champ (`surface` pour polygones, `longueur` pour lignes)  
-  - Calculez les surfaces en hectares et les longueurs en mètres
+  - Calculez les surfaces en hectares et les longueurs en mètres à l'aide du calculateur de champ (
 
 ### Questions
 - Surface totale des gravières (`surface_eau`) ?  
 - Surface du Rhin (`cours_eau`) ?
-- Voie de tram avec la longueur la plus grande ?
+- Quelle est l'identifiant de la Voie de tram avec la longueur la plus grande ?
 
 ---
 
@@ -126,7 +136,7 @@ L’objectif est de découvrir le contenu de chaque couche et d’appliquer les 
 
 ### Exercices
 - Exporter les **jardins familiaux** (`amenagt_es_vert`) → `Résultats`  
-- Exporter toutes les **etang**  → `Résultats`  
+- Exporter toutes les **etangs**  → `Résultats`  
 - Exporter les stations VéloHop avec **>10 vélos** et situées en dehors de Strasbourg → `Resultats`  
 
 ---
@@ -152,11 +162,13 @@ L’objectif est de découvrir le contenu de chaque couche et d’appliquer les 
 
 - Appliquez la symbologie suivante :  
   - Toits >50 m → rouge  
-  - Toits 1–5 m → vert  
+  - Toits 1–5 m → vert
+  - Autre → jaune
 
 ### 6.3 Distances et coordonnées
 - Identifier la **flèche de la cathédrale** et la **statue de la Place de la République**  
-- Mesurer la distance à vol d’oiseau avec l'outil règle
+- Mesurer la distance à vol d’oiseau avec l'outil Règle (en mètres)
+- Si vous effectuez maintenant un triangle reliant ces deux points avec le sommet du palais universitaire, quelle est la distance parcourue en km ?
 ---
 
 ## 7. Bilan
