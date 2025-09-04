@@ -76,7 +76,6 @@
   - Sauvegardez le résultat dans `Traitements` sous `MNT_2022_2023.gpkg`
 - Utiliser la bonne symbologie pour représenter les évolutions topo-bathymétriques par classe de 0,5 m. (couleur chaudes évolutions > 0 m; couleurs froides évolutions < 0 m)
  
-**Questions :**   
 - Supposons une incertitude de mesure en z (altitude) de 0,1 m pour chaque levé. Intégrer cette incertitude par la réalisation d'un nouveau raster à partir du raster `MNT_2022_2023.gpkg`.
 - Enregistrez votre nouvelle couche raster dans `Traitements` sous `MNT_2022_2023_corr.gpkg`
 - Utiliser la bonne symbologie pour représenter les évolutions topo-bathymétriques par classe de 0,5 m (couleur chaudes évolutions > 0 m; couleurs froides évolutions < 0 m)
