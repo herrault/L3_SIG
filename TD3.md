@@ -52,7 +52,7 @@ La phase exploratoire est essentielle : avant toute analyse, il faut comprendre 
 **Exercices :**  
 - Exportez les traceurs détectés lors de la deuxième campagne et y incluant les coordonnées d'injection dans `Traitements` sous `Traceurs_P1.gpkg`.  
 
-*Contexte : vous préparez un rapport présentant les résultats de l'études.*  
+*Contexte : vous préparez un rapport présentant les résultats significatifs de l'étude.*  
 ---
 
 ### 3. Calcul des distances de transport et extraction de métriques
