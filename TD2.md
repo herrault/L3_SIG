@@ -19,6 +19,7 @@ Les vieux arbres en milieu urbain remplissent des fonctions écologiques essenti
 ---
 
 ## 0. Préparation de l’espace de travail
+
 1. Créez un dossier principal `TD2_QGIS`.  
 2. Créez les sous-dossiers :  
    - `Donnees`  
@@ -34,6 +35,7 @@ Les vieux arbres en milieu urbain remplissent des fonctions écologiques essenti
 ## Partie 1 – Exploration et sélection
 
 ### 1.1 Exploration des données
+
 - De la même manière que dans le TD1, créez un geopackage nommée database_arbre et placez vos couches à l'intérieur
 - Examinez les tables attributaires : notez les types de données, champs disponibles, nombre d’entités.  
 - Modifiez la symbologie pour améliorer la lecture cartographique :  
@@ -55,6 +57,7 @@ Les vieux arbres en milieu urbain remplissent des fonctions écologiques essenti
 ### 1.2 Sélection par attributs
 
 📌 **Contexte ?**  
+
 Les arbres anciens comme les Quercus sont à la fois des refuges de biodiversité et appartiennent au patrimoine paysager. Leur proximité avec des infrastructures routières (pollution, risques mécaniques) ou avec des bâtiments (chute, conflits racinaires) peut cependant poser des problèmes de gestion et de sécurité. Les commandes qui suivent permettent donc d’identifier les situations de cohabitation sensible entre patrimoine naturel et infrastructures humaines.
 
 - Sélectionnez tous **les vieux arbres du genre *Quercus* (chênes)** et exportez les `Résultats` sous `quercus_vieux.shp`.  
