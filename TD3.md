@@ -55,7 +55,7 @@
 *Contexte : vous préparez un rapport présentant les résultats significatifs de l'étude.*  
 ---
 
-### 3. Calcul des distances de transport et extraction de métriques
+### 3. Mesure des distances de transport des galets
 - Créer une ligne centrale (centerline) à partir de la couche `Chenal_actif.gpkg`. Exporter le résultat dans `Traitements` sous `Centerline.gpkg`.  
 - Réaliser une projection orthogonale sur la ligne centrale des traceurs inclus dans la couche `Traceurs_P1.gpkg` - exporter le résultat dans `Traitements` sous `Traceurs_P1_orthogonale.gpkg`.  
 - Calculer la distance euclidienne de chaque galet inclus dans la couche `Traceurs_P1.gpkg` - exporter dans `Traitements` sous `Traceurs_P1_euclidienne.gpkg`.
@@ -69,7 +69,7 @@
 
 ---
 
-### 4. Mesure et étude des évolutions topo-bathymétriques du chenal actif 
+### 4. Étude des évolutions topo-bathymétriques du chenal actif 
 - Découpez `MNT_2022.gpkg` et `MNT_2023.gpkg` avec `chenal_actif.gpkg`.  
 - Sauvegardez les deux couches dans `Traitements` sous`MNT_2022_clip.gpkg`; `MNT_2023_clip.gpkg` 
 - Réaliser une soustraction des deux MNTs en utilisant la calculatrice raster pour identifier les évolutions topo-bathymétrique au cours du temps.
