@@ -14,7 +14,7 @@
 - Développer un regard critique sur la précision des données utilisées  
 - Produire des résultats réutilisables pour des projets en géomorphologie fluviale (mobilité de la charge de fond et évolutions topo-bathymétriques.  
 
-*Contexte : Vous avez obtenu un marché avec EDF dans le cadre d'une opération de restauration menées en rivière (injection sédimentaire). L'objectif est de quantifier les évolutions topo-bathymétriques du chenal actifs et de calculer les distances de transport de galets équipés de traceurs (puces RFID).*  
+*Contexte : Vous avez obtenu un marché avec EDF pour suivre les effets géomorphologiques d'une opération de restauration menées en rivière (injection sédimentaire). L'objectif est de quantifier les évolutions topo-bathymétriques du chenal actifs et de calculer les distances de transport de galets équipés de traceurs (puces RFID).*  
 
 ---
 
