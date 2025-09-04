@@ -28,7 +28,7 @@
    - `Galets_2022.gpkg` (points : Id, classe granulométrique, longitude, latitude)
    - `Galets_2023.gpkg` (points : Id, longitude, latitude)
    - `Cordon_sedimentaire.gpkg` (polygone)  
-   - `chenal_actif.gpkg` (polygones : usage, hauteur)  
+   - `Chenal_actif.gpkg` (polygones : usage, hauteur)  
    - `MNT_2022.tif` (raster, altitude du fond du chenal et topographie emmergée en 2022)  
    - `MNT_2023.tif` (raster, altitude du fond du chenal et tppographie emmergée en 2023)
 ---
@@ -48,19 +48,21 @@ La phase exploratoire est essentielle : avant toute analyse, il faut comprendre 
 
 **Questions :**  
 - Combien de galets ont été retrouvés par classe granulométrique lors de la deuxième campagne ?
-- Quelle est la classe granulométrique qui a été la moins retrouvée (en %) lors de la deuxième campagne ? 
+- Quelle est la classe granulométrique qui a été la moins retrouvée (en %) lors de la deuxième campagne ?
+  
 ---
 **Exercices :**  
 - Exportez les traceurs détectés lors de la deuxième campagne et y incluant les coordonnées d'injection dans `Traitements` sous `Traceurs_P1.gpkg`.  
-
+---
 *Contexte : vous préparez un rapport présentant les résultats significatifs de l'étude.*  
 ---
 
 ### 3. Calcul des distances de transport et extraction de métriques
-- Créer une ligne centrale (centerline) à partir de la couche `chenal_actif.gpkg`
-- Réaliser une projection orthogonale des traceurs inclus dans la couche `Traceurs_P1.gpkg` - exporter le résultat dans `Traitements` sous `Traceurs_P1_orthogonale.gpkg`.  
+- Créer une ligne centrale (centerline) à partir de la couche `Chenal_actif.gpkg`
+- Réaliser une projection orthogonale sur la ligne centrale des traceurs inclus dans la couche `Traceurs_P1.gpkg` - exporter le résultat dans `Traitements` sous `Traceurs_P1_orthogonale.gpkg`.  
 - Calculer la distance euclidienne de chaque galet inclus dans la couche `Traceurs_P1.gpkg` - exporter dans `Traitements` sous `Traceurs_P1_euclidienne.gpkg`.
-- Quelle est la distance minimale, moyenne, médiane et maximale des galets retrouvés lors de la période de suivi en supprimant les galets qui ont parcouru moins de 5 m pour les deux méthodes de calcul des distances ?  Que constatez-vous ?
+- Quelle est la distance minimale, moyenne, médiane et maximale des galets retrouvés entre les deux levés pour les deux méthodes de calcul des distances?
+- Réaliser la même opération en incluant uniquement les galets qui se sont déplacés au minimum de 5m. Que constatez-vous ?
 
 **Questions :**  
 - Quelles est la classe granulométrique qui s'est déplacée en moyenne le plus loin ? 
