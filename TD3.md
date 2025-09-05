@@ -94,10 +94,11 @@ Réalisez une carte thématique incluant :
 Ajoutez une légende claire, un titre, une échelle et une flèche du Nord.  
 
 ## 6. Bilan et réflexions
-- Compréhension des différentes sélections (attributs, localisation, intersection).  
-- Calcul de différentes distances.  
+- Maitrise des jointure attributaires et spatiales
+- Calculs de distance et projection orthogonale
 - Calculs arithmétiques sur des données raster.  
-- Production de cartes et export de données vectorielles et rasters réutilisables.  
+- Production de cartes et export de données vectorielles et rasters réutilisables.
+- Inclure des incertitudes de mesures dans les analyses spatiales
 
 *Vous avez suivi le workflow complet d’un projet SIG en géomorphologie fluviale, combinant évolutions topo-bathymétriques et transport de la charge de fond.*  
 
