@@ -30,8 +30,8 @@ Nous allons importer les **shapefiles de l’Eurométropole de Strasbourg** et l
 
 ### 1.1 Jeux de données
 1. Décompressez `data_TD_eurometropole` dans `Donnees`.  
-2. Dans QGIS, créez un **GeoPackage** nommé `database.gpkg` dans `TD1_QGIS`.  
-3. Importez les couches suivantes dans `database.gpkg` :  
+2. Dans QGIS, créez un **GeoPackage** nommé `database_strasbourg.gpkg` dans `TD1_QGIS`.  
+3. Importez les couches suivantes dans `database_strasbourg.gpkg` :  
 
 | Thème      | Couches |
 |------------|---------|
