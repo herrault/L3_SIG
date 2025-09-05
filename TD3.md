@@ -93,7 +93,7 @@ Réalisez une carte thématique incluant :
 
 Ajoutez une légende claire, un titre, une échelle et une flèche du Nord.  
 
-## 6. Bilan et réflexions (à faire)
+## 6. Bilan et réflexions
 - Compréhension des différentes sélections (attributs, localisation, intersection).  
 - Calcul de différentes distances.  
 - Calculs arithmétiques sur des données raster.  
@@ -107,4 +107,4 @@ Ajoutez une légende claire, un titre, une échelle et une flèche du Nord.
 - Toujours vérifier le système de coordonnées avant d’exporter ou de traiter les données.  
 - Conserver une copie des couches originales (ne jamais écraser les données sources).  
 - Documenter chaque étape dans le panneau **Propriétés > Métadonnées**.
-- Tenir compte des incertitudes des mesures dans les analyses
+- Tenir compte des incertitudes des mesures dans les analyses spatiales
