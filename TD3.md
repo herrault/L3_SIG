@@ -1,4 +1,4 @@
-# TD3 – Analyse spatiale à partir de données vectorielles et rasters (Rolling Stones)
+# TD3 – Analyse spatiale à partir de données vectorielles et rasters // Rolling Stones
 
 **Date :** 05-09-2025  
 **Nom :** Herrault PA et Chardon V  
