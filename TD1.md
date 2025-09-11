@@ -82,7 +82,7 @@ L’objectif est de découvrir le contenu de chaque couche et d’appliquer les 
 
 ### 2.4 Sélection par attributs
 
-- **Vecteur > Outils de recherche > Sélectionner par expression**  
+- **Ouvrir la table attributaire > Sélectionner des attributs en utilisant une expression**  
 - Exemples ciblés :  
   - Sélectionner les **voies rapides** dans `grand_axe`  
   - Sélectionner les **bâtiments sportifs** dans `batiment_public`
