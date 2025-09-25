@@ -55,7 +55,7 @@
 *Contexte : vous préparez un rapport présentant les résultats significatifs de l'étude.*  
 ---
 
-### 3. Mesure des distances de transport des galets
+### 3. Mesure des distances de transport 
 - Créer une ligne centrale (centerline) à partir de la couche `Chenal_actif.gpkg`. Exporter le résultat dans `Traitements` sous `Centerline.gpkg`.  
 - Réaliser une projection orthogonale sur la ligne centrale des traceurs inclus dans la couche `Traceurs_P1.gpkg` - exporter le résultat dans `Traitements` sous `Traceurs_P1_orthogonale.gpkg`.  
 - Calculer la distance euclidienne de chaque galet inclus dans la couche `Traceurs_P1.gpkg` - exporter dans `Traitements` sous `Traceurs_P1_euclidienne.gpkg`.
