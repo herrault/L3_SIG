@@ -26,8 +26,8 @@
    - `Resultats`  
    - `Annexes`  
 3. Placez dans `Donnees` les couches rasters et vectorielles fournies :  
-   - `Galets_2016.csv` (points : Id, classe granulométrique, X, Y)
-   - `Galets_2017.csv` (points : Id, X, Y)
+   - `GALET_2016.csv` (Id, classe granulométrique, X, Y)
+   - `GALET_2017.csv` (Id, X, Y)
    - `Cordon_sedimentaire.gpkg` (polygone)  
    - `Chenal_actif.gpkg` (polygones : usage, hauteur)  
    - `MNT_2016.tif` (raster, altitude du fond du chenal et topographie emmergée en 2022)  
