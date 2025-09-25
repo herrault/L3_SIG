@@ -53,7 +53,9 @@
 
 ### 3. Mesure des distances de transport 
 *Méthode 1
-- Utiliser la fonction -> Vecteur -> Outils d'analyse -> Matrice des distances. Exporter le résultat dans `Traitements` sous `Distance_methode1.gpkg`.  
+- Utiliser la fonction -> Vecteur -> Outils d'analyse -> Matrice des distances.
+- Regardez la table d'attributs - quelle méthode pouvons-nous utiliser pour récupérer les bonnes associations Id? 
+- Exporter le résultat dans `Traitements` sous `Distance_methode1.gpkg`.  
 *Méthode 2
 - Créer une ligne centrale (centerline) à partir de la couche `Chenal_actif.gpkg`. Exporter le résultat dans `Traitements` sous `Centerline.gpkg`.  
 - Réaliser une projection orthogonale des traceurs sur la ligne centrale du chenal actif `GALET_2016.gpkg` - exporter le résultat dans `Traitements` sous `GALET_2016_orthogonale.gpkg`.
