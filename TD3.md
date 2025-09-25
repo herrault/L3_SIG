@@ -28,8 +28,7 @@
 3. Placez dans `Donnees` les couches rasters et vectorielles fournies :  
    - `GALET_2016.csv` (Id, X, Y)
    - `GALET_2017.csv` (Id, X, Y, GRANULO)
-   - `Cordon_sedimentaire.gpkg` (polygone)  
-   - `Chenal_actif.gpkg` (polygones : usage, hauteur)  
+   - `Chenal_actif.gpkg` (polygone)  
    - `MNT_2016.tif` (raster, altitude du fond du chenal et topographie emmergée en 2022)  
    - `MNT_2017.tif` (raster, altitude du fond du chenal et tppographie emmergée en 2023)
 ---
