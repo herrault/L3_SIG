@@ -72,7 +72,7 @@
 ### 4. Étude des évolutions topo-bathymétriques du chenal actif 
 - Découpez `MNT_2022.gpkg` et `MNT_2023.gpkg` avec `chenal_actif.gpkg`.  
 - Sauvegardez les deux couches dans `Traitements` sous`MNT_2022_clip.gpkg`; `MNT_2023_clip.gpkg` 
-- Réaliser une soustraction des deux MNTs en utilisant la calculatrice raster pour identifier les évolutions topo-bathymétrique au cours du temps.
+- Réaliser une soustraction des deux MNTs en utilisant la calculatrice raster pour identifier les évolutions topo-bathymétriques au cours du temps.
   - Sauvegardez le résultat dans `Traitements` sous `MNT_2022_2023.gpkg`
 - Utiliser la bonne symbologie pour représenter les évolutions topo-bathymétriques par classe de 0,5 m. (couleur chaudes évolutions > 0 m; couleurs froides évolutions < 0 m)
  
