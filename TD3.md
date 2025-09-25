@@ -52,10 +52,14 @@
 ---
 
 ### 3. Mesure des distances de transport 
+*Méthode 1
+- Utiliser la fonction -> Vecteur -> Outils d'analyse -> Matrice des distances. Exporter le résultat dans `Traitements` sous `Distance_methode1.gpkg`.  
+*Méthode 2
 - Créer une ligne centrale (centerline) à partir de la couche `Chenal_actif.gpkg`. Exporter le résultat dans `Traitements` sous `Centerline.gpkg`.  
-- Réaliser une projection orthogonale des traceurs sur la ligne centrale du chenal actif `Traceurs_P1.gpkg` - exporter le résultat dans `Traitements` sous `Traceurs_P1_orthogonale.gpkg`.  
-- Calculer la distance euclidienne de chaque galet inclus dans la couche `Traceurs_P1.gpkg` - exporter dans `Traitements` sous `Traceurs_P1_euclidienne.gpkg`.
-- Quelle est la distance minimale, moyenne, médiane et maximale des galets calculées entre les deux levés pour les deux méthodes de calcul ? Que remarquez-vous ?
+- Réaliser une projection orthogonale des traceurs sur la ligne centrale du chenal actif `GALET_2016.gpkg` - exporter le résultat dans `Traitements` sous `GALET_2016_orthogonale.gpkg`.
+- Réaliser une projection orthogonale des traceurs sur la ligne centrale du chenal actif `GALET_2017.gpkg` - exporter le résultat dans `Traitements` sous `GALET_2017_orthogonale.gpkg`.  
+- Calculer la distance euclidienne de chaque galet inclus dans la couche `GALET_P1.gpkg` - exporter dans `Traitements` sous `GALET_P1_euclidienne.gpkg`.
+- Quelle est la distance minimale, moyenne, médiane et maximale des galets calculées durant P1 pour les deux méthodes de calcul ? Que remarquez-vous ?
 - Réaliser la même opération en incluant uniquement les galets qui se sont déplacés au minimum de 5 m. Que constatez-vous ?
 
 **Questions :**  
