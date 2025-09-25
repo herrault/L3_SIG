@@ -45,7 +45,7 @@
 ### 2. Sélection par attributs et jointure attributaire
 
 **Questions :**  
-- Combien de galets ont été retrouvés par classe granulométrique lors de la deuxième campagne ?
+- Combien de galets ont été retrouvés par classe granulométrique lors du deuxième suivi ?
 - Quelle est la classe granulométrique qui a été la moins retrouvée (en %) lors de la deuxième campagne ?
   
 ---
