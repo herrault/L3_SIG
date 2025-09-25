@@ -1,6 +1,6 @@
 # TD3 – Analyse spatiale à partir de données vectorielles et rasters // Rolling Stones
 
-**Date :** 05-09-2025  
+**Date :** 25-09-2025  
 **Nom :** Herrault PA et Chardon V  
 
 ---
@@ -26,20 +26,20 @@
    - `Resultats`  
    - `Annexes`  
 3. Placez dans `Donnees` les couches rasters et vectorielles fournies :  
-   - `Galets_2022.gpkg` (points : Id, classe granulométrique, longitude, latitude)
-   - `Galets_2023.gpkg` (points : Id, longitude, latitude)
+   - `Galets_2016.gpkg` (points : Id, classe granulométrique, longitude, latitude)
+   - `Galets_2017.gpkg` (points : Id, longitude, latitude)
    - `Cordon_sedimentaire.gpkg` (polygone)  
    - `Chenal_actif.gpkg` (polygones : usage, hauteur)  
-   - `MNT_2022.tif` (raster, altitude du fond du chenal et topographie emmergée en 2022)  
-   - `MNT_2023.tif` (raster, altitude du fond du chenal et tppographie emmergée en 2023)
+   - `MNT_2016.tif` (raster, altitude du fond du chenal et topographie emmergée en 2022)  
+   - `MNT_2017.tif` (raster, altitude du fond du chenal et tppographie emmergée en 2023)
 ---
 
 ### 1. Exploration des données
 - Ajoutez les quatre couches à QGIS.  
 - Examinez les tables attributaires : notez les types de données, champs disponibles, nombre d’entités.  
 - Modifiez la symbologie pour améliorer la lecture cartographique :  
-  - `Galets_2022` → taille par classe  
-  - `Galets_2023` → taille par classe, transparence 50%.  
+  - `Galets_2016` → taille par classe  
+  - `Galets_2017` → taille par classe, transparence 50%.  
   - `Cordon_sedimentaire.gpkg` → couleur jaune, transparence 80%.  
 
 ### 2. Sélection par attributs et jointure attributaire
@@ -70,23 +70,23 @@
 ---
 
 ### 4. Étude des évolutions topo-bathymétriques du chenal actif 
-- Découpez `MNT_2022.gpkg` et `MNT_2023.gpkg` avec `chenal_actif.gpkg`.  
-- Sauvegardez les deux couches dans `Traitements` sous`MNT_2022_clip.gpkg`; `MNT_2023_clip.gpkg` 
+- Découpez `MNT_2016.gpkg` et `MNT_2017.gpkg` avec `chenal_actif.gpkg`.  
+- Sauvegardez les deux couches dans `Traitements` sous`MNT_2016_clip.gpkg`; `MNT_2017_clip.gpkg` 
 - Réaliser une soustraction des deux MNTs en utilisant la calculatrice raster pour identifier les évolutions topo-bathymétriques au cours du temps.
-  - Sauvegardez le résultat dans `Traitements` sous `MNT_2022_2023.gpkg`
+  - Sauvegardez le résultat dans `Traitements` sous `MNT_2016_2017.gpkg`
 - Utiliser la bonne symbologie pour représenter les évolutions topo-bathymétriques par classe de 0,5 m. (couleur chaudes évolutions > 0 m; couleurs froides évolutions < 0 m)
  
-- Supposons une incertitude de mesure en z (altitude) de 0,1 m pour chaque levé. Intégrer cette incertitude par la réalisation d'un nouveau raster à partir du raster `MNT_2022_2023.gpkg`.
-- Enregistrez votre nouvelle couche raster dans `Traitements` sous `MNT_2022_2023_corr.gpkg`
+- Supposons une incertitude de mesure en z (altitude) de 0,1 m pour chaque levé. Intégrer cette incertitude par la réalisation d'un nouveau raster à partir du raster `MNT_2016_2017.gpkg`.
+- Enregistrez votre nouvelle couche raster dans `Traitements` sous `MNT_2016_2017_corr.gpkg`
 - Utiliser la bonne symbologie pour représenter les évolutions topo-bathymétriques par classe de 0,5 m (couleur chaudes évolutions > 0 m; couleurs froides évolutions < 0 m)
-- Que constatez-vous en comparant `MNT_2022_2023.gpkg` et `MNT_2022_2023_corr.gpkg`?
-- Que constatez-vous en comparant la localisation des traceurs détectés en 2023 et les évolutions topo-bathymétriques observées entre 2022 et 2023 sur `MNT_2022_2023_corr.gpkg` ?
+- Que constatez-vous en comparant `MNT_2016_2017.gpkg` et `MNT_2016_2017_corr.gpkg`?
+- Que constatez-vous en comparant la localisation des traceurs détectés en 2023 et les évolutions topo-bathymétriques observées entre 2022 et 2023 sur `MNT_2016_2017_corr.gpkg` ?
      
 ---
 
 ### 5. Cartographie finale
 Réalisez une carte thématique incluant :  
-- La position initiale et de 2023 des traceurs détectés
+- La position des traceurs installés en 2016 et détectés en 2017.
 - Les évolutions topo-bathymétriques survenues entre les deux survols LiDAR topo-bathymétriques
 - Limites du chenal actif
 - Orthophotographie de la zone d'étude  
