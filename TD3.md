@@ -34,12 +34,12 @@
 ---
 
 ### 1. Exploration des données
-- Ajoutez les quatre couches à QGIS.  
+- Importer les deux fichiers .csv.
 - Examinez les tables attributaires : notez les types de données, champs disponibles, nombre d’entités.  
 - Modifiez la symbologie pour améliorer la lecture cartographique :  
-  - `Galets_2016` → taille par classe  
-  - `Galets_2017` → taille par classe, transparence 50%.  
-  - `Cordon_sedimentaire.gpkg` → couleur jaune, transparence 80%.  
+  - `GALET_2016`→ couleur noire
+  - `GALET_2017`→ couleur bleue
+  - `Chenal_actif.gpkg` → contour bleu, transparence 80%.  
 
 ### 2. Sélection par attributs et jointure attributaire
 
@@ -47,9 +47,6 @@
 - Combien de galets ont été retrouvés par classe granulométrique lors du deuxième suivi ?
 - Quelle est la classe granulométrique qui a été la moins retrouvée (en %) lors de la deuxième campagne ?
   
----
-**Exercices :**  
-- Exportez les traceurs détectés lors de la deuxième campagne et y incluant les coordonnées d'injection dans `Traitements` sous `Traceurs_P1.gpkg`.  
 ---
 *Contexte : vous préparez un rapport présentant les résultats significatifs de l'étude.*  
 ---
