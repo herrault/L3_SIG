@@ -1,6 +1,6 @@
 # TD3 – Analyse spatiale à partir de données vectorielles et rasters // Rolling Stones
 
-**Date :** 25-09-2025  
+**Date :** 26-09-2025  
 **Nom :** Herrault PA et Chardon V  
 
 ---
@@ -55,17 +55,17 @@
 - Utiliser la fonction -> Vecteur -> Outils d'analyse -> Matrice des distances.
 - Regardez la table d'attributs - quelle méthode pouvons-nous utiliser pour récupérer les bonnes associations Id? 
 - Exporter le résultat dans `Traitements` sous `Distance_methode1.gpkg`.  
-*Méthode 2
+*Méthode 2 (plus sophistiquée)
 - Digitaliser le chenal actif de l'injection sédimentaire jusqu'au galet détecté le plus en aval. Exporter le résultat dans `Traitements` sous `Chenal_actif.gpkg`.  
 - Créer une ligne centrale (centerline) à partir de la couche `Chenal_actif.gpkg` en utilisant la fonction skeleton
 - Supprimer les polylignes indésirables.
 - Agréger les polylignes. Exporter le résultat dans `Traitements` sous `Centerline.gpkg`.
-- Découper votre centerline en polylines de 5 m avec l'outil 'Division des lignes par longeur maximale'. 
 - Réaliser une projection orthogonale des traceurs sur la ligne centrale du chenal actif `GALET_2016.gpkg` - exporter le résultat dans `Traitements` sous `GALET_2016_orthogonale.gpkg`.
-- Réaliser une projection orthogonale des traceurs sur la ligne centrale du chenal actif `GALET_2017.gpkg` - exporter le résultat dans `Traitements` sous `GALET_2017_orthogonale.gpkg`.  
-- Calculer la distance euclidienne de chaque galet inclus dans la couche `GALET_P1.gpkg` - exporter dans `Traitements` sous `GALET_P1_euclidienne.gpkg`.
-- Quelle est la distance minimale, moyenne, médiane et maximale des galets calculées durant P1 pour les deux méthodes de calcul ? Que remarquez-vous ?
-- Réaliser la même opération en incluant uniquement les galets qui se sont déplacés au minimum de 5 m. Que constatez-vous ?
+- Réaliser une projection orthogonale des traceurs sur la ligne centrale du chenal actif `GALET_2017.gpkg` - exporter le résultat dans `Traitements` sous `GALET_2017_orthogonale.gpkg`.
+- Réaliser une jointure de table entre `GALET_2017.gpkg` et `GALET_2016.gpkg`.
+- Calculer la distance euclidienne de chaque galet retrouvés en 2017. Exporter dans `Traitements` sous `GALET_P1_euclidienne.gpkg`.
+- Quelle est la distance minimale, moyenne, médiane et maximale des galets calculées durant P1 pour les deux méthodes de calcul ?
+- Réaliser la même opération en incluant uniquement les galets qui se sont déplacés au minimum de 5 m. Que constatez-vous 
 
 **Questions :**  
 - Quelles est la classe granulométrique qui s'est déplacée en moyenne le plus loin ? 
