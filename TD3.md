@@ -70,9 +70,6 @@
 
 **Questions :**  
 - Quelles est la classe granulométrique qui s'est déplacée en moyenne le plus loin ? 
-- Pensez-vous que ces distances sont robustes statistiquement ?
-- Si ce n'est pas le cas, quelle solution proposeriez-vous ?
-
 ---
 
 ### 4. Étude des évolutions topo-bathymétriques du chenal actif 
