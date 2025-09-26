@@ -27,8 +27,7 @@
    - `Annexes`  
 3. Placez dans `Donnees` les couches rasters et vectorielles fournies :  
    - `GALET_2016.csv` (Id, X, Y)
-   - `GALET_2017.csv` (Id, X, Y, GRANULO)
-   - `Chenal_actif.gpkg` (polygone)  
+   - `GALET_2017.csv` (Id, X, Y, GRANULO) 
    - `MNT_2016.tif` (raster, altitude du fond du chenal et topographie emmergée en 2022)  
    - `MNT_2017.tif` (raster, altitude du fond du chenal et tppographie emmergée en 2023)
 ---
@@ -57,7 +56,11 @@
 - Regardez la table d'attributs - quelle méthode pouvons-nous utiliser pour récupérer les bonnes associations Id? 
 - Exporter le résultat dans `Traitements` sous `Distance_methode1.gpkg`.  
 *Méthode 2
-- Créer une ligne centrale (centerline) à partir de la couche `Chenal_actif.gpkg`. Exporter le résultat dans `Traitements` sous `Centerline.gpkg`.  
+- Digitaliser le chenal actif de l'injection sédimentaire jusqu'au galet détecté le plus en aval. Exporter le résultat dans `Traitements` sous `Chenal_actif.gpkg`.  
+- Créer une ligne centrale (centerline) à partir de la couche `Chenal_actif.gpkg` en utilisant la fonction skeleton
+- Supprimer les polylignes indésirables.
+- Agréger les polylignes. Exporter le résultat dans `Traitements` sous `Centerline.gpkg`.
+- Découper votre centerline en polylines de 5 m avec l'outil 'Division des lignes par longeur maximale'. 
 - Réaliser une projection orthogonale des traceurs sur la ligne centrale du chenal actif `GALET_2016.gpkg` - exporter le résultat dans `Traitements` sous `GALET_2016_orthogonale.gpkg`.
 - Réaliser une projection orthogonale des traceurs sur la ligne centrale du chenal actif `GALET_2017.gpkg` - exporter le résultat dans `Traitements` sous `GALET_2017_orthogonale.gpkg`.  
 - Calculer la distance euclidienne de chaque galet inclus dans la couche `GALET_P1.gpkg` - exporter dans `Traitements` sous `GALET_P1_euclidienne.gpkg`.
