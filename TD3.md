@@ -54,7 +54,8 @@
 **Méthode 1**
 - Utiliser la fonction -> Vecteur -> Outils d'analyse -> Matrice des distances.
 - Regardez la table d'attributs - quelle méthode pouvons-nous utiliser pour récupérer les bonnes associations Id? 
-- Exporter le résultat dans `Traitements` sous `Distance_methode1.gpkg`.  
+- Exporter le résultat dans `Traitements` sous `Distance_methode1.gpkg`.
+  
 **Méthode 2 (plus sophistiquée)**
 - Digitaliser le chenal actif de l'injection sédimentaire jusqu'au galet détecté le plus en aval. Exporter le résultat dans `Traitements` sous `Chenal_actif.gpkg`.  
 - Créer une ligne centrale (centerline) à partir de la couche `Chenal_actif.gpkg` en utilisant la fonction skeleton
