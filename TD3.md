@@ -83,7 +83,7 @@
 - Enregistrez votre nouvelle couche raster dans `Traitements` sous `MNT_2016_2017_corr.gpkg`
 - Utiliser la bonne symbologie pour représenter les évolutions topo-bathymétriques par classe de 0,5 m (couleur chaudes évolutions > 0 m; couleurs froides évolutions < 0 m)
 - Que constatez-vous en comparant `MNT_2016_2017.gpkg` et `MNT_2016_2017_corr.gpkg`?
-- Que constatez-vous en comparant la localisation des traceurs détectés en 2023 et les évolutions topo-bathymétriques observées entre 2022 et 2023 sur `MNT_2016_2017_corr.gpkg` ?
+- Que constatez-vous en comparant la localisation des traceurs détectés en 2017 et les évolutions topo-bathymétriques observées entre 2016 et 2017 sur `MNT_2016_2017_corr.gpkg` ?
      
 ---
 
