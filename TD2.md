@@ -30,7 +30,7 @@ MNT : https://seafile.unistra.fr/d/93c58499e53a47f3a1d8/
    - `Resultats`  
    - `Annexes`  
 3. Placez dans `Donnees` les couches vectorielles fournies :  
-   - `arbres.shp` (points : espèce, genre, ancien ou jeune)  
+   - `arbres.shp` (points : espèce, genre, type_arbre = ancien ou jeune)  
    - `batiments.shp` (polygones : usage, hauteur)  
    - `voirie.shp` (lignes : type de voie, nom)  
    - `zone_etude.shp` (polygone de délimitation de l’étude)
@@ -43,10 +43,10 @@ MNT : https://seafile.unistra.fr/d/93c58499e53a47f3a1d8/
 - De la même manière que dans le TD1, créez un geopackage nommée database_arbre et placez vos couches à l'intérieur
 - Examinez les tables attributaires : notez les types de données, champs disponibles, nombre d’entités.  
 - Modifiez la symbologie pour améliorer la lecture cartographique :  
-  - `arbres` → couleur par âge (jeune/ancien), forme par genre.  
-  - `batiments` → couleur par usage, transparence 50%.  
+  - `arbres` → couleur par statut (type_arbre :  2 = jeune/ 1 = ancien), forme par genre.  
+  - `batiments` → couleur par catégorie, transparence 50%.  
   - `voirie` → couleur par type de voie.  
-  - `zone_etude` → contour gris foncé, transparence 30%.  
+  - `zone_etude` → remplissage blanc, contour gris foncé, transparence 30%.  
 
 **À faire :**  
 - Exportez une vue (Projet > Exporter/Importer) pour chaque visualisation et collez-la dans un document Word (`Annexes`).  
@@ -54,7 +54,7 @@ MNT : https://seafile.unistra.fr/d/93c58499e53a47f3a1d8/
 **Questions :**  
 
 - Combien d’arbres sont anciens ?  
-- Combien de bâtiments publics et privés ?  
+- Combien de bâtiments appartiennent à la fois à la catégorie enseignement et sportif  ? Combien existe-t'il de     bâtiments sociaux dédiés aux métiers de l'enfance ? Quelle surface au sol représente cette dernière sélection ?
 - Quelle est la longueur totale du réseau viaire ?  
 
 ---
@@ -65,21 +65,21 @@ MNT : https://seafile.unistra.fr/d/93c58499e53a47f3a1d8/
 
 Les arbres anciens comme les Quercus sont à la fois des refuges de biodiversité et appartiennent au patrimoine paysager. Leur proximité avec des infrastructures routières (pollution, risques mécaniques) ou avec des bâtiments (chute, conflits racinaires) peut cependant poser des problèmes de gestion et de sécurité. Les commandes qui suivent permettent donc d’identifier les situations de cohabitation sensible entre patrimoine naturel et infrastructures humaines.
 
-- Sélectionnez tous **les vieux arbres du genre *Quercus* (chênes)** et exportez les `Résultats` sous `quercus_vieux.shp`.  
-- Sélectionnez tous **les bâtiments publics et privés de plus de 20 m de hauteur**. Après avoir ouvert le menu **Edition**, dans un champ nommé **type_taille** (type = entier), codez en 1 ceux ayant une taille > 20m et les autres en 2. Sauvegardez vos résultats et
-bouclez votre menu d'Edition. 
-
+- Sélectionnez tous **les vieux arbres du genre *Quercus* (chênes) et exportez les`quercus_vieux.shp`.  
+- Dans cette nouvelle couche, après avoir ouvert le menu **Edition**, dans un champ nommé **type_taille** (type = entier), codez en 1 ceux ayant une taille > 20m et les autres en 2. Sauvegardez vos résultats et bouclez votre menu d'Edition. )**. **Parmi les vieux chênes supérieurs à 20m, quel est le maximum de hauteur observé ? La moyenne ?**
+- Sélectionnez tous **les bâtiments plus de 20 m de hauteur**. Exportez les sous 'bat_sup20m.shp'. 
 ---
 
 ### 1.3 Sélection par localisation
 
-- Sélectionnez les vieux quercus situés **à moins de 20 m des rues** et exportez les ('vieux_quercus_risques.shp')
-- Sélectionnez les grands bâtiments situés dans un rayon de 50 m autour des arbres anciens et exportez les ('grands_bat_quercus_risques.shp')
+- Sélectionnez les vieux quercus situés **à moins de 20 m des rues** et exportez les ('vieux_quercus_risques.shp'). **Pour cela, vous allez utiliser l'outil Tampon (à partir des vieux quercus) puis l'outil de sélection par localisation vous permettra de parvenir à vos résultats.**
+- Sélectionnez les grands bâtiments ('bat_sup20m.shp') situés dans un rayon de 50 m autour des arbres anciens (tous genres confondus) et exportez les ('grands_bat_quercus_risques.shp') **Utilisez la même démarche que précédemment mais attention au sens de l'opération**.
 
 **Questions :**  
 
-- Parmi les vieux arbres, combien de chênes (quercus) en sont pas en situation de conflit avec la voirie  ?  
+- Combien de vieux chênes sont en situation de conflit avec la voirie  ?  
 - Combien de bâtiments de grande taille se trouvent autour des arbres anciens ? Quel est leur surface moyenne ?
+- Quel est le (les ?) genre dominant concerné par une proximité potentiellement problématique avec ces grands bâtiments ?
 
 ### 1.4 Cartographie finale 
 
