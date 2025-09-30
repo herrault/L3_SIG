@@ -18,6 +18,8 @@ Les vieux arbres en milieu urbain remplissent des fonctions écologiques essenti
 
 ---
 
+Les données dont nous aurons besoin sont disponibles ici : https://seafile.unistra.fr/d/6407ede3dd604ed2863f/
+
 ## 0. Préparation de l’espace de travail
 
 1. Créez un dossier principal `TD2_QGIS`.  
