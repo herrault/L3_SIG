@@ -43,7 +43,7 @@ MNT : https://seafile.unistra.fr/d/93c58499e53a47f3a1d8/
 - De la même manière que dans le TD1, créez un geopackage nommée database_arbre et placez vos couches à l'intérieur
 - Examinez les tables attributaires : notez les types de données, champs disponibles, nombre d’entités.  
 - Modifiez la symbologie pour améliorer la lecture cartographique :  
-  - `arbres` → couleur par statut (type_arbre :  2 = jeune/ 1 = ancien), forme par genre.  
+  - `arbres` → couleur par statut (type_arbre :  2 = jeune/ 1 = ancien)
   - `batiments` → couleur par catégorie, transparence 50%.  
   - `voirie` → couleur par type de voie.  
   - `zone_etude` → remplissage blanc, contour gris foncé, transparence 30%.  
@@ -65,7 +65,7 @@ MNT : https://seafile.unistra.fr/d/93c58499e53a47f3a1d8/
 
 Les arbres anciens comme les Quercus sont à la fois des refuges de biodiversité et appartiennent au patrimoine paysager. Leur proximité avec des infrastructures routières (pollution, risques mécaniques) ou avec des bâtiments (chute, conflits racinaires) peut cependant poser des problèmes de gestion et de sécurité. Les commandes qui suivent permettent donc d’identifier les situations de cohabitation sensible entre patrimoine naturel et infrastructures humaines.
 
-- Sélectionnez tous **les vieux arbres du genre *Quercus* (chênes) et exportez les`quercus_vieux.shp`.  
+- Sélectionnez tous **les vieux arbres du genre *Quercus* (chênes) et exportez les sous `quercus_vieux.shp`.  
 - Dans cette nouvelle couche, après avoir ouvert le menu **Edition**, dans un champ nommé **type_taille** (type = entier), codez en 1 ceux ayant une taille > 20m et les autres en 2. Sauvegardez vos résultats et bouclez votre menu d'Edition. )**. **Parmi les vieux chênes supérieurs à 20m, quel est le maximum de hauteur observé ? La moyenne ?**
 - Sélectionnez tous **les bâtiments plus de 20 m de hauteur**. Exportez les sous 'bat_sup20m.shp'. 
 ---
