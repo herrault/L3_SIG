@@ -100,7 +100,7 @@ La seconde partie vise à introduire de nouvelles fonctionnalités plus avancés
 ### 2.1 Limitation à la zone d’étude (Clip)
 
 - Outil : **Vecteur > Outils de géotraitement > Couper (Clip)**  
-- Découpez `arbres.shp`, `batiments.shp` et `zone_etude.shp`.  
+- Découpez `arbres.shp`, `batiments.shp` et `voirie.shp`.  
 - Sauvegardez en :  
   - `arbres_zone_etude.shp`  
   - `batiments_zone_etude.shp`
