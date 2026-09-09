@@ -111,4 +111,4 @@ Ajoutez une légende claire, un titre, une échelle et une flèche du Nord.
 - Toujours vérifier le système de coordonnées avant d’exporter ou de traiter les données.  
 - Conserver une copie des couches originales (ne jamais écraser les données sources).  
 - Documenter chaque étape dans le panneau **Propriétés > Métadonnées**.
-- Tenir compte des incertitudes des mesures dans les analyses spatiales
+- Tenir compte de l'incertitude des mesures dans les analyses spatiales
