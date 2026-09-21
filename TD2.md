@@ -73,7 +73,7 @@ Les arbres anciens comme les Quercus sont à la fois des refuges de biodiversit�
 ### 1.3 Sélection par localisation
 
 - Sélectionnez les vieux quercus situés **à moins de 50 m des rues** et exportez les ('vieux_quercus_risques.shp'). **Pour cela, vous allez utiliser l'outil Tampon (à partir des vieux quercus) puis l'outil de sélection par localisation vous permettra de parvenir à vos résultats.**
-- Sélectionnez les grands bâtiments ('bat_sup20m.shp') situés dans un rayon de 50 m autour des arbres anciens (tous genres confondus) et exportez les ('grands_bat_quercus_risques.shp') **Utilisez la même démarche que précédemment mais attention au sens de l'opération**.
+- Sélectionnez les grands bâtiments ('bat_sup20m.shp') situés dans un rayon de 50 m autour des arbres anciens (tous genres confondus) et exportez les ('grands_bat_arbres_anciens_risques.shp') **Utilisez la même démarche que précédemment mais attention au sens de l'opération**.
 
 **Questions :**  
 
