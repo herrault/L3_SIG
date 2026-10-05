@@ -28,8 +28,8 @@ Accès données : https://seafile.unistra.fr/d/d11d276659514c5dbd21/
 3. Placez dans `Donnees` les couches rasters et vectorielles fournies :  
    - `GALET_2016.csv` (Id, X, Y)
    - `GALET_2017.csv` (Id, X, Y, GRANULO) 
-   - `MNT_2016.tif` (raster, altitude du fond du chenal et topographie emmergée en 2022)  
-   - `MNT_2017.tif` (raster, altitude du fond du chenal et tppographie emmergée en 2023)
+   - `MNT_2016.tif` (raster, altitude du fond du chenal et topographie emmergée en 2016)  
+   - `MNT_2017.tif` (raster, altitude du fond du chenal et tppographie emmergée en 2017)
 ---
 
 ### 1. Exploration des données
