@@ -42,9 +42,8 @@ Accès données : https://seafile.unistra.fr/d/d11d276659514c5dbd21/
 
 ### 2. Sélection par attributs et jointure attributaire
 
-**Questions :**  
+**Question:**  
 - Combien de galets ont été retrouvés par classe granulométrique lors du deuxième suivi ?
-- Quelle est la classe granulométrique qui a été la moins retrouvée (en %) lors de la deuxième campagne ?
   
 ---
 *Contexte : vous préparez un rapport présentant les résultats significatifs de l'étude.*  
