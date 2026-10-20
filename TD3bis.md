@@ -19,10 +19,9 @@ Accès données : https://seafile.unistra.fr/d/a5a7ed788ad246428146/
    - `Resultats`  
    - `Annexes`  
 3. Placez dans `Donnees` les couches rasters et vectorielles fournies :  
-   - `Communes_emprise` (Id, X, Y)
-   - `OCSGE_2019_68` (Occupation du sol en 2019 du Haut-Rhin) 
-   - `MNT_20M_68` (raster, MNT du Haut-Rhin, résolution 20 m (MNT généré à partir du RGE 5 m))  
-   - `` (raster, altitude du fond du chenal et tppographie emmergée en 2017)
+   - `Communes_emprise` (Couche vectorielle, emprise des communes françaises)
+   - `OCSGE_2019_68` (Couche vectorielles, Occupation du sol en 2019 du Haut-Rhin) 
+   - `MNT_20M_68` (Couche raster, MNT du Haut-Rhin, résolution 20 m (MNT généré à partir du RGE 5 m))  
 ---
 
 ### 1. Exploration des données
