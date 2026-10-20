@@ -9,6 +9,7 @@ Accès données : https://seafile.unistra.fr/d/a5a7ed788ad246428146/
 - Maîtriser les outils de sélection / jointure spatiale et attributaire.  
 - Manipuler les outils de la boîte à outils de traitement QGIS.
 - Manipuler, traiter et analyser des données rasters
+- Produire de nouvelles métriques à partir d'un MNT
 - Extraire des informations de données rasters
 ---
 
