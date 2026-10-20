@@ -54,7 +54,7 @@ Pour réaliser cette partie, utilisez l'outil de géotraitement `intersection` d
       - Enregistrer cette nouvelle couche dans `Resultats` sous le nom `Raster_Exposition_20m_68`
         
 - À partir des trois couches rasters `MNT_20m_68`, `Raster_Pente_20m_68` et `Raster_Exposition_20m_68`, étudiez les caractéristiques topographiques et d'exposition des terrains où le vignoble du Haut-Rhin est implanté ?
-  - Pour réalisez les étapes suivantes, récupérez l'occupation du sol de type vigne à partir de la couche `OCSGE_2019_68`
+  - Pour réaliser les étapes suivantes, récupérez l'occupation du sol de type vigne à partir de la couche `OCSGE_2019_68`
   - Donnez sous la forme d'un tableau la valeur minimale, moyenne et maximale en terme d'altitude, de pente et d'exposition. 
      
      
