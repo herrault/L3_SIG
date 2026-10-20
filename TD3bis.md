@@ -6,8 +6,8 @@ Accès données : https://seafile.unistra.fr/d/a5a7ed788ad246428146/
 ---
 
 ## 🎯 Objectifs
-- Maîtriser les outils de sélection / jointure spatiale et attributaire.  
-- 
+- Maîtriser les principales opérations sur les données vectorielles 
+- Maîtrise
  
 
 ---
