@@ -48,6 +48,7 @@ Pour réaliser cette partie, utilisez l'outil de géotraitement `intersection` d
  - Recoder une données raster à l'aide de l'outil reclassification par table Code  = 1 pour altitude < 200m; Code = 2 pour altitude 200m - 350m et code = 3 pour altitude > 350 m et enregistrer cette nouvelle couche dans `Resultats` sous le nom `MNT_reclassification`
  - Réalisez une vectorisation du raster `MNT_reclassification` en utilisant l'outil Polygoniser
  - À l'aide de la calculatrice de champs créez une nouvelle colonne `Unité_relief` de type texte. Pour chaque code, indiquez le nom de l'unité de relief.
+ - Dans quelle unité de relief sont implantées en majorité les vergers traditionnels ? 
       
 ### 4. Exploration, traitements et analyses sur données Rasters & Vectorielles - Étagement de la végétation
  -  Réalisez une requête attributaire pour extraire uniquement les classes suivantes (lib_n3)  `Forêts de conifères`, `Forêts de feuillus`,  `Forêts mixtes`,  `Pelouses et pâturages de montagne` et enregistrer cette nouvelle couche dans `Resultats` sous le nom `Vegetation`
