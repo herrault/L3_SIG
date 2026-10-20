@@ -46,7 +46,7 @@ Pour réaliser cette partie, utilisez l'outil de géotraitement `intersection` d
     - classe 2 : altitude 200m - 500m : Collines sous-vosgiennes
     - classe 3 : altitude > 500m : Massif vosgien
   
- - Le modèle numérique de terrain permet de calculer d'autres métriques utiles pour étudier l'espace géographique
+ - Le modèle numérique de terrain permet de calculer d'autres métriques utiles pour étudier l'espace géographique. Nous allons étudier les terrains sur lesquels les vignes sont implantées. 
     - Calculer la valeur de pente à l'échelle du pixel à partir de l'outil Raster -> Analyse -> Pente.
       - Enregistrer cette nouvelle couche dans `Resultats` sous le nom `Raster_Pente_20m_68`
         
@@ -54,8 +54,9 @@ Pour réaliser cette partie, utilisez l'outil de géotraitement `intersection` d
       - Enregistrer cette nouvelle couche dans `Resultats` sous le nom `Raster_Exposition_20m_68`
         
 - À partir des trois couches rasters `MNT_20m_68`, `Raster_Pente_20m_68` et `Raster_Exposition_20m_68`, étudiez les caractéristiques topographiques et d'exposition des terrains où le vignoble du Haut-Rhin est implanté ?
-  - Pour réaliser les étapes suivantes, récupérez l'occupation du sol de type vigne à partir de la couche `OCSGE_2019_68`
-  - Donnez sous la forme d'un tableau la valeur minimale, moyenne et maximale en terme d'altitude, de pente et d'exposition. 
+  - Pour réaliser les étapes suivantes, récupérez l'occupation du sol de type Vignes à partir de la couche `OCSGE_2019_68`. 
+  - À l'aide de l'outil statistique de zone, calculez pour chaque polygone la valeur minimale, moyenne et maximale d'altitude, de pente et d'exposition.
+  - Que
      
      
 
