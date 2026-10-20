@@ -41,7 +41,7 @@ Pour réaliser cette partie, utilisez l'outil de géotraitement `intersection` d
  - Combien de bâtis (tous types confondus) à l'échelle du Haut-Rhin (tous type) se trouvent à moins de 2,5 km de cours et voies d'eau ?
 
 ### 3. Exploration d'un MNT, recodage d'une donnée raster
- -  Modifier la symbologie de sorte à avoir trois classes d'altitude pour représenter les trois grandes unités de relief (typologie simplifiée) de la zone géographique étudiée
+ -  Modifier la symbologie de sorte à avoir trois classes d'altitude pour représenter les trois grandes unités de relief de la zone géographique étudiée
     - classe 1 : altitude < 200 m : Plaine d'Alsace
     - classe 2 : altitude 200 m - 350 m : Piémont
     - classe 3 : altitude > 350 m : Massif vosgien
