@@ -40,7 +40,7 @@ Pour réaliser cette partie, utilisez l'outil de géotraitement `intersection` d
  - Combien de Bâtis (tous types confondus) à l'échelle du Haut-Rhin (tous type) se trouvent à moins de 2,5 km de cours et voies d'eau ?
   
 
--  ### 3. Exploration, Traitements et analyses sur données Rasters & Vectorielles - cas sur les Vignes. 
+-  ### 3. Exploration, Traitements et analyses sur données Rasters & Vectorielles - Les Vignes. 
  -  Modifier la symbologie de sorte à avoir trois classes d'altitude pour représenter les unités de relief
     - classe 1 : altitude < 200m : Plaine d'Alsace
     - classe 2 : altitude 200m - 500m : Collines sous-vosgiennes
