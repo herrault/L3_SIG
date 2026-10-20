@@ -21,7 +21,7 @@ Accès données : https://seafile.unistra.fr/d/a5a7ed788ad246428146/
 3. Placez dans `Donnees` les couches rasters et vectorielles fournies :  
    - `Communes_emprise` (Couche vectorielle, emprise des communes françaises)
    - `OCSGE_2019_68` (Couche vectorielles, Occupation du sol en 2019 du Haut-Rhin) 
-   - `MNT_20M_68` (Couche raster, MNT du Haut-Rhin, résolution 20 m (MNT généré à partir du RGE 5 m))  
+   - `MNT_20m_68` (Couche raster, MNT du Haut-Rhin, résolution 20 m (MNT généré à partir du RGE 5 m))  
 ---
 
 ### 1. Exploration et préparation des données
@@ -33,11 +33,11 @@ Accès données : https://seafile.unistra.fr/d/a5a7ed788ad246428146/
    - Pour faire cette tâche, aidez-vous de cette expression `"insee" LIKE '68%'`
 
 ### 2. Révision de plusieurs manipulations sur des données vectorielles à l'échelle du Haut-Rhin (lib_n3)
-Pour réaliser cette partie, aidez-vous de l'outil de géotraitement `intersection`
- -  Quelle est la commune qui concentre le plus d'exploitations agricoles ?
+Pour réaliser cette partie, utilisez l'outil de géotraitement `intersection` dans un premier temps
+ - Quelle est la commune qui concentre le plus d'exploitations agricoles ?
  - Quelle est la superficie moyenne en ha de bâti continu à l'échelle de la commune ?
- -  Quelle est la commune qui concentre le plus de bâtis continus et d’Équipements sportifs de loisirs et campings ?
- - Combien de Bâtis à l'échelle du Haut-Rhin (tous type) se trouvent à moins de 2,5 km de cours et voies d'eau ?
+ - Quelle est la commune qui concentre le plus de bâtis continus et d’Équipements sportifs de loisirs et campings ?
+ - Combien de Bâtis (tous types confondus) à l'échelle du Haut-Rhin (tous type) se trouvent à moins de 2,5 km de cours et voies d'eau ?
   
 
 -  ### 3. Exploration, Traitements et analyses Raster
@@ -45,6 +45,10 @@ Pour réaliser cette partie, aidez-vous de l'outil de géotraitement `intersecti
     - classe 1 : altitude < 200m : Plaine d'Alsace
     - classe 2 : altitude 200m - 500m : Collines sous-vosgiennes
     - classe 3 : altitude > 500m : Massif vosgien
+  
+ - Le modèle numérique de terrain permet de calculer d'autres métriques utiles pour étudier l'espace géographique
+    - Calculer la valeur de pente à l'échelle du pixel à partir de l'outil Raster -> Analyse -> Pente. Enregistrer cette nouvelle couche dans `Resultats` sous le nom `Raster_Pente_20m_68`
+    - Calculer la valeur d'exposition à l'échelle du pixel à partir de l'outil Raster -> Analyse -> Exposition. Enregistrer cette nouvelle couche dans `Resultats` sous le nom `Raster_Exposition_20m_68` 
 
 
 
