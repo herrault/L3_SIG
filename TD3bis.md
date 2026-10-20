@@ -13,7 +13,7 @@ Accès données : https://seafile.unistra.fr/d/a5a7ed788ad246428146/
 ---
 
 ## 0. Préparation de l’espace de travail
-1. Créez un dossier principal `TD3_QGIS`.  
+1. Créez un dossier principal `TD3bis_QGIS`.  
 2. Créez les sous-dossiers :  
    - `Donnees`  
    - `Resultats`  
@@ -24,10 +24,24 @@ Accès données : https://seafile.unistra.fr/d/a5a7ed788ad246428146/
    - `MNT_20M_68` (Couche raster, MNT du Haut-Rhin, résolution 20 m (MNT généré à partir du RGE 5 m))  
 ---
 
-### 1. Exploration des données
-- Importer les deux fichiers .csv.
-- Examinez les tables attributaires : notez les types de données, champs disponibles, nombre d’entités.  
-- Modifiez la symbologie pour améliorer la lecture cartographique :  
-  - `GALET_2016`→ couleur noire
-  - `GALET_2017`→ couleur bleue
-  - `Chenal_actif.gpkg` → contour bleu, transparence 80%.  
+### 1. Exploration et préparation des données
+- Importer la couche OCSGE_68
+- Examinez la table attributaire
+- Modifiez la symbologie pour améliorer la lecture cartographique au niveau 3  
+  - Dans symbologie, charger le style de couche de l'IGN à l'aide du fichier `OCSGE_GE2_symbologie_niv3`
+- À partir de la couche `Communes_emprise`, faire une extraction uniquement des communes du Haut-Rhin en enregistrer cette nouvelle couche dans `Resultats` sous le nom `Communes_emprise_68`
+
+### 2. Révision de plusieurs manipulations sur des données vectorielles à l'échelle du Haut-Rhin (lib_n3)
+-  Quelle est la commune qui concentre le plus d'exploitations agricoles ?
+-  Quelle est la superficie moyenne en ha de bâti continu à l'échelle de la commune ?
+-  Quelle est la commune qui concentre le plus de bâtis continus et d’Équipements sportifs de loisirs et campings ?
+-  Combien de Bâtis à l'échelle du Haut-Rhin (tous type) se trouvent à moins de 2,5 km de cours et voies d'eau ?
+-  
+
+-  ### 3. 
+
+
+
+
+
+
