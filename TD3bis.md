@@ -57,7 +57,7 @@ Pour réaliser cette partie, utilisez l'outil de géotraitement `intersection` d
   - Pour réaliser les étapes suivantes, récupérez l'occupation du sol de type vignes à partir de la couche `OCSGE_2019_68`. 
   - À l'aide de l'outil `statistique de zone`, calculez pour chaque polygone la valeur minimale, moyenne et maximale de l'altitude, de la pente et de l'exposition. Enregistrez les trois nouvelles couches dans `Resultats`
   - Réalisez une jointure attributaire pour rassembler l'ensemble des résultats dans une seule couche vectorielle et enregistrer cette nouvelle couche dans `Resultats` sous le nom `Statistique_vignes_68`
-  - 
+  - Résumez l'information à l'échelle de la commune (min_altitude/ moy._altitude/ max_altitude / min_pente/ moy._pente/ max_pente/  min_exposition/ moy._exposition/ max_exposition.
      
      
 
