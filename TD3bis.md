@@ -30,6 +30,8 @@ Accès données : https://seafile.unistra.fr/d/a5a7ed788ad246428146/
 - Modifiez la symbologie pour améliorer la lecture cartographique au niveau 3  
   - Dans symbologie, charger le style de couche de l'IGN à l'aide du fichier `OCSGE_GE2_symbologie_niv3`
 - À partir de la couche `Communes_emprise`, faire une extraction uniquement des communes du Haut-Rhin en enregistrer cette nouvelle couche dans `Resultats` sous le nom `Communes_emprise_68`
+  - Aidez-vous de cette expression `"insee" LIKE '68%'`
+- À partir de la couche `Communes_emprise_68`, dé
 
 ### 2. Révision de plusieurs manipulations sur des données vectorielles à l'échelle du Haut-Rhin (lib_n3)
 -  Quelle est la commune qui concentre le plus d'exploitations agricoles ?
