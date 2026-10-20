@@ -44,7 +44,7 @@ Pour réaliser cette partie, utilisez l'outil de géotraitement `intersection` d
  -  Modifier la symbologie de sorte à avoir trois classes d'altitude pour représenter les trois grandes unités de relief de la zone géographique étudiée
     - classe 1 : altitude < 200 m : Plaine d'Alsace
     - classe 2 : altitude 200 m - 350 m : Piémont
-    - classe 3 : altitude > 500 m : Massif vosgien
+    - classe 3 : altitude > 350 m : Massif vosgien
  - Recoder une données raster à l'aide de l'outil reclassification par table Code  = 1 pour altitude < 200m; Code = 2 pour altitude 200m - 350m et code = 3 pour altitude > 350 m et enregistrer cette nouvelle couche dans `Resultats` sous le nom `MNT_reclassification`
  - Réalisez une vectorisation du raster `MNT_reclassification` en utilisant l'outil Polygoniser
  - Créez une nouvelle colonne `Unité_relief` de type texte. Pour chaque code, indiquez le nom de l'unité de relief à l'aide de la calculatrice de champs.
@@ -71,8 +71,6 @@ Pour réaliser cette partie, utilisez l'outil de géotraitement `intersection` d
   - Réalisez une jointure attributaire pour rassembler l'ensemble des résultats dans une seule couche vectorielle et enregistrer cette nouvelle couche dans `Resultats` sous le nom `Statistique_vignes_68`
   - Résumez l'information à l'échelle de la commune (min_altitude/ moy_altitude / max_altitude / min_pente / moy_pente / max_pente / min_exposition/ moy_exposition/ max_exposition. Aidez-vous de l'outil `Statistiques par catégories`
  
-    
-### 4. Réalisez une cartographie 
     
      
      
