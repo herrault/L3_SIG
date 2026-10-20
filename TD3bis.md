@@ -42,11 +42,9 @@ Pour réaliser cette partie, aidez-vous de l'outil de géotraitement `intersecti
 
 -  ### 3. Exploration, Traitements et analyses Raster
  -  Modifier la symbologie de sorte à avoir trois classes d'altitude pour représenter les unités de relief
-   - classe 1 : altitude < 200m : Plaine d'Alsace
-   - classe 2 : altitude 200m - 500m : Collines sous-vosgiennes
-   - classe 3 : altitude > 500m : Massif vosgien
-
-   - 
+    - classe 1 : altitude < 200m : Plaine d'Alsace
+    - classe 2 : altitude 200m - 500m : Collines sous-vosgiennes
+    - classe 3 : altitude > 500m : Massif vosgien
 
 
 
