@@ -41,7 +41,7 @@ Pour réaliser cette partie, utilisez l'outil de géotraitement `intersection` d
   
 
 -  ### 3. Exploration, Traitements et analyses sur données Rasters & Vectorielles - Les Vignes. 
- -  Modifier la symbologie de sorte à avoir trois classes d'altitude pour représenter les unités de relief
+ -  Modifier la symbologie de sorte à avoir trois classes d'altitude pour représenter les trois grandes unités de relief de la zone géographique étudiée
     - classe 1 : altitude < 200m : Plaine d'Alsace
     - classe 2 : altitude 200m - 500m : Collines sous-vosgiennes
     - classe 3 : altitude > 500m : Massif vosgien
