@@ -6,10 +6,10 @@ Accès données : https://seafile.unistra.fr/d/a5a7ed788ad246428146/
 ---
 
 ## 🎯 Objectifs
-- Maîtriser les principales opérations sur les données vectorielles 
-- Maîtrise
- 
-
+- Maîtriser les outils de sélection / jointure spatiale et attributaire.  
+- Manipuler les outils de la boîte à outils de traitement QGIS.
+- Manipuler, traiter et analyser des données rasters
+- Extraire des informations de données rasters
 ---
 
 ## 0. Préparation de l’espace de travail
