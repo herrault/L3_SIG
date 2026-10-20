@@ -35,9 +35,9 @@ Accès données : https://seafile.unistra.fr/d/a5a7ed788ad246428146/
 ### 2. Révision de plusieurs manipulations sur des données vectorielles à l'échelle du Haut-Rhin (lib_n3)
 Pour réaliser cette partie, aidez-vous de l'outil de géotraitement `intersection`
  -  Quelle est la commune qui concentre le plus d'exploitations agricoles ?
- -  Quelle est la superficie moyenne en ha de bâti continu à l'échelle de la commune ?
+ - Quelle est la superficie moyenne en ha de bâti continu à l'échelle de la commune ?
  -  Quelle est la commune qui concentre le plus de bâtis continus et d’Équipements sportifs de loisirs et campings ?
- -  Combien de Bâtis à l'échelle du Haut-Rhin (tous type) se trouvent à moins de 2,5 km de cours et voies d'eau ?
+ - Combien de Bâtis à l'échelle du Haut-Rhin (tous type) se trouvent à moins de 2,5 km de cours et voies d'eau ?
   
 
 -  ### 3. Exploration, Traitements et analyses Raster
