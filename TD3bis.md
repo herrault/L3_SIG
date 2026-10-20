@@ -51,7 +51,8 @@ Pour réaliser cette partie, utilisez l'outil de géotraitement `intersection` d
       - Enregistrer cette nouvelle couche dans `Resultats` sous le nom `Raster_Pente_20m_68`
     - Calculer la valeur d'exposition à l'échelle du pixel à partir de l'outil Raster -> Analyse -> Exposition.
       - Enregistrer cette nouvelle couche dans `Resultats` sous le nom `Raster_Exposition_20m_68`
-    - À partir des trois couches rasters `MNT_20m_68`, `Raster_Pente_20m_68` et `Raster_Exposition_20m_68`, quelles sont les caractéristiques topographiques et d'exposition du vignoble du Haut-Rhin ?  Donnez la valeur minimale, moyenne et maximale en terme d'altitude, de pente et d'exposition
+    - À partir des trois couches rasters `MNT_20m_68`, `Raster_Pente_20m_68` et `Raster_Exposition_20m_68`, quelles sont les caractéristiques topographiques et d'exposition du vignoble du Haut-Rhin ?
+      - Donnez la valeur minimale, moyenne et maximale en terme d'altitude, de pente et d'exposition
 
 
 
