@@ -25,7 +25,7 @@ Accès données : https://seafile.unistra.fr/d/a5a7ed788ad246428146/
 ---
 
 ### 1. Exploration et préparation des données
- - Importer la couche OCSGE_68
+ - Importer la couche `OCSGE_2019_68`
  - Examinez la table attributaire
  - Modifiez la symbologie pour améliorer la lecture cartographique au niveau 3  
    - Dans symbologie, charger le style de couche de l'IGN à l'aide du fichier `OCSGE_GE2_symbologie_niv3`
@@ -51,7 +51,7 @@ Pour réaliser cette partie, utilisez l'outil de géotraitement `intersection` d
       - Enregistrer cette nouvelle couche dans `Resultats` sous le nom `Raster_Pente_20m_68`
     - Calculer la valeur d'exposition à l'échelle du pixel à partir de l'outil Raster -> Analyse -> Exposition.
       - Enregistrer cette nouvelle couche dans `Resultats` sous le nom `Raster_Exposition_20m_68`
-    - À partir des trois couches rasters `MNT_20m_68`, `Raster_Pente_20m_68` et `Raster_Exposition_20m_68`, quelles sont les caractéristiques topographiques et d'exposition du vignoble du Haut-Rhin ?
+    - À partir des trois couches rasters `MNT_20m_68`, `Raster_Pente_20m_68` et `Raster_Exposition_20m_68`, quelles sont les caractéristiques topographiques et d'exposition du vignoble du Haut-Rhin (récupérez l'occupation du sol de type vigne à partir de la couche `OCSGE_2019_68`) ?
       - Donnez la valeur minimale, moyenne et maximale en terme d'altitude, de pente et d'exposition
 
 
