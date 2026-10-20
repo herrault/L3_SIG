@@ -54,7 +54,7 @@ Pour réaliser cette partie, utilisez l'outil de géotraitement `intersection` d
  -  Réalisez une requête attributaire pour extraire uniquement les classes suivantes (lib_n3)  `Forêts de conifères`, `Forêts de feuillus`,  `Forêts mixtes`,  `Pelouses et pâturages de montagne` et enregistrer cette nouvelle couche dans `Resultats` sous le nom `Vegetation`
  - À l'aide de l'outil `statistique de zone`, calculez pour chaque polygone la valeur minimale et maximale de l'altitude. Enregistrez cette nouvelle couche dans `Resultats` sous le nom `Statistique_Vegetation`.
  - Calculez la valeur moyenne minimale et la valeur moyenne maximale de l'altitude par classe de végétation. 
- - Que pouvez-vous en conclure sur l'étagement moyen de la végétation ? 
+ - Que pouvez-vous en conclure sur l'étagement de la végétation ? 
     
 
 ### 5. Exploration, traitements et analyses sur données Rasters & Vectorielles - Les Vignes
