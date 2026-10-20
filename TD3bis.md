@@ -13,7 +13,7 @@ Accès données : https://seafile.unistra.fr/d/a5a7ed788ad246428146/
 - Extraire des informations de données rasters
 ---
 
-## 0. Préparation de l’espace de travail
+### 0. Préparation de l’espace de travail
 1. Créez un dossier principal `TD3bis_QGIS`.  
 2. Créez les sous-dossiers :  
    - `Donnees`  
@@ -51,26 +51,28 @@ Pour réaliser cette partie, utilisez l'outil de géotraitement `intersection` d
       
 ### 4. Exploration, traitements et analyses sur données Rasters & Vectorielles - Étagement de la végétation
  -  Réalisez une requête attributaire pour extraire uniquement les classes suivantes (lib_n3)  `Forêts de conifères`, `Forêts de feuillus`,  `Forêts mixtes`,  `Pelouses et pâturages de montagne` et enregistrer cette nouvelle couche dans `Resultats` sous le nom `Vegetation`
- - À l'aide de l'outil `statistique de zone`, calculez pour chaque polygone la valeur minimale et maximale de l'altitude. Enregistrez cette nouvelle couches dans `Resultats` sous le nom `Statistique_Vegetation`.
- - Calculez la valeur moyenne minimale et la valeur moyenne maximale par classe de végétation. 
- - Que pouvez-vous en conclure sur l'étagement de la végétation à l'échelle du Haut-Rhin ?
+ - À l'aide de l'outil `statistique de zone`, calculez pour chaque polygone la valeur minimale et maximale de l'altitude. Enregistrez cette nouvelle couche dans `Resultats` sous le nom `Statistique_Vegetation`.
+ - Calculez la valeur moyenne minimale et la valeur moyenne maximale de l'altitude par classe de végétation. 
+ - Que pouvez-vous en conclure sur l'étagement moyen de la végétation ?
  - Spatialement observez vous des particularités locales / phénomènes locaux sur l'étagement de la végétation ? 
     
 
 ### 5. Exploration, traitements et analyses sur données Rasters & Vectorielles - Les Vignes
  - Le modèle numérique de terrain permet de calculer d'autres métriques utiles pour étudier l'espace géographique. Nous allons étudier les terrains sur lesquels les vignes sont implantées. 
-    - Calculer la valeur de pente à l'échelle du pixel à partir de l'outil Raster -> Analyse -> Pente.
+    - Calculer la valeur de pente à l'échelle du pixel à partir de l'outil Raster -> Analyse -> Pente
       - Enregistrer cette nouvelle couche dans `Resultats` sous le nom `Raster_Pente_20m_68`
         
-    - Calculer la valeur d'exposition à l'échelle du pixel à partir de l'outil Raster -> Analyse -> Exposition.
+    - Calculer la valeur d'exposition à l'échelle du pixel à partir de l'outil Raster -> Analyse -> Exposition
       - Enregistrer cette nouvelle couche dans `Resultats` sous le nom `Raster_Exposition_20m_68`
         
 - À partir des trois couches rasters `MNT_20m_68`, `Raster_Pente_20m_68` et `Raster_Exposition_20m_68`, étudiez les caractéristiques topographiques et d'exposition des terrains où le vignoble du Haut-Rhin est implanté ?
   - Pour réaliser les étapes suivantes, récupérez l'occupation du sol de type vignes à partir de la couche `OCSGE_2019_68`. 
   - À l'aide de l'outil `statistique de zone`, calculez pour chaque polygone la valeur minimale, moyenne et maximale de l'altitude, de la pente et de l'exposition. Enregistrez les trois nouvelles couches dans `Resultats`
-  - Réalisez une jointure attributaire pour rassembler l'ensemble des résultats dans une seule couche vectorielle et enregistrer cette nouvelle couche dans `Resultats` sous le nom `Statistique_vignes_68`
+  - Réalisez une jointure attributaire pour rassembler l'ensemble des résultats dans une seule couche vectorielle et enregistrer cette nouvelle couche dans `Resultats` sous le nom `Statistiques_vignes_68`
   - Refaire les étapes précédentes en utilisant l'outil `statistique de zone` en utilisant le traitement par lot
   - Résumez l'information à l'échelle de la commune (min_altitude/ moy_altitude / max_altitude / min_pente / moy_pente / max_pente / min_exposition/ moy_exposition/ max_exposition. Aidez-vous de l'outil `Statistiques par catégories`
+  - Quelle est la commune où les vignes sont implantées à la plus haute altitude ?
+  - Quelle est la commune où les vignes sont implantées sur les pentes les plus importantes ? 
  
     
      
