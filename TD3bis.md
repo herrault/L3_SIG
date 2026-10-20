@@ -38,14 +38,19 @@ Pour réaliser cette partie, utilisez l'outil de géotraitement `intersection` d
  - Quelle est la superficie moyenne en ha de bâti continu à l'échelle de la commune ?
  - Quelle est la commune qui concentre le plus de bâtis continus et d’Équipements sportifs de loisirs et campings ?
  - Combien de Bâtis (tous types confondus) à l'échelle du Haut-Rhin (tous type) se trouvent à moins de 2,5 km de cours et voies d'eau ?
-  
 
-### 3. Exploration, Traitements et analyses sur données Rasters & Vectorielles - Les Vignes. 
+### 3. Exploration, Traitements et analyses sur données Rasters & Vectorielles - Étude de l'étagement de la végétation. 
  -  Modifier la symbologie de sorte à avoir trois classes d'altitude pour représenter les trois grandes unités de relief de la zone géographique étudiée
     - classe 1 : altitude < 200m : Plaine d'Alsace
     - classe 2 : altitude 200m - 500m : Collines sous-vosgiennes
     - classe 3 : altitude > 500m : Massif vosgien
-  
+ -  Réalisez une requête attributaire pour extraire uniquement les classes suivantes (lib_n3)  `Forêts de conifères`, `Forêts de feuillus`,  `Forêts mixtes`,  `Pelouses et pâturages de montagne` et enregistrer cette nouvelle couche dans `Resultats` sous le nom `Vegetation`
+ -  À l'aide de l'outil `statistique de zone`, calculez pour chaque polygone la valeur minimale, la médiane et la valeur maximale de l'altitude. Enregistrez cette nouvelle couches dans `Resultats` sous le nom `Statistique_Vegetation`.
+ - Calculez
+ -  Que pouvez-vous en conclure sur l'étagement de la végétation à l'échelle du Haut-Rhin et observez vous des particularités locales ? 
+    
+
+### 4. Exploration, Traitements et analyses sur données Rasters & Vectorielles - Les Vignes. 
  - Le modèle numérique de terrain permet de calculer d'autres métriques utiles pour étudier l'espace géographique. Nous allons étudier les terrains sur lesquels les vignes sont implantées. 
     - Calculer la valeur de pente à l'échelle du pixel à partir de l'outil Raster -> Analyse -> Pente.
       - Enregistrer cette nouvelle couche dans `Resultats` sous le nom `Raster_Pente_20m_68`
