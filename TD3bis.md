@@ -67,12 +67,13 @@ Pour réaliser cette partie, utilisez l'outil de géotraitement `intersection` d
         
 - À partir des trois couches rasters `MNT_20m_68`, `Raster_Pente_20m_68` et `Raster_Exposition_20m_68`, étudiez les caractéristiques topographiques et d'exposition des terrains où le vignoble du Haut-Rhin est implanté ?
   - Pour réaliser les étapes suivantes, récupérez l'occupation du sol de type vignes à partir de la couche `OCSGE_2019_68`. 
-  - À l'aide de l'outil `statistique de zone`, calculez pour chaque polygone la valeur minimale, moyenne et maximale de l'altitude, de la pente et de l'exposition. Enregistrez les trois nouvelles couches dans `Resultats`
+  - À l'aide de l'outil `statistique de zone`, calculez pour chaque polygone la valeur minimale, moyenne et maximale de l'altitude, de la pente et la valeur majoritaire de l'exposition. Enregistrez les trois nouvelles couches dans `Resultats`
   - Réalisez une jointure attributaire pour rassembler l'ensemble des résultats dans une seule couche vectorielle et enregistrer cette nouvelle couche dans `Resultats` sous le nom `Statistiques_vignes_68`
   - Refaire les étapes précédentes en utilisant l'outil `statistique de zone` en utilisant le traitement par lot
-  - Résumez l'information à l'échelle de la commune (min_altitude/ moy_altitude / max_altitude / min_pente / moy_pente / max_pente / min_exposition/ moy_exposition/ max_exposition. Aidez-vous de l'outil `Statistiques par catégories`
+  - Résumez l'information à l'échelle de la commune (min_altitude/ moy_altitude / max_altitude / min_pente / moy_pente / max_pente / majority_exposition. Aidez-vous de l'outil `Statistiques par catégories`
   - Quelle est la commune où les vignes sont implantées à la plus haute altitude ?
-  - Quelle est la commune où les vignes sont implantées sur les pentes les plus importantes ? 
+  - Quelle est la commune où les vignes sont implantées sur les pentes les plus importantes ?
+  - Quelle est l'exposition privilégiée pour l'implantation des vignes à l'échelle d'une commune ? 
  
     
      
