@@ -33,14 +33,14 @@ Accès données : https://seafile.unistra.fr/d/a5a7ed788ad246428146/
  - À partir de la couche `Communes_emprise`, faire une extraction uniquement des communes du Haut-Rhin en enregistrer cette nouvelle couche dans `Resultats` sous le nom `Communes_emprise_68`
    - Pour faire cette tâche, aidez-vous de cette expression `"insee" LIKE '68%'`
 
-### 2. Révision de plusieurs manipulations sur des données vectorielles à l'échelle du Haut-Rhin (lib_n3)
+### 2. Révision de plusieurs manipulations sur des données vectorielles (lib_n3)
 Pour réaliser cette partie, utilisez l'outil de géotraitement `intersection` dans un premier temps
  - Quelle est la commune qui concentre le plus d'exploitations agricoles ?
  - Quelle est la superficie moyenne en ha de bâti continu à l'échelle de la commune ?
  - Quelle est la commune qui concentre le plus de bâtis continus et d’Équipements sportifs de loisirs et campings ?
  - Combien de bâtis (tous types confondus) à l'échelle du Haut-Rhin (tous type) se trouvent à moins de 2,5 km de cours et voies d'eau ?
 
-### 3. Exploration d'un MNT, recodage d'une donnée raster
+### 3. Exploration d'un MNT, recodage d'une donnée raster et vectorisation
  -  Modifier la symbologie de sorte à avoir trois classes d'altitude pour représenter les trois grandes unités de relief de la zone géographique étudiée
     - classe 1 : altitude < 200 m : Plaine d'Alsace
     - classe 2 : altitude 200 m - 350 m : Piémont
