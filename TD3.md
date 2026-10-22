@@ -58,8 +58,7 @@ Accès données : https://seafile.unistra.fr/d/d11d276659514c5dbd21/
 **Méthode 2 (plus sophistiquée)**
 - Créer une ligne centrale (centerline) à partir de la couche `Chenal_actif.gpkg` en utilisant la fonction skeleton
 - Supprimer les polylignes indésirables.
-- Agréger les polylignes. Exporter le résultat dans `Traitements` sous `Centerline.gpkg`.
-- Réaliser une projection orthogonale des traceurs sur la ligne centrale du chenal actif `GALET_2016.gpkg` - exporter le résultat dans `Traitements` sous `GALET_2016_orthogonale.gpkg`.
+- Réaliser une projection orthogonale des traceurs sur la ligne centrale du chenal actif `GALET_2016.gpkg` - exporter le résultat dans `Traitements` sous `GALET_2016_orthogonale.gpkg`. Utilisez l'outil `accrocher les géométriques à la couche` (utilisez les différentes fonctions pour avoir l'ensemble des galets projetés sur la centerline)
 - Réaliser une projection orthogonale des traceurs sur la ligne centrale du chenal actif `GALET_2017.gpkg` - exporter le résultat dans `Traitements` sous `GALET_2017_orthogonale.gpkg`.
 - Réaliser une jointure de table entre `GALET_2017_orthogonale.gpkg` et `GALET_2016_orthogonale.gpkg`.
 - Calculer la distance euclidienne de chaque galet retrouvés en 2017. Exporter dans `Traitements` sous `GALET_P1_euclidienne.gpkg`.
