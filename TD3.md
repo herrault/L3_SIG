@@ -62,7 +62,7 @@ Accès données : https://seafile.unistra.fr/d/d11d276659514c5dbd21/
 - Agréger les polylignes. Exporter le résultat dans `Traitements` sous `Centerline.gpkg`.
 - Réaliser une projection orthogonale des traceurs sur la ligne centrale du chenal actif `GALET_2016.gpkg` - exporter le résultat dans `Traitements` sous `GALET_2016_orthogonale.gpkg`.
 - Réaliser une projection orthogonale des traceurs sur la ligne centrale du chenal actif `GALET_2017.gpkg` - exporter le résultat dans `Traitements` sous `GALET_2017_orthogonale.gpkg`.
-- Réaliser une jointure de table entre `GALET_2017.gpkg` et `GALET_2016.gpkg`.
+- Réaliser une jointure de table entre `GALET_2017_orthogonale.gpkg` et `GALET_2016_orthogonale.gpkg`.
 - Calculer la distance euclidienne de chaque galet retrouvés en 2017. Exporter dans `Traitements` sous `GALET_P1_euclidienne.gpkg`.
 - 
 
