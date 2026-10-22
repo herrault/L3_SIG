@@ -70,7 +70,7 @@ Accès données : https://seafile.unistra.fr/d/d11d276659514c5dbd21/
 ---
 
 ### 4. Étude des évolutions topo-bathymétriques du chenal actif 
-- Découpez `MNT_2016.tif` et `MNT_2017.tif` avec `chenal_actif.gpkg`.  
+- Découpez `MNT_2016.tif` et `MNT_2017.tif` avec `chenal_actif.gpkg`
 - Sauvegardez les deux couches dans `Traitements` sous `MNT_2016_clip.gpkg`; `MNT_2017_clip.gpkg` 
 - Réaliser une soustraction des deux MNTs en utilisant la calculatrice raster pour identifier les évolutions topo-bathymétriques entre les deux levés.
   - Sauvegardez le résultat dans `Traitements` sous `MNT_2016_2017.gpkg`
