@@ -71,9 +71,10 @@ Pour réaliser cette partie, utilisez l'outil de géotraitement `intersection` d
   - Réalisez une jointure attributaire pour rassembler l'ensemble des résultats dans une seule couche vectorielle et enregistrer cette nouvelle couche dans `Resultats` sous le nom `Statistiques_vignes_68`
   - Refaire les étapes précédentes en utilisant l'outil `statistique de zone` en utilisant le traitement par lot
   - Résumez l'information à l'échelle de la commune (min_altitude/ moy_altitude / max_altitude / min_pente / moy_pente / max_pente / majority_exposition. Aidez-vous de l'outil `Statistiques par catégories`
+  - Quelle est l'exposition privilégiée pour l'implantation des vignes à l'échelle d'une commune ? 
   - Quelle est la commune où les vignes sont implantées à la plus haute altitude ?
   - Quelle est la commune où les vignes sont implantées sur les pentes les plus importantes ?
-  - Quelle est l'exposition privilégiée pour l'implantation des vignes à l'échelle d'une commune ? 
+
  
     
      
