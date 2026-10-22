@@ -65,8 +65,7 @@ Accès données : https://seafile.unistra.fr/d/d11d276659514c5dbd21/
 
   
 **Questions :**  
-- Quelle est la distance minimale, moyenne, médiane et maximale des galets calculées durant P1 pour les deux méthodes de calcul ?
-- Réaliser la même opération en incluant uniquement les galets qui se sont déplacés au minimum de 5 m. Que constatez-vous ?
+- Quelle est la distance minimale, moyenne, médiane et maximale des galets calculées entre 2016 et 2017 pour les deux méthodes de calcul ?
 - Quelles est la classe granulométrique qui s'est déplacée en moyenne le plus loin ? 
 ---
 
