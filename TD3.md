@@ -33,7 +33,7 @@ Accès données : https://seafile.unistra.fr/d/d11d276659514c5dbd21/
 ---
 
 ### 1. Exploration des données
-- Importer les deux fichiers .csv.
+- Importer les deux fichiers .csv
 - Examinez les tables attributaires : notez les types de données, champs disponibles, nombre d’entités.  
 - Modifiez la symbologie pour améliorer la lecture cartographique :  
   - `GALET_2016`→ couleur noire
