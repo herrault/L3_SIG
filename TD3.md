@@ -56,7 +56,6 @@ Accès données : https://seafile.unistra.fr/d/d11d276659514c5dbd21/
 - Exporter le résultat dans `Traitements` sous `Distance_methode1.gpkg`.
   
 **Méthode 2 (plus sophistiquée)**
-- Digitaliser le chenal actif de l'injection sédimentaire jusqu'au galet détecté le plus en aval. Exporter le résultat dans `Traitements` sous `Chenal_actif.gpkg`.  
 - Créer une ligne centrale (centerline) à partir de la couche `Chenal_actif.gpkg` en utilisant la fonction skeleton
 - Supprimer les polylignes indésirables.
 - Agréger les polylignes. Exporter le résultat dans `Traitements` sous `Centerline.gpkg`.
