@@ -61,9 +61,9 @@ Accès données : https://seafile.unistra.fr/d/d11d276659514c5dbd21/
 - Réaliser une projection orthogonale des traceurs sur la ligne centrale du chenal actif `GALET_2016.gpkg` - exporter le résultat dans `Traitements` sous `GALET_2016_orthogonale.gpkg`. Utilisez l'outil `accrocher les géométriques à la couche` (utilisez les différentes fonctions pour avoir l'ensemble des galets projetés sur la centerline)
 - Réaliser une projection orthogonale des traceurs sur la ligne centrale du chenal actif `GALET_2017.gpkg` - exporter le résultat dans `Traitements` sous `GALET_2017_orthogonale.gpkg`.
 - Réaliser une jointure de table entre `GALET_2017_orthogonale.gpkg` et `GALET_2016_orthogonale.gpkg`.
-- Calculer la distance euclidienne de chaque galet retrouvés en 2017. Exporter dans `Traitements` sous `GALET_P1_euclidienne.gpkg`.
-- 
+- Calculer la distance de chaque galet retrouvés en 2017 à l'aide des coordonnées sur la centerline en utilisant la calculatrice de champs (théorème de Pythagore). Exporter dans `Traitements` sous `GALET_P1_euclidienne.gpkg`.
 
+  
 **Questions :**  
 - Quelle est la distance minimale, moyenne, médiane et maximale des galets calculées durant P1 pour les deux méthodes de calcul ?
 - Réaliser la même opération en incluant uniquement les galets qui se sont déplacés au minimum de 5 m. Que constatez-vous ?
