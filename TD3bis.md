@@ -45,7 +45,7 @@ Pour réaliser cette partie, utilisez l'outil de géotraitement `intersection` d
     - classe 1 : altitude < 200 m : Plaine d'Alsace
     - classe 2 : altitude 200 m - 350 m : Piémont
     - classe 3 : altitude > 350 m : Massif vosgien
- - Recoder une données raster à l'aide de l'outil reclassification par table Code  = 1 pour altitude < 200m; Code = 2 pour altitude 200m - 350m et code = 3 pour altitude > 350 m et enregistrer cette nouvelle couche dans `Resultats` sous le nom `MNT_reclassification`
+ - Recoder une donnée raster à l'aide de l'outil reclassification par table Code  = 1 pour altitude < 200m; Code = 2 pour altitude 200m - 350m et code = 3 pour altitude > 350 m et enregistrer cette nouvelle couche dans `Resultats` sous le nom `MNT_reclassification`
  - Réalisez une vectorisation du raster `MNT_reclassification` en utilisant l'outil Polygoniser
  - À l'aide de la calculatrice de champs créez une nouvelle colonne `Unité_relief` de type texte. Pour chaque code, indiquez le nom de l'unité de relief.
  - Dans quelle unité de relief sont implantées en majorité les vergers ? 
