@@ -65,21 +65,18 @@ Accès données : https://seafile.unistra.fr/d/d11d276659514c5dbd21/
 
   
 **Questions :**  
-- Quelle est la distance minimale, moyenne, médiane et maximale des galets calculées entre 2016 et 2017 pour les deux méthodes de calcul ?
+- Quelle est la distance de déplacement minimale, moyenne, médiane et maximale des galets entre 2016 et 2017 pour les deux méthodes de calcul ?
 - Quelles est la classe granulométrique qui s'est déplacée en moyenne le plus loin ? 
 ---
 
 ### 4. Étude des évolutions topo-bathymétriques du chenal actif 
-- Découpez `MNT_2016.gpkg` et `MNT_2017.gpkg` avec `chenal_actif.gpkg`.  
-- Sauvegardez les deux couches dans `Traitements` sous`MNT_2016_clip.gpkg`; `MNT_2017_clip.gpkg` 
+- Découpez `MNT_2016.tif` et `MNT_2017.tif` avec `chenal_actif.gpkg`.  
+- Sauvegardez les deux couches dans `Traitements` sous `MNT_2016_clip.gpkg`; `MNT_2017_clip.gpkg` 
 - Réaliser une soustraction des deux MNTs en utilisant la calculatrice raster pour identifier les évolutions topo-bathymétriques entre les deux levés.
   - Sauvegardez le résultat dans `Traitements` sous `MNT_2016_2017.gpkg`
 - Utiliser la bonne symbologie pour représenter les évolutions topo-bathymétriques par classe de 0,5 m. (couleur chaudes évolutions > 0 m; couleurs froides évolutions < 0 m)
  
-- Supposons une incertitude de mesure en z (altitude) de 0,1 m pour chaque levé. Intégrer cette incertitude par la réalisation d'un nouveau raster à partir du raster `MNT_2016_2017.gpkg`.
-- Enregistrez votre nouvelle couche raster dans `Traitements` sous `MNT_2016_2017_corr.gpkg`
-- Utiliser la bonne symbologie pour représenter les évolutions topo-bathymétriques par classe de 0,5 m (couleur chaudes évolutions > 0 m; couleurs froides évolutions < 0 m)
-- Que constatez-vous en comparant `MNT_2016_2017.gpkg` et `MNT_2016_2017_corr.gpkg`?
+- Supposons une incertitude de mesure en z (altitude) de 0,1 m pour chaque levé. Intégrer cette incertitude dans votre symbologie.
 - Que constatez-vous en comparant la localisation des traceurs détectés en 2017 et les évolutions topo-bathymétriques observées entre 2016 et 2017 sur `MNT_2016_2017_corr.gpkg` ?
      
 ---
