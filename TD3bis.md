@@ -129,43 +129,13 @@ Plus la valeur de friction est élevée, plus le pixel correspondant
 représente un obstacle au déplacement de l'espèce ou du groupe d'espèces
 considéré.
 
-  ---------------------------------------------------------------------------
-  Pente minimale (°) Pente maximale (°) Valeur de friction Interprétation
-                                                           écologique /
-                                                           déplacement
-  ------------------ ------------------ ------------------ ------------------
-                   0                 10                  1 Terrain plat à
-                                                           faible pente :
-                                                           progression aisée,
-                                                           sans surcoût
-                                                           énergétique.
-
-                  10                 20                 20 Pente modérée :
-                                                           effort
-                                                           physiologique
-                                                           accru, mais
-                                                           déplacement
-                                                           continu.
-
-                  20                 30                 50 Pente forte :
-                                                           ralentissement
-                                                           significatif et
-                                                           coût énergétique
-                                                           élevé.
-
-                  30                 40                 80 Pente très raide :
-                                                           progression
-                                                           difficile, terrain
-                                                           accidenté.
-
-                  40                 90                100 Pente extrême /
-                                                           falaises
-                                                           vosgiennes :
-                                                           barrière
-                                                           topographique
-                                                           quasi
-                                                           infranchissable.
-  ---------------------------------------------------------------------------
+ | Pente minimale (°) | Pente maximale (°) | Valeur de friction | Interprétation écologique / déplacement |
+|---:|---:|---:|:---|
+| 0 | 10 | 1 | Terrain plat à faible pente : progression aisée, sans surcoût énergétique. |
+| 10 | 20 | 20 | Pente modérée : effort physiologique accru, mais déplacement continu. |
+| 20 | 30 | 50 | Pente forte : ralentissement significatif et coût énergétique élevé. |
+| 30 | 40 | 80 | Pente très raide : progression difficile, terrain accidenté. |
+| 40 | 90 | 100 | Pente extrême / falaises vosgiennes : barrière topographique quasi infranchissable. |
 
 Représentez ensuite le résultat spatialement à l'aide d'une palette
 continue. Une fois la symbologie définie, exportez la légende sous le
@@ -319,9 +289,7 @@ Organisez les couches dans le canevas selon l'ordre suivant :
 
 Ajoutez également les éléments cartographiques suivants :
 
--   **Carroyage :** coordonnées projetées en Lambert-93, avec un pas de
-    10 000 m, des croix intérieures et les coordonnées indiquées en
-    bordure.
+-   **Carroyage :** coordonnées projetées en Lambert-93, carroyage continu avec un pas de 2km
 -   **Titre obligatoire :** « Modélisation des corridors écologiques
     Vosges-Piémont : analyse comparative des coûts d'habitat et de
     relief ».
