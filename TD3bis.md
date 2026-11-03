@@ -223,39 +223,38 @@ problématiques pour le déplacement des espèces.
 
 #### 5.6. Combiner les deux couches de friction
 
-Cette étape vise à combiner les différentes couches de friction afin
-d'obtenir un score de friction composite. Le modèle proposé repose sur
-une pondération des deux composantes :
+Cette étape vise à combiner les différentes couches de friction afin d'obtenir un score de friction composite. Le modèle proposé repose sur une pondération des deux composantes :
 
-\[
+$$
 C = w_1 \times \text{friction de la pente}
-+ w_2 \times \text{friction de l’occupation du sol}
-\]
++ w_2 \times \text{friction de l'occupation du sol}
+$$
 
-Nous allons tester deux hypothèses correspondant à deux profils
-écologiques différents.
+Nous allons tester deux hypothèses correspondant à deux profils écologiques différents.
 
 **Scénario 1 -- Ressource**
 
-Avec (w_1 = 0{,}20) et (w_2 = 0{,}80), ce scénario donne davantage de
-poids à l'occupation du sol qu'à la pente. Il vise à représenter les
-déplacements de petits mammifères terrestres, tels que la martre des
-pins, le chat forestier ou la belette d'Europe.
+Avec les coefficients suivants :
+
+$$
+w_1 = 0{,}20 \qquad w_2 = 0{,}80
+$$
+
+Ce scénario donne davantage de poids à l'occupation du sol qu'à la pente. Il vise à représenter les déplacements de petits mammifères terrestres, tels que la martre des pins, le chat forestier ou la belette d'Europe.
 
 **Scénario 2 -- Énergie**
 
-Avec (w_1 = 0{,}65) et (w_2 = 0{,}35), ce scénario donne davantage de
-poids à la pente qu'à l'occupation du sol. Il vise à représenter les
-déplacements de grands mammifères et d'ongulés, comme le cerf élaphe ou
-le chevreuil.
+Avec les coefficients suivants :
 
-À l'aide de la **Calculatrice raster**, calculez les deux nouvelles
-couches de friction et nommez-les respectivement
-`friction_ressource.tif` et `friction_energie.tif`.
+$$
+w_1 = 0{,}65 \qquad w_2 = 0{,}35
+$$
 
-Une fois les rasters exportés, réappliquez-leur la légende de friction
-afin de visualiser spatialement les résultats et de comparer les deux
-scénarios.
+Ce scénario donne davantage de poids à la pente qu'à l'occupation du sol. Il vise à représenter les déplacements de grands mammifères et d'ongulés, comme le cerf élaphe ou le chevreuil.
+
+À l'aide de la **Calculatrice raster**, calculez les deux nouvelles couches de friction et nommez-les respectivement `friction_ressource.tif` et `friction_energie.tif`.
+
+Une fois les rasters exportés, réappliquez-leur la légende de friction afin de visualiser spatialement les résultats et de comparer les deux scénarios.
 
 #### 5.7. Calculer les cartes de coût cumulé et de direction des déplacements
 
