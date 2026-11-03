@@ -67,9 +67,7 @@ Les démarches visant à préserver les espèces s'appuient notamment sur
 des données spatiales afin de comprendre comment les différents éléments
 du paysage peuvent contraindre leurs déplacements. Il s'agit ainsi
 d'évaluer si ces éléments ont des effets positifs ou négatifs sur leur
-capacité à trouver des ressources et des espaces de quiétude. Ces deux
-dimensions seront représentées par deux scénarios de friction :
-`friction_ressource.tif` et `friction_energie.tif`.
+capacité à trouver des ressources et des espaces de quiétude. 
 
 Le principe de connectivité du paysage est donc central, mais il dépend
 également des caractéristiques propres aux organismes biologiques,
@@ -90,9 +88,10 @@ La première étape consiste à découper le modèle numérique de terrain
 (MNT) et la couche d'occupation du sol sur le territoire de la zone
 d'étude.
 
-À l'aide du fichier `emprise`, utilisez : - l'outil **Couper** pour la
-couche vectorielle d'occupation du sol ; - l'outil **Découper un raster
-selon une couche masque** pour le MNT.
+À l'aide du fichier `emprise`, utilisez : 
+- l'outil **Couper** pour la
+couche vectorielle d'occupation du sol ;
+- l'outil **Découper un raster selon une couche masque** pour le MNT.
 
 Nommez les fichiers exportés respectivement `ocs_ge_emprise.gpkg` et
 `mnt_emprise.tif`.
@@ -111,8 +110,9 @@ de calculer une couche de pente. Exportez le résultat sous le nom
 
 Représentez ensuite la pente à l'aide d'un gradient continu afin
 d'observer sa répartition sur le site d'étude. Répondez aux questions
-suivantes : - Dans quelles zones observe-t-on les pentes les plus fortes
-? - Quelles sont, en moyenne, les valeurs de pente observées dans la
+suivantes : 
+- Dans quelles zones observe-t-on les pentes les plus fortes
+- Quelles sont, en moyenne, les valeurs de pente observées dans la
 vallée de Munster ?
 
 #### 5.3. Reclasser le raster de pente en valeurs de friction
