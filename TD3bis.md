@@ -196,8 +196,7 @@ problématiques pour le déplacement des espèces.
 Cette étape vise à combiner les différentes couches de friction afin d'obtenir un score de friction composite. Le modèle proposé repose sur une pondération des deux composantes :
 
 $$
-C = w_1 \times \text{friction de la pente}
-+ w_2 \times \text{friction de l'occupation du sol}
+C = w_1 \times \text{friction de la pente} + w_2 \times \text{friction de l'occupation du sol}
 $$
 
 Nous allons tester deux hypothèses correspondant à deux profils écologiques différents.
