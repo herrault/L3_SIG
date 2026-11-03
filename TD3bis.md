@@ -291,13 +291,12 @@ des cartes de coût et de direction. Il s'agit de déterminer quel chemin
 de moindre coût peut être emprunté pour rejoindre le point A depuis le
 point B.
 
-Pour cela, utilisez l'outil **`r.drain`** : 1. En entrée, utilisez
-d'abord votre carte de coût, puis votre carte de direction du mouvement.
+Pour cela, utilisez l'outil **`r.drain`** : 
+1. En entrée, utilisez d'abord votre carte de coût, puis votre carte de direction du mouvement.
 2. Cette fois, le point de départ (*starting point*) est le point B, car
-le chemin tracé « descendra » vers le point A. 3. Veillez à cocher
-l'option **« La carte raster en entrée est une surface de coût »**. 4.
-Exportez le résultat de l'algorithme (*Drain*) sous le nom
-`corridor_ressource.gpkg` ou `corridor_energie.gpkg`.
+le chemin tracé « descendra » vers le point A.
+3. Veillez à cocher l'option **« La carte raster en entrée est une surface de coût »**.
+4. Exportez le résultat de l'algorithme (*Drain*) sous le nom `corridor_ressource.gpkg` ou `corridor_energie.gpkg`.
 
 Réalisez cette opération pour les deux scénarios.
 
@@ -311,12 +310,9 @@ Organisez les couches dans le canevas selon l'ordre suivant :
 1.  **Au sommet :** la couche `points_deplacements`, représentée par des
     ronds colorés distincts avec un contour blanc.
 2.  **Juste en dessous :** les deux corridors :
-    -   `corridor_ressource`, en violet magenta (`#e7298a`), avec une
-        épaisseur de 1,2 mm ;
-    -   `corridor_energie`, en orange vif (`#ff7f00`), avec une
-        épaisseur de 1,2 mm.
-3.  **À un niveau intermédiaire :** la couche d'occupation du sol,
-    vectorielle ou rasterisée, avec une symbologie par catégories de
+    -   `corridor_ressource`avec une épaisseur de 1,2 mm ;
+    -   `corridor_energie` avec une épaisseur de 1,2 mm.
+3.  **À un niveau intermédiaire :** la couche d'occupation du sol, vectorielle ou rasterisée, avec une symbologie par catégories de
     niveau 1 et une opacité globale de 55 %.
 4.  **En arrière-plan :** `ombrage_vosges.tif`, en niveaux de gris, afin
     de faire ressortir le relief du massif.
