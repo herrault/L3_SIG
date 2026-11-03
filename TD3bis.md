@@ -271,18 +271,16 @@ nécessaire pour relier le point de départ à ce pixel.
 La carte de direction, quant à elle, indique sous la forme d'une valeur
 angulaire la direction du voisin correspondant au coût le plus faible.
 
-Pour réaliser cette opération, utilisez l'outil **`r.cost`** : 1.
-Choisissez comme couche d'entrée l'une des deux couches de friction
-(`friction_ressource.tif` ou `friction_energie.tif`). 2. Définissez
-uniquement un point de départ : il n'est pas nécessaire de renseigner un
-point d'arrivée. Cliquez sur la position indiquée dans le GeoPackage
-`point_deplacement`. 3. Exportez la carte de coût sous le nom
-`carte_cout_ressource.tif` ou `carte_cout_energie.tif`. 4. Exportez la
-carte de direction sous le nom `carte_direction_ressource.tif` ou
-`carte_direction_energie.tif`.
+Pour réaliser cette opération, utilisez l'outil **`r.cost`** : 
+1.Choisissez comme couche d'entrée l'une des deux couches de friction
+(`friction_ressource.tif` ou `friction_energie.tif`). 
 
-Répétez l'opération pour les deux scénarios de friction et inspectez
-spatialement les résultats.
+2. Définissez uniquement un point de départ : il n'est pas nécessaire de renseigner un point d'arrivée. Cliquez sur la position indiquée dans le GeoPackage
+`point_deplacement`.
+3. Exportez la carte de coût sous le nom `carte_cout_ressource.tif` ou `carte_cout_energie.tif`.
+4. Exportez la carte de direction sous le nom `carte_direction_ressource.tif` ou `carte_direction_energie.tif`.
+
+Répétez l'opération pour les deux scénarios de friction et inspectez spatialement les résultats.
 
 **Question :** que met notamment en lumière la carte de direction ?
 
