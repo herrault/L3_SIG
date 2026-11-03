@@ -182,72 +182,23 @@ Dans la couche vectorielle d'occupation du sol, créez un champ
 `Friction_OCS` et attribuez les valeurs indiquées dans le tableau
 ci-dessous, en vous appuyant sur la nomenclature de niveau 2 (`lib_n2`).
 
-  ------------------------------------------------------------------------
-  Valeur (`lib_n2`)        Friction (`Friction_OCS`) Justification
-                                                     écologique
-  --------------------- ---------------------------- ---------------------
-  Forêts                                           1 Habitat optimal,
-                                                     couvert protecteur
-                                                     continu.
-
-  Milieux humides                                  5 Végétation dense,
-                                                     ressource en eau,
-                                                     quiétude.
-
-  Formations naturelles                           10 Milieu semi-naturel,
-  herbacées ou                                       lisières favorables.
-  arbustives                                         
-
-  Espaces verts urbains                           15 Relais végétalisé
-                                                     ponctuel, passage
-                                                     nocturne.
-
-  Espaces ouverts, sans                           20 Milieu ouvert,
-  ou avec peu de                                     absence de couvert,
-  végétation                                         mais progression
-                                                     aisée.
-
-  Autres zones                                    35 Prairies et pâtures,
-  agricoles                                          absence d'abris
-                                                     arborés.
-
-  Cultures permanentes                            45 Vignobles et vergers,
-                                                     dérangement et
-                                                     traitements.
-
-  Terres arables                                  50 Grandes cultures
-                                                     ouvertes, labours,
-                                                     machinisme.
-
-  Espaces ouverts                                 65 Friches urbaines et
-  urbains                                            chantiers, fort
-                                                     dérangement.
-
-  Espaces en mutation                             75 Décapages de sols,
-                                                     travaux,
-                                                     artificialisation.
-
-  Habitat                                         85 Zones pavillonnaires,
-                                                     clôtures, chiens
-                                                     domestiques.
-
-  Activités économiques                           90 Zones industrielles,
-                                                     hangars, parkings
-                                                     goudronnés.
-
-  Équipements et                                  90 Enceintes closes
-  infrastructures                                    imperméabilisées.
-  collectives                                        
-
-  Surfaces en eau                                 95 Plans d'eau et cours
-                                                     d'eau profonds :
-                                                     barrière physique.
-
-  Infrastructures et                             100 Routes majeures et
-  superstructures des                                voies ferrées :
-  réseaux de transport                               risque de collision
-                                                     létal.
-  ------------------------------------------------------------------------
+| Valeur (`lib_n2`) | Friction (`Friction_OCS`) | Justification écologique |
+|:---|---:|:---|
+| Forêts | 1 | Habitat optimal, couvert protecteur continu. |
+| Milieux humides | 5 | Végétation dense, ressource en eau, quiétude. |
+| Formations naturelles herbacées ou arbustives | 10 | Milieu semi-naturel, lisières favorables. |
+| Espaces verts urbains | 15 | Relais végétalisé ponctuel, passage nocturne. |
+| Espaces ouverts, sans ou avec peu de végétation | 20 | Milieu ouvert, absence de couvert, mais progression aisée. |
+| Autres zones agricoles | 35 | Prairies et pâtures, absence d'abris arborés. |
+| Cultures permanentes | 45 | Vignobles et vergers, dérangement et traitements. |
+| Terres arables | 50 | Grandes cultures ouvertes, labours, machinisme. |
+| Espaces ouverts urbains | 65 | Friches urbaines et chantiers, fort dérangement. |
+| Espaces en mutation | 75 | Décapages de sols, travaux, artificialisation. |
+| Habitat | 85 | Zones pavillonnaires, clôtures, chiens domestiques. |
+| Activités économiques | 90 | Zones industrielles, hangars, parkings goudronnés. |
+| Équipements et infrastructures collectives | 90 | Enceintes closes imperméabilisées. |
+| Surfaces en eau | 95 | Plans d'eau et cours d'eau profonds : barrière physique. |
+| Infrastructures et superstructures des réseaux de transport | 100 | Routes majeures et voies ferrées : risque de collision létal. |
 
 #### 5.5. Rasteriser la couche d'occupation du sol
 
