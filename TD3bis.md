@@ -289,7 +289,7 @@ Organisez les couches dans le canevas selon l'ordre suivant :
 Ajoutez également les éléments cartographiques suivants :
 
 -   **Carroyage :** coordonnées projetées en Lambert-93, carroyage continu avec un pas de 2km
--   **Titre obligatoire :** « Modélisation des corridors écologiques
+-   **Titre :** « Modélisation des corridors écologiques
     Vosges-Piémont : analyse comparative des coûts d'habitat et de
     relief ».
 -   **Légende :** désactivez l'option **Mise à jour automatique** et
