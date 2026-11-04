@@ -155,20 +155,20 @@ ci-dessous, en vous appuyant sur la nomenclature de niveau 2 (`lib_n2`).
 | Valeur (`lib_n2`) | Friction (`Friction_OCS`) | Justification écologique |
 |:---|---:|:---|
 | Forêts | 1 | Habitat optimal, couvert protecteur continu. |
-| Milieux humides | 5 | Végétation dense, ressource en eau, quiétude. |
+| Milieux humides | 5 | Végétation dense, ressource en eau |
 | Formations naturelles herbacées ou arbustives | 10 | Milieu semi-naturel, lisières favorables. |
 | Espaces verts urbains | 15 | Relais végétalisé ponctuel, passage nocturne. |
-| Espaces ouverts, sans ou avec peu de végétation | 20 | Milieu ouvert, absence de couvert, mais progression aisée. |
-| Autres zones agricoles | 35 | Prairies et pâtures, absence d'abris arborés. |
-| Cultures permanentes | 45 | Vignobles et vergers, dérangement et traitements. |
-| Terres arables | 50 | Grandes cultures ouvertes, labours, machinisme. |
-| Espaces ouverts urbains | 65 | Friches urbaines et chantiers, fort dérangement. |
-| Espaces en mutation | 75 | Décapages de sols, travaux, artificialisation. |
-| Habitat | 85 | Zones pavillonnaires, clôtures, chiens domestiques. |
-| Activités économiques | 90 | Zones industrielles, hangars, parkings goudronnés. |
+| Espaces ouverts, sans ou avec peu de végétation | 20 | Milieu ouvert, absence de couvert |
+| Autres zones agricoles | 35 | Prairies et pâtures|
+| Cultures permanentes | 45 | Vignobles et vergers|
+| Terres arables | 50 | Grandes cultures ouvertes|
+| Espaces ouverts urbains | 65 | Friches urbaines et chantiers|
+| Espaces en mutation | 75 | Travaux, artificialisation. |
+| Habitat | 85 | Zones pavillonnaires, clôtures|
+| Activités économiques | 90 | Zones industrielles, hangars, parkings |
 | Équipements et infrastructures collectives | 90 | Enceintes closes imperméabilisées. |
-| Surfaces en eau | 95 | Plans d'eau et cours d'eau profonds : barrière physique. |
-| Infrastructures et superstructures des réseaux de transport | 100 | Routes majeures et voies ferrées : risque de collision létal. |
+| Surfaces en eau | 95 | Plans d'eau et cours d'eau profonds |
+| Infrastructures et superstructures des réseaux de transport | 100 | Routes majeures et voies ferrées |
 
 #### 5.5. Rasteriser la couche d'occupation du sol
 
