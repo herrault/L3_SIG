@@ -309,6 +309,9 @@ Ajoutez également les éléments cartographiques suivants :
     projection (EPSG:2154 -- Lambert-93) et les sources de données (IGN
     BD ALTI®, OCS GE / CLC).
 
+    <img width="1535" height="1181" alt="image" src="https://github.com/user-attachments/assets/fba09904-07d9-498f-8031-37ea7616eff3" />
+
+
 ------------------------------------------------------------------------
 
      
