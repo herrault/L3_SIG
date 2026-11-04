@@ -241,9 +241,9 @@ La carte de direction, quant à elle, indique sous la forme d'une valeur
 angulaire la direction du voisin correspondant au coût le plus faible.
 
 Pour réaliser cette opération, utilisez l'outil **`r.cost`** : 
+
 1.Choisissez comme couche d'entrée l'une des deux couches de friction
 (`friction_ressource.tif` ou `friction_energie.tif`). 
-
 2. Définissez uniquement un point de départ : il n'est pas nécessaire de renseigner un point d'arrivée. Cliquez sur la position indiquée dans le GeoPackage
 `point_deplacement`.
 3. Exportez la carte de coût sous le nom `carte_cout_ressource.tif` ou `carte_cout_energie.tif`.
