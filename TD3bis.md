@@ -30,8 +30,6 @@ Accès données : https://seafile.unistra.fr/d/a5a7ed788ad246428146/
  - Examinez la table attributaire
  - Modifiez la symbologie pour améliorer la lecture cartographique au niveau 3  
    - Dans symbologie, charger le style de couche de l'IGN à l'aide du fichier `OCSGE_GE2_symbologie_niv3`
- - À partir de la couche `Communes_emprise`, faire une extraction uniquement des communes du Haut-Rhin en enregistrer cette nouvelle couche dans `Resultats` sous le nom `Communes_emprise_68`
-   - Pour faire cette tâche, aidez-vous de cette expression `"insee" LIKE '68%'`
 
 ### 2. Révision de plusieurs manipulations sur des données vectorielles (lib_n3)
 Pour réaliser cette partie, utilisez l'outil de géotraitement `intersection` dans un premier temps
