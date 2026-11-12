@@ -31,7 +31,7 @@ Accès données : https://seafile.unistra.fr/d/a5a7ed788ad246428146/
  - Modifiez la symbologie pour améliorer la lecture cartographique au niveau 3  
    - Dans symbologie, charger le style de couche de l'IGN à l'aide du fichier `OCSGE_GE2_symbologie_niv3`
 
-### 2. Révision de plusieurs manipulations sur des données vectorielles (lib_n3)
+### 2. Révision de plusieurs manipulations sur des données vectorielles (lib_n3 & lib_n4)
 Pour réaliser cette partie, utilisez l'outil de géotraitement `intersection` dans un premier temps
  - Quelle est la commune qui concentre le plus d'exploitations agricoles ?
  - Quelle est la superficie moyenne en ha de bâti continu à l'échelle de la commune ?
