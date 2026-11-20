@@ -7,7 +7,7 @@
 ---
 
 ## 🎯 Objectifs
-- Maîtriser les outils de sélection, découpage et jointure (spatiale et attributaire) sous QGIS.
+- Revoir les outils de sélection, découpage et jointure (spatiale et attributaire) sous QGIS.
 - Mobiliser les algorithmes topographiques et microclimatiques de **GRASS GIS** (`r.slope.aspect`, `r.sun`, `r.horizon`).
 - Extraire et croiser des statistiques zonales rasters et vectorielles autour d'entités ponctuelles.
 - Construire une typologie multi-critères à l'aide de la calculatrice de champs et concevoir une carte de synthèse respectant les règles de sémiologie graphique.
@@ -47,23 +47,21 @@ Faire paître les troupeaux en haute montagne implique une connaissance approfon
 
 ### 1. Préparation et découpage des données sur le site d'étude
 
-Afin de limiter les temps de calcul (notamment pour les traitements rasters GRASS) et de cibler l'analyse sur le secteur étudié, commencez par extraire les entités comprises dans le périmètre de `site_etude.gpkg`.
+Afin de travailler avec des données précisément centrées sur le secteur étudié, commencez par extraire les entités comprises dans le périmètre de `site_etude.gpkg`.
 
 - À l'aide de l'outil **Vecteur > Outils de géotraitement > Couper**, découpez les trois couches vectorielles sur l'emprise de `site_etude.gpkg` et enregistrez-les dans `Resultats` sous les noms suivants :
   - `troncons_hydro_se.gpkg`
   - `carhab_habitats_se.gpkg`
-  - `cabanes_pastorales_se.gpkg`
-- Si le MNT dépasse largement la zone d'étude, découpez-le également à l'aide de l'outil **Raster > Extraction > Découper un raster selon une couche masque** (en conservant une légère marge tampon autour de `site_etude.gpkg` pour éviter les effets de bord lors des calculs d'horizon) et nommez-le `mnt_se.tif`.
 
 ---
 
 ### 2. Exploration des cabanes pastorales et pression de prédation
 
-Avant d'analyser les contraintes physiques du milieu, inspectez la table attributaire de `cabanes_pastorales_se.gpkg` afin de repérer les informations liées à la conduite des troupeaux (effectifs, présence de chiens de protection / patous, attaques ou prédation).
+Avant d'analyser les contraintes physiques du milieu, inspectez la table attributaire de `cabanes_pastorales.gpkg` afin de repérer les informations liées à la conduite des troupeaux (effectifs, présence de chiens de protection / patous, attaques ou prédation).
 
-1. Affichez `mnt_se.tif` en arrière-plan à l'aide d'un gradient continu d'altitude.
-2. Représentez `cabanes_pastorales_se.gpkg` en **symboles proportionnels** (ou catégorisés selon le nombre/la présence de patous).
-3. **Questions d'analyse :**
+1. Affichez `mnt_queyras_20m.tif` en arrière-plan à l'aide d'un gradient continu d'altitude.
+2. Représentez `cabanes_pastorales.gpkg` en **symboles proportionnels** (ou catégorisés selon le nombre/la présence de patous).
+3. **Questions :**
    - Comment se répartissent les cabanes équipées de chiens de protection sur le territoire d'étude ?
    - Observe-t-on un lien entre l'altitude, l'ouverture des milieux (alpages d'altitude vs fonds de vallée) et la pression de prédation ?
 
@@ -90,7 +88,7 @@ Les modèles solaires de GRASS nécessitent en entrée des rasters de pente et d
 
 1. Ouvrez **GRASS > Raster > `r.sun.insoltime`**.
 2. Renseignez les paramètres d'entrée suivants :
-   - **Elevation raster map :** `mnt_se.tif`
+   - **Elevation raster map :** `mnt_queyras_20m.tif`
    - **Slope raster map :** `pente.tif`
    - **Aspect raster map :** `exposition.tif`
    - **Day of the year (1-365) :** **`196`** (correspondant au **15 juillet**, date représentative du cœur de la saison d'estive en alpage).
@@ -106,10 +104,10 @@ Les modèles solaires de GRASS nécessitent en entrée des rasters de pente et d
 
 1. Ouvrez **GRASS > Raster > `r.horizon`**.
 2. Renseignez les paramètres suivants :
-   - **Nom de la carte d'élévation raster source :** `mnt_se.tif`
+   - **Nom de la carte d'élévation raster source :** `mnt_queyras_20m.tif`
    - **Direction pour laquelle vous voulez connaître la hauteur de l'horizon :** **`150`**
    - **La distance maximale à prendre en compte :** **`5000`** (rayon de recherche des crêtes de 5 km)
-   - *(Astuce QGIS : si l'interface exige un pas angulaire supérieur à 0, renseignez `360` en pas angulaire, `150` en angle de départ et `151` en angle de fin, puis récupérez le raster `150.tif` généré).*
+   - *(Astuce QGIS : si l'interface exige un pas angulaire supérieur à 0, renseignez `360` en pas angulaire, `150` en angle de départ et `151` en angle de fin).*
 3. Exportez le résultat dans `Resultats` sous le nom `abri_vent.tif`.
 
 ---
@@ -125,15 +123,15 @@ Les modèles solaires de GRASS nécessitent en entrée des rasters de pente et d
 3. **Questions et ressources complémentaires :**
    - Quel est l'habitat le plus représenté sur votre zone d'étude du Queyras ?
    - Pour visualiser la physionomie réelle de ces habitats sur le terrain et consulter leurs fiches descriptives, référez-vous aux ressources officielles de l'INPN / PatriNat :
-     - [Programme national CarHab (PatriNat / OFB)](https://www.patrinat.fr/fr/carhab-cartographie-nationale-des-habitats-6632)
-     - [Cahiers d'habitats Natura 2000 & référentiel HabRef (INPN)](https://inpn.mnhn.fr/programme/referentiel-habitats)
-     - [Atlas photographique et flore du Parc naturel régional du Queyras](https://www.pnr-queyras.fr/)
+     - [Programme national CarHab (PatriNat / OFB)](https://www.patrinat.fr/fr/cartographie-nationale-des-habitats-carhab-6671)
+     - [Cahiers d'habitats Flora Veg EU]([https://hal.science/hal-05456928v2/file/CarHab_Notice_2026.pdf](https://floraveg.eu/habitat/))
+     - [Site du Parc naturel régional du Queyras](https://www.pnr-queyras.fr/)
 
 #### 4.2. Calcul de l'éloignement aux ressources en eau
 
 L'abreuvement des troupeaux et les besoins domestiques du berger imposent une proximité aux cours d'eau ou aux sources.
 
-1. Ouvrez l'outil **Analyse vectorielle > Joindre les attributs par le plus proche** *(attention à ne pas utiliser « Distance au plus proche centre », qui mesurerait la distance au milieu des tronçons et non au point le plus proche de la rivière)*.
+1. Ouvrez l'outil **Analyse vectorielle > Joindre les attributs par le plus proche** 
 2. Configurez l'outil :
    - **Couche en entrée 1 :** `cabanes_pastorales_se.gpkg`
    - **Couche en entrée 2 :** `troncons_hydro_se.gpkg`
@@ -148,7 +146,7 @@ L'abreuvement des troupeaux et les besoins domestiques du berger imposent une pr
 
 L'implantation d'une cabane ne se résume pas au seul pixel sur lequel repose son toit (qui peut être biaisé par un replat artificiel ou un talus) : il convient de caractériser **son environnement immédiat** (aire de repos du troupeau, parc de nuit, abords).
 
-1. **Création des zones tampons :** À l'aide de l'outil **Vecteur > Outils de géotraitement > Tampon**, créez un buffer de **`100` mètres** autour de `cabanes_pastorales_se.gpkg` (en veillant à conserver l'identifiant unique de chaque cabane).
+1. **Création des zones tampons :** À l'aide de l'outil **Vecteur > Outils de géotraitement > Tampon**, créez un buffer de **`100` mètres** autour de `cabanes_pastorales.gpkg` (en veillant à conserver l'identifiant unique de chaque cabane).
 2. **Extraction des statistiques rasters :** Ouvrez l'outil **Analyse raster > Statistiques de zone**. Pour chacun des quatre rasters suivants, calculez la **Moyenne** (`mean`) à l'intérieur des tampons de 100 m en renseignant un préfixe explicite :
    - `mnt_se.tif` $\rightarrow$ préfixe `_altitude`
    - `pente.tif` $\rightarrow$ préfixe `_pente`
