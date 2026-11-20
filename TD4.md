@@ -36,7 +36,7 @@ Faire paître les troupeaux en haute montagne implique une connaissance approfon
    - `Resultats`
    - `Annexes`
 3. Placez dans `Donnees` les couches rasters et vectorielles fournies (toutes projetées en **RGF93 / Lambert-93 – EPSG:2154**) :
-   - `mnt_queyras_20m.tif` (Couche raster : Modèle Numérique de Terrain à 20 m de résolution)
+   - `mnt_queyras_25m.tif` (Couche raster : Modèle Numérique de Terrain à 20 m de résolution)
    - `troncons_hydro.gpkg` (Couche vectorielle linéaire : réseau hydrographique BD TOPO® IGN)
    - `carhab_habitats.gpkg` (Couche vectorielle surfacique : cartographie nationale des habitats naturels et semi-naturels CarHab)
    - `style_habitat_carhab.qml` (Fichier de style QGIS associé à la nomenclature CarHab)
@@ -59,7 +59,7 @@ Afin de travailler avec des données précisément centrées sur le secteur étu
 
 Avant d'analyser les contraintes physiques du milieu, inspectez la table attributaire de `cabanes_pastorales.gpkg` afin de repérer les informations liées à la conduite des troupeaux (effectifs, présence de chiens de protection / patous, attaques ou prédation).
 
-1. Affichez `mnt_queyras_20m.tif` en arrière-plan à l'aide d'un gradient continu d'altitude.
+1. Affichez `mnt_queyras_25m.tif` en arrière-plan à l'aide d'un gradient continu d'altitude.
 2. Représentez `cabanes_pastorales.gpkg` en **symboles proportionnels** (ou catégorisés selon le nombre/la présence de patous).
 3. **Questions :**
    - Comment se répartissent les cabanes équipées de chiens de protection sur le territoire d'étude ?
@@ -76,7 +76,7 @@ Nous allons maintenant calculer deux variables microclimatiques déterminantes p
 Les modèles solaires de GRASS nécessitent en entrée des rasters de pente et d'exposition générés selon ses propres conventions géométriques (dans GRASS, l'exposition est mesurée en degrés dans le sens anti-horaire à partir de l'Est = $0^\circ$).
 
 1. Ouvrez l'algorithme **GRASS > Raster > `r.slope.aspect`**.
-2. Renseignez `mnt_se.tif` en couche d'élévation.
+2. Renseignez `mnt_queyras_25m.tif` en couche d'élévation.
 3. Vérifiez que le format de sortie de la pente (`Slope`) est réglé sur **`degrees`** (degrés).
 4. Exportez les deux rasters générés dans `Resultats` sous les noms :
    - `pente.tif`
@@ -104,7 +104,7 @@ Les modèles solaires de GRASS nécessitent en entrée des rasters de pente et d
 
 1. Ouvrez **GRASS > Raster > `r.horizon`**.
 2. Renseignez les paramètres suivants :
-   - **Nom de la carte d'élévation raster source :** `mnt_queyras_20m.tif`
+   - **Nom de la carte d'élévation raster source :** `mnt_queyras_25m.tif`
    - **Direction pour laquelle vous voulez connaître la hauteur de l'horizon :** **`150`**
    - **La distance maximale à prendre en compte :** **`5000`** (rayon de recherche des crêtes de 5 km)
    - *(Astuce QGIS : si l'interface exige un pas angulaire supérieur à 0, renseignez `360` en pas angulaire, `150` en angle de départ et `151` en angle de fin).*
