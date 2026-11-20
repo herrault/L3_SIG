@@ -131,7 +131,7 @@ Les modèles solaires de GRASS nécessitent en entrée des rasters de pente et d
    - Quel est l'habitat le plus représenté sur votre zone d'étude du Queyras ?
    - Pour visualiser la physionomie réelle de ces habitats sur le terrain et consulter leurs fiches descriptives, référez-vous aux ressources officielles de l'INPN / PatriNat :
      - [Programme national CarHab (PatriNat / OFB)](https://www.patrinat.fr/fr/cartographie-nationale-des-habitats-carhab-6671)
-     - [Cahiers d'habitats Flora Veg EU]([https://hal.science/hal-05456928v2/file/CarHab_Notice_2026.pdf](https://floraveg.eu/habitat/))
+     - [Cahiers d'habitats Flora Veg EU](https://floraveg.eu/habitat/)
      - [Site du Parc naturel régional du Queyras](https://www.pnr-queyras.fr/)
 
 #### 4.2. Calcul de l'éloignement aux ressources en eau
