@@ -88,7 +88,7 @@ Les modèles solaires de GRASS nécessitent en entrée des rasters de pente et d
 
 1. Ouvrez **GRASS > Raster > `r.sun.insoltime`**.
 2. Renseignez les paramètres d'entrée suivants :
-   - **Elevation raster map :** `mnt_queyras_20m.tif`
+   - **Elevation raster map :** `mnt_queyras_25m.tif`
    - **Slope raster map :** `pente.tif`
    - **Aspect raster map :** `exposition.tif`
    - **Day of the year (1-365) :** **`196`** (correspondant au **15 juillet**, date représentative du cœur de la saison d'estive en alpage).
@@ -210,16 +210,16 @@ round(
 
 ### 9. Mise en page cartographique et règles de sémiologie graphique
 
-Pour restituer les résultats de votre analyse spatiale de manière claire et hiérarchisée, ouvrez le **Composeur d'impression** (**Projet > Nouvelle mise en page...**) et appliquez les principes de sémiologie graphique suivants (Bertin) :
+Pour restituer les résultats de votre analyse spatiale de manière claire et hiérarchisée, ouvrez le **Composeur d'impression** (**Projet > Nouvelle mise en page...**) et appliquez les principes de sémiologie graphique suivants :
 
 1. **Hiérarchie visuelle et superposition des plans (du sommet vers le fond) :**
    - **Premier plan (information thématique principale) :** La couche `cabanes_synthese.gpkg`. Appliquez une **double variable visuelle** :
-     - la **couleur (variable qualitative)** selon le champ `typologie` (trois teintes contrastées et intuitives : vert/bleu pour le *Type 1 abrité*, orange/jaune pour le *Type 2 d'altitude*, rouge pour le *Type 3 sous contrainte*) ;
+     - la **couleur (variable qualitative)** selon le champ `typologie` (trois teintes contrastées): vert/bleu pour le *Type 1 abrité*, orange/jaune pour le *Type 2 d'altitude*, rouge pour le *Type 3 sous contrainte*) ;
      - la **taille proportionnelle (variable quantitative)** selon le champ `score_confort` (ou l'effectif du troupeau), avec un fin contour blanc pour détacher les symboles du fond.
    - **Plan intermédiaire (contexte hydrographique et écologique) :**
      - le réseau hydrographique `troncons_hydro_se.gpkg` en bleu fin (`#1f78b4`), indispensable pour justifier visuellement la proximité à l'eau des cabanes ;
      - les grands types d'habitats `carhab_habitats_se.gpkg` (regroupés par grands milieux : pelouses, forêts, landes/rochers) avec une **opacité réduite à 40–50 %** afin de ne pas écraser l'information ponctuelle.
-   - **Arrière-plan (support topographique) :** Un ombrage du relief (`hillshade` généré à partir de `mnt_se.tif`) en niveaux de gris pour donner la lecture immédiate des crêtes, des versants et des fonds de vallée.
+   - **Arrière-plan (support topographique) :** Un ombrage du relief (`hillshade` généré à partir de `mnt_queyras_25m.tif`) en niveaux de gris pour donner la lecture immédiate des crêtes, des versants et des fonds de vallée.
 
 2. **Habillage cartographique obligatoire :**
    - **Titre explicite :** *« Implantation des cabanes pastorales dans le massif du Queyras : typologie multi-critères des contraintes topographiques, microclimatiques et d'accès aux ressources »*.
