@@ -26,7 +26,8 @@ Faire paître les troupeaux en haute montagne implique une connaissance approfon
 
 **Problématique :** *L'objectif de ce TD est de comprendre les conditions environnementales qui régissent la distribution des troupeaux dans le massif du Queyras à travers l'implantation des cabanes pastorales. Grâce à une approche géomatique multi-critères, nous chercherons à déterminer dans quels environnements ces cabanes sont implantées, tant sur le plan topographique et microclimatique que vis-à-vis de l'accès aux ressources en eau et fourragères.*
 
-![Carte finale de l'implantation des cabanes pastorales](pastoral.jpg)
+![Image_illustration](pastoral.jpg)
+*Présence de troupeaux dans le massif du Queyras (https://blogs.alternatives-economiques.fr)*
 
 ---
 
