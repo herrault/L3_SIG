@@ -1,4 +1,4 @@
-# TD4 – Analyse spatiale du pastoralisme dans le massif du Queyras : implantation des cabanes et contraintes environnementales
+# TD4 – Le pastoralisme dans le massif du Queyras : implantation des cabanes et contraintes environnementales
 
 **Date :** 19-11-2026  
 **Nom :** Herrault PA  
