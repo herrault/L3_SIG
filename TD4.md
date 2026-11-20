@@ -30,7 +30,7 @@ Faire paître les troupeaux en haute montagne implique une connaissance approfon
 <p align="center">
   <img src="pastoral.jpg" alt="Activité pastorale dans le Queyras" width="600">
   <br>
-  <em>Activité pastorale et paysage typique dans le massif du Queyras (https://blogs.alternatives-economiques.fr)</em>
+  <em>Présence de troupeaux dans le massif du Queyras (https://blogs.alternatives-economiques.fr)</em>
 </p>
 
 ---
