@@ -38,7 +38,7 @@ Faire paître les troupeaux en haute montagne implique une connaissance approfon
    - `Resultats`
    - `Annexes`
 3. Placez dans `Donnees` les couches rasters et vectorielles fournies (toutes projetées en **RGF93 / Lambert-93 – EPSG:2154**) :
-   - `mnt_queyras_25m.tif` (Couche raster : Modèle Numérique de Terrain à 20 m de résolution)
+   - `mnt_queyras_25m.tif` (Couche raster : Modèle Numérique de Terrain à 25 m de résolution)
    - `troncons_hydro.gpkg` (Couche vectorielle linéaire : réseau hydrographique BD TOPO® IGN)
    - `carhab_habitats.gpkg` (Couche vectorielle surfacique : cartographie nationale des habitats naturels et semi-naturels CarHab)
    - `style_habitat_carhab.qml` (Fichier de style QGIS associé à la nomenclature CarHab)
