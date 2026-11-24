@@ -165,7 +165,7 @@ L'implantation d'une cabane ne se résume pas au seul pixel sur lequel repose so
 
 ### 6. Association de l'habitat dominant (`CarHab`) aux cabanes
 
-1. À partir des tampons de 100 m construits à l'étape précédente, croisez les buffers avec `carhab_habitats_se.gpkg` (via **Intersection** ou **Joindre les attributs par localisation (résumé)** en retenant l'habitat majoritaire / intersecté).
+1. À partir des tampons de 100 m construits à l'étape précédente, croisez les buffers avec `carhab_habitats_se.gpkg` (via **Intersection** ou **Joindre les attributs par localisation** en retenant l'habitat majoritaire / intersecté).
 2. Joignez les attributs écologiques correspondants (`code_hab_carhab`, `nom_complet_hab`, `nom_simplifie_hab`, `etage_de_vegetation`) à votre couche `cabanes_pastorales_se.gpkg`.
 
 ---
