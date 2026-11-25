@@ -113,8 +113,8 @@ Les modèles solaires de GRASS nécessitent en entrée des rasters de pente et d
 2. Renseignez les paramètres suivants :
    - **Nom de la carte d'élévation raster source :** `mnt_queyras_25m.tif`
    - **Direction pour laquelle vous voulez connaître la hauteur de l'horizon :** **`150`**
+   - **Taille des pas angulaires pour une orientation multidirectionelle :** **`150`**
    - **La distance maximale à prendre en compte :** **`5000`** (rayon de recherche des crêtes de 5 km)
-   - *(Astuce QGIS : si l'interface exige un pas angulaire supérieur à 0, renseignez `360` en pas angulaire, `150` en angle de départ et `151` en angle de fin).*
 3. Exportez le résultat dans `Resultats` sous le nom `abri_vent.tif`.
 
 ---
